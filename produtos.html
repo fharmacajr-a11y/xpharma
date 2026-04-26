@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Catálogo completo XPharma: suplementos e produtos farmacêuticos de alta performance certificados GMP e ISO. Performance Pro, Pharma Grade e Wellness Vital." />
+  <meta name="keywords" content="XPharma produtos, suplementos GMP, produtos farmacêuticos, performance, pharma grade, wellness" />
+  <meta property="og:title" content="Produtos — XPharma Linha Completa" />
+  <meta property="og:description" content="Conheça o catálogo XPharma: produtos certificados GMP e ISO para performance, saúde e bem-estar." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0a0a0f" />
+
+  <title>Produtos — XPharma</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVEGAÇÃO -->
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Navegação principal">
+      <div class="container nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="XPharma — Página inicial">
+          <div class="logo-mark" aria-hidden="true">X</div>
+          <span class="logo-text">X<span>Pharma</span></span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="produtos.html" class="active">Produtos</a></li>
+          <li><a href="autenticidade.html">Autenticidade</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+        <a href="contato.html" class="btn btn-primary nav-cta">Fale Conosco</a>
+        <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-mobile">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div class="nav-mobile" id="nav-mobile" role="dialog" aria-label="Menu de navegação">
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="produtos.html" class="active">Produtos</a>
+      <a href="autenticidade.html">Autenticidade</a>
+      <a href="contato.html">Contato</a>
+      <a href="contato.html" class="btn btn-primary">Fale Conosco</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Navegação estrutural">
+          <a href="index.html">Início</a>
+          <span aria-hidden="true">›</span>
+          <span aria-current="page">Produtos</span>
+        </nav>
+        <span class="section-tag">Portfólio Completo</span>
+        <h1 id="page-title">Linha de Produtos <span class="gold-text">XPharma</span></h1>
+        <p>Cada produto desenvolvido com rigor científico, ingredientes selecionados e certificação farmacêutica internacional.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         DIFERENCIAIS DOS PRODUTOS
+    ══════════════════════════════════════ -->
+    <section style="padding:60px 0;background:var(--bg-surface);" aria-label="Diferenciais dos produtos XPharma">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;text-align:center;">
+          <div class="cert-card reveal reveal-delay-1">
+            <div class="cert-icon" aria-hidden="true">🏅</div>
+            <h4>GMP Certified</h4>
+            <p>Boas Práticas de Fabricação em cada produto</p>
+          </div>
+          <div class="cert-card reveal reveal-delay-2">
+            <div class="cert-icon" aria-hidden="true">🔬</div>
+            <h4>Pureza Farmacêutica</h4>
+            <p>Análise HPLC em cada lote produzido</p>
+          </div>
+          <div class="cert-card reveal reveal-delay-3">
+            <div class="cert-icon" aria-hidden="true">🛡️</div>
+            <h4>Rastreável</h4>
+            <p>Código único de autenticação por produto</p>
+          </div>
+          <div class="cert-card reveal reveal-delay-4">
+            <div class="cert-icon" aria-hidden="true">🌍</div>
+            <h4>Global</h4>
+            <p>Exportado para mais de 30 países</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         FILTROS + GRADE DE PRODUTOS
+    ══════════════════════════════════════ -->
+    <section aria-labelledby="catalog-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-tag">Catálogo</span>
+          <h2 class="section-title" id="catalog-title">Explore Nossa Linha Completa</h2>
+          <p class="section-subtitle">
+            Mais de 120 produtos certificados, organizados por categoria para facilitar sua escolha.
+          </p>
+          <div class="divider-gold"></div>
+        </header>
+
+        <!-- Filtros -->
+        <nav class="products-filter" aria-label="Filtrar produtos por categoria">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="performance">Performance Pro</button>
+          <button class="filter-btn" data-filter="pharma">Pharma Grade</button>
+          <button class="filter-btn" data-filter="wellness">Wellness &amp; Vital</button>
+          <button class="filter-btn" data-filter="recovery">Recuperação</button>
+        </nav>
+
+        <!-- Grid de Produtos -->
+        <div class="products-grid" id="products-grid">
+
+          <!-- Performance Pro -->
+          <article class="product-card reveal reveal-delay-1" data-category="performance">
+            <div class="img-placeholder product-card-img" role="img" aria-label="Produto: XP Pro Whey — Proteína de alto desempenho" style="height:260px;">
+              <span class="ph-icon" aria-hidden="true">💊</span>
+              <span style="font-size:0.72rem">assets/images/xp-pro-whey.jpg</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag">Performance Pro</span>
+              <h3>XP Pro Whey</h3>
+              <p>Proteína isolada de altíssima pureza com perfil completo de aminoácidos essenciais. Certificada GMP e livre de contaminantes.</p>
+            </div>
+          </article>
+
+          <article class="product-card reveal reveal-delay-2" data-category="performance">
+            <div class="img-placeholder product-card-img" role="img" aria-label="Produto: XP Creatine Monohydrate" style="height:260px;">
+              <span class="ph-icon" aria-hidden="true">⚡</span>
+              <span style="font-size:0.72rem">assets/images/xp-creatine.jpg</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag">Performance Pro</span>
+              <h3>XP Creatine Monohydrate</h3>
+              <p>Creatina monohidratada de grau farmacêutico com 99,9% de pureza, testada por HPLC e certificada internacionalmente.</p>
+            </div>
+          </article>
+
+          <article class="product-card reveal reveal-delay-3" data-category="performance">
+            <div class="img-placeholder product-card-img" role="img" aria-label="Produto: XP BCAA Pro" style="height:260px;">
+              <span class="ph-icon" aria-hidden="true">🔥</span>
+              <span style="font-size:0.72rem">assets/images/xp-bcaa.jpg</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag">Performance Pro</span>
+              <h3>XP BCAA Pro</h3>
+              <p>Aminoácidos de cadeia ramificada na proporção ideal 2:1:1, com absorção rápida e sem corantes artificiais.</p>
+            </div>
+          </article>
+
+          <!-- Pharma Grade -->
+          <article class="product-card reveal reveal-delay-1" data-category="pharma">
+            <div class="img-placeholder product-card-img" role="img" aria-label="Produto: XP Testosterone Complex" style="height:260px;">
+              <span class="ph-icon" aria-hidden="true">🧬</span>
+              <span style="font-size:0.72rem">assets/images/xp-testosterone.jpg</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag">Pharma Grade</span>
+              <h3>XP Testosterone Complex</h3>
+              <p>Formulação avançada para suporte hormonal natural, com ingredientes de origem farmacêutica e biodisponibilidade maximizada.</p>
+            </div>
+          </article>
+
+          <article class="product-card reveal reveal-delay-2" data-category="pharma">
+            <div class="img-placeholder product-card-img" role="img" aria-label="Produto: XP GH Factor" style="height:260px;">
+              <span class="ph-icon" aria-hidden="true">🔬</span>
+              <span style="font-size:0.72rem">assets/images/xp-gh-factor.jpg</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag">Pharma Grade</span>
+              <h3>XP GH Factor</h3>
+              <p>Suporte ao hormônio do crescimento com stack de aminoácidos de alta concentração, produzido em ambiente GMP estéril.</p>
+            </div>
+          </article>
+
+          <article class="product-card reveal reveal-delay-3" data-category="pharma">
+            <div class="img-placeholder product-card-img" role="img" aria-label="Produto: XP Peptide Collagen" style="height:260px;">
+              <span class="ph-icon" aria-hidden="true">💉</span>
+              <span style="font-size:0.72rem">assets/images/xp-peptide.jpg</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag">Pharma Grade</span>
+              <h3>XP Peptide Collagen</h3>
+              <p>Colágeno hidrolisado de grau farmacêutico com vitamina C e zinco. Verificado por espectrometria de massa.</p>
+            </div>
+          </article>
+
+          <!-- Wellness & Vital -->
+          <article class="product-card reveal reveal-delay-1" data-category="wellness">
+            <div class="img-placeholder product-card-img" role="img" aria-label="Produto: XP Omega-3 Ultra" style="height:260px;">
+              <span class="ph-icon" aria-hidden="true">🌿</span>
+              <span style="font-size:0.72rem">assets/images/xp-omega3.jpg</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag">Wellness &amp; Vital</span>
+              <h3>XP Omega-3 Ultra</h3>
+              <p>Óleo de peixe de alta concentração com EPA e DHA, destilado molecularmente para eliminar metais pesados e contaminantes.</p>
+            </div>
+          </article>
+
+          <article class="product-card reveal reveal-delay-2" data-category="wellness">
+            <div class="img-placeholder product-card-img" role="img" aria-label="Produto: XP Multivitamin Pro" style="height:260px;">
+              <span class="ph-icon" aria-hidden="true">🌟</span>
+              <span style="font-size:0.72rem">assets/images/xp-multivitamin.jpg</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag">Wellness &amp; Vital</span>
+              <h3>XP Multivitamin Pro</h3>
+              <p>Complexo vitamínico e mineral completo com 32 nutrientes essenciais, formulado para máxima absorção e biodisponibilidade.</p>
+            </div>
+          </article>
+
+          <article class="product-card reveal reveal-delay-3" data-category="wellness">
+            <div class="img-placeholder product-card-img" role="img" aria-label="Produto: XP Vitamin D3 + K2" style="height:260px;">
+              <span class="ph-icon" aria-hidden="true">☀️</span>
+              <span style="font-size:0.72rem">assets/images/xp-vitd3.jpg</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag">Wellness &amp; Vital</span>
+              <h3>XP Vitamin D3 + K2</h3>
+              <p>Combinação sinérgica de vitaminas D3 e K2 para saúde óssea, imunidade e saúde cardiovascular. Alta concentração e pureza.</p>
+            </div>
+          </article>
+
+          <!-- Recuperação -->
+          <article class="product-card reveal reveal-delay-1" data-category="recovery">
+            <div class="img-placeholder product-card-img" role="img" aria-label="Produto: XP Recovery Night" style="height:260px;">
+              <span class="ph-icon" aria-hidden="true">🌙</span>
+              <span style="font-size:0.72rem">assets/images/xp-recovery.jpg</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag">Recuperação</span>
+              <h3>XP Recovery Night</h3>
+              <p>Fórmula noturna com magnésio, zinco, L-glicina e melatonina de baixa dose para recuperação muscular e qualidade do sono.</p>
+            </div>
+          </article>
+
+          <article class="product-card reveal reveal-delay-2" data-category="recovery">
+            <div class="img-placeholder product-card-img" role="img" aria-label="Produto: XP Glutamine Pro" style="height:260px;">
+              <span class="ph-icon" aria-hidden="true">🔄</span>
+              <span style="font-size:0.72rem">assets/images/xp-glutamine.jpg</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag">Recuperação</span>
+              <h3>XP Glutamine Pro</h3>
+              <p>L-glutamina de grau farmacêutico para recuperação intestinal, imunidade e redução do catabolismo muscular pós-treino.</p>
+            </div>
+          </article>
+
+          <article class="product-card reveal reveal-delay-3" data-category="recovery">
+            <div class="img-placeholder product-card-img" role="img" aria-label="Produto: XP Anti-Oxidant Complex" style="height:260px;">
+              <span class="ph-icon" aria-hidden="true">💚</span>
+              <span style="font-size:0.72rem">assets/images/xp-antioxidant.jpg</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag">Recuperação</span>
+              <h3>XP Anti-Oxidant Complex</h3>
+              <p>Coquetel antioxidante com vitamina C, E, selênio, N-acetilcisteína e resveratrol para combater o estresse oxidativo.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         AVISO LEGAL
+    ══════════════════════════════════════ -->
+    <section style="padding:60px 0;background:var(--bg-surface);">
+      <div class="container">
+        <div style="
+          background:var(--bg-surface2);
+          border:1px solid var(--border-gold);
+          border-radius:var(--radius-lg);
+          padding:2rem;
+          display:flex;
+          gap:1.5rem;
+          align-items:flex-start;
+        " role="note" aria-label="Aviso legal sobre os produtos">
+          <span style="font-size:2rem;flex-shrink:0;" aria-hidden="true">⚠️</span>
+          <div>
+            <h3 style="font-family:var(--font-heading);font-size:1rem;font-weight:700;color:var(--gold);margin-bottom:0.5rem;">Aviso Importante</h3>
+            <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.75;">
+              Os produtos XPharma são destinados a adultos saudáveis. Consulte sempre um médico ou nutricionista antes de iniciar qualquer suplementação.
+              As informações contidas neste site são de caráter informativo e não substituem a orientação profissional de saúde.
+              Todos os produtos são registrados e aprovados pelos órgãos competentes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" aria-labelledby="product-cta-title">
+      <div class="container reveal">
+        <span class="section-tag">Dúvidas?</span>
+        <h2 id="product-cta-title">Precisa de Ajuda para<br /><span class="gold-text">Escolher seu Produto?</span></h2>
+        <p>Nossa equipe de especialistas está pronta para orientar você sobre o produto ideal para seus objetivos.</p>
+        <div class="cta-btns">
+          <a href="contato.html" class="btn btn-primary">Falar com Especialista</a>
+          <a href="autenticidade.html" class="btn btn-outline">Verificar Autenticidade</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" aria-label="XPharma">
+            <div class="logo-mark" aria-hidden="true">X</div>
+            <span class="logo-text">X<span>Pharma</span></span>
+          </a>
+          <p>Excelência farmacêutica com padrões internacionais GMP e ISO.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Instagram">📸</a>
+            <a href="#" class="social-link" aria-label="Facebook">👍</a>
+            <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+            <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+          </div>
+        </div>
+        <nav aria-label="Empresa">
+          <h4>Empresa</h4>
+          <ul role="list">
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="sobre.html#missao">Missão &amp; Valores</a></li>
+            <li><a href="sobre.html#historia">Nossa História</a></li>
+            <li><a href="sobre.html#tecnologia">Tecnologia</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Produtos">
+          <h4>Produtos</h4>
+          <ul role="list">
+            <li><a href="produtos.html">Catálogo Completo</a></li>
+            <li><a href="produtos.html">Performance Pro</a></li>
+            <li><a href="produtos.html">Pharma Grade</a></li>
+            <li><a href="produtos.html">Wellness &amp; Vital</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Suporte">
+          <h4>Suporte</h4>
+          <ul role="list">
+            <li><a href="autenticidade.html">Autenticidade</a></li>
+            <li><a href="contato.html">Fale Conosco</a></li>
+            <li><a href="contato.html">Seja Distribuidor</a></li>
+            <li><a href="contato.html">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="footer-year"></span> XPharma Farmacêutica Ltda. Todos os direitos reservados.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Política de Privacidade</a>
+          <a href="#">Termos de Uso</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
