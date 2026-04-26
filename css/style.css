@@ -1244,3 +1244,55 @@ section { padding: 100px 0; }
 
   .verify-input-wrap { flex-direction: column; }
 }
+
+/* ══════════════════════════════════════
+   COMPONENTES EXTRAÍDOS DE INLINE STYLE
+══════════════════════════════════════ */
+
+/* ── Páginas legais (Privacidade & Termos) ── */
+.legal-heading {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+.legal-text {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+.legal-list {
+  margin-top: 0.75rem;
+  padding-left: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 2;
+}
+.legal-callout {
+  background: var(--bg-surface2);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 1.25rem 1.5rem;
+}
+.legal-callout p {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.8;
+}
+
+/* ── Números de destaque (sobre.html) ── */
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+/* ── Nota informativa em tom muted ── */
+.note-muted {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}

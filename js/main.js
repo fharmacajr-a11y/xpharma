@@ -280,4 +280,8 @@
     });
   });
 
+  /* ── Ano dinâmico no rodapé ── */
+  const yearEl = document.getElementById('footer-year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
 })();
