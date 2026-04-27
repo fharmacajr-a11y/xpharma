@@ -1,100 +1,110 @@
-# XPharma — Organização de Assets
+# XPharma Asset Guide
 
-Todos os arquivos devem ser salvos em `assets/images/`, usando as subpastas abaixo.
-**Não usar imagens sem licença comercial livre ou autorização da empresa.**
-Formatos aceitos: `.jpg` (fotografia), `.png` (transparência), `.webp` (otimizado).
-
----
-
-## Estrutura Atual de Pastas
-
-- `assets/images/brand/` → logos oficiais, símbolo da marca, favicon futuro
-- `assets/images/institutional/` → laboratório, equipe, fábrica, instalações
-- `assets/images/products/` → catálogo, embalagens e cards de produto
-- `assets/images/authenticity/` → embalagem com código, verificação e materiais antifraude
+All files should be stored under `assets/images/` using the folders below.
+Use only images with a clear commercial license or written company authorization.
+Accepted formats: `.jpg` for photography, `.png` for transparency, and `.webp` for optimized delivery.
 
 ---
 
-## Assets de Marca Já Adicionados
+## Current Folder Structure
 
-| Arquivo | Uso atual | Observação |
+- `assets/images/brand/` - official logos, brand symbol, future favicon
+- `assets/images/institutional/` - laboratory, team, facility, quality-control environments
+- `assets/images/products/` - catalog images, packaging visuals, product cards, campaign visuals
+
+---
+
+## Brand Assets Already Added
+
+| File | Current use | Notes |
 |---|---|---|
-| `brand/logo-xpharma-premium-horizontal.jpg` | Header e footer | Logo principal aplicada no site |
-| `brand/logo-xpharma-premium-com-simbolo.jpg` | Reserva para usos futuros | Não aplicada nesta rodada |
+| `brand/logo-xpharma-premium-horizontal.jpg` | Header and footer | Main logo used across the site |
+| `brand/logo-xpharma-premium-with-symbol.jpg` | Reserved for future use | Not used in this round |
 
 ---
 
-## Pendências — Prioridade Alta
+## Product Assets Already Added
 
-Imagens visíveis nas páginas de maior tráfego. Nesta etapa, os placeholders continuam no HTML; apenas a organização dos caminhos foi definida aqui.
+| File | Current use | Suggested alt text |
+|---|---|---|
+| `products/lipored-hd-bottle.jpg` | LipoRED HD page and product cards | LipoRED HD bottle with a red and white label |
+| `products/lipored-hd-campaign.jpg` | LipoRED HD campaign visual | LipoRED HD XPharma Premium campaign visual |
+| `products/xpharma-premium-product-boxes.jpg` | Home hero and catalog reference | XPharma Premium product boxes on a clean light background |
+| `products/xpharma-premium-red-package-front.jpg` | Home, About, Products, and LipoRED HD pages | Red XPharma Premium package |
+| `products/sample-bottle-qrcode.jpg` | Product cards and catalog reference | XPharma bottle label sample with QR code |
 
-| Arquivo esperado | Página(s) | Proporção | Resolução mín. | Tipo | `alt` sugerido | Observação |
+---
+
+## Pending Assets - High Priority
+
+Visible images for the highest-traffic institutional sections. Current HTML placeholders remain in place until these assets are authorized for use.
+
+| Expected file | Page(s) | Ratio | Minimum resolution | Type | Suggested alt text | Notes |
 |---|---|---|---|---|---|---|
-| `institutional/laboratorio.jpg` | index.html — seção hero | 4:5 | 800 × 1000 px | Foto real — laboratório de produção | Laboratório de produção XPharma: equipamentos farmacêuticos, ambiente estéril e bancada de análise | Foto principal da home; impacto visual alto |
-| `institutional/equipe.jpg` | sobre.html — seção Quem Somos | 4:5 | 800 × 1000 px | Foto real — equipe em laboratório | Equipe XPharma em laboratório de pesquisa e desenvolvimento | Aparece no topo da página Sobre |
-| `authenticity/embalagem-codigo.jpg` | autenticidade.html — seção Localização do Código | 3:4 | 600 × 800 px | Foto real — embalagem com código de autenticação em destaque | Embalagem XPharma com código de autenticação em destaque | Usada em contexto de segurança e antifraude |
+| `institutional/team.jpg` | about.html - Who We Are section | 4:5 | 800 x 1000 px | Real photo - team in laboratory | XPharma team in a research laboratory | Appears near the top of the About page |
+| `institutional/facility.jpg` | about.html - Technology section | 16:9 | 1200 x 675 px | Real photo - production or quality-control environment | XPharma production facility or quality control environment | Wide image for the technology section |
 
 ---
 
-## Pendências — Prioridade Média
+## Pending Assets - Medium Priority
 
-Imagens de destaque na home e no catálogo de produtos.
+Additional product and institutional visuals that can improve the catalog and supporting pages.
 
-| Arquivo esperado | Página(s) | Proporção | Resolução mín. | Tipo | `alt` sugerido | Observação |
+| Expected file | Page(s) | Ratio | Minimum resolution | Type | Suggested alt text | Notes |
 |---|---|---|---|---|---|---|
-| `products/produto-performance.jpg` | index.html + produtos.html | 1:1 | 600 × 600 px | Foto de embalagem — Linha Performance Pro | Embalagem XPharma Linha Performance Pro | Hero de produto na home e card no catálogo |
-| `products/produto-pharma.jpg` | index.html + produtos.html | 1:1 | 600 × 600 px | Foto de embalagem — Linha Pharma Grade | Embalagem XPharma Linha Pharma Grade | Hero de produto na home e card no catálogo |
-| `products/produto-wellness.jpg` | index.html + produtos.html | 1:1 | 600 × 600 px | Foto de embalagem — Linha Wellness & Vital | Embalagem XPharma Linha Wellness & Vital | Hero de produto na home e card no catálogo |
-| `institutional/fabrica.jpg` | sobre.html — seção Tecnologia | 16:9 | 1200 × 675 px | Foto real — linha de produção ou fábrica GMP | Linha de produção XPharma: ambiente GMP, maquinário farmacêutico e controle de qualidade | Imagem wide de instalações |
+| `products/product-performance.jpg` | index.html + products.html | 1:1 | 600 x 600 px | Product or packaging photo | XPharma Performance Pro product presentation | Use only authorized commercial imagery |
+| `products/product-information.jpg` | index.html + products.html | 1:1 | 600 x 600 px | Product or packaging photo | XPharma product information presentation | Use only authorized commercial imagery |
+| `products/product-wellness.jpg` | index.html + products.html | 1:1 | 600 x 600 px | Product or packaging photo | XPharma Wellness and Vital product presentation | Use only authorized commercial imagery |
 
 ---
 
-## Pendências — Prioridade Baixa
+## Pending Assets - Product Card Placeholders
 
-Cards individuais do catálogo de produtos em `produtos.html`. Cada arquivo corresponde a um produto específico.
+Each file corresponds to a product card currently represented by a placeholder in `products.html`.
+Do not use imagery that implies unauthorized health-related or market-authorization claims.
 
-| Arquivo esperado | Produto | Proporção | Resolução mín. | Tipo | `alt` sugerido |
+| Expected file | Product | Ratio | Minimum resolution | Type | Suggested alt text |
 |---|---|---|---|---|---|
-| `products/xp-pro-whey.jpg` | XP Pro Whey | 1:1 | 600 × 600 px | Foto de embalagem | Embalagem XP Pro Whey — proteína de alto desempenho |
-| `products/xp-creatine.jpg` | XP Creatine Monohydrate | 1:1 | 600 × 600 px | Foto de embalagem | Embalagem XP Creatine Monohydrate — monohidrato farmacêutico |
-| `products/xp-bcaa.jpg` | XP BCAA Pro | 1:1 | 600 × 600 px | Foto de embalagem | Embalagem XP BCAA Pro |
-| `products/xp-testosterone.jpg` | XP Testosterone Complex | 1:1 | 600 × 600 px | Foto de embalagem | Embalagem XP Testosterone Complex |
-| `products/xp-gh-factor.jpg` | XP GH Factor | 1:1 | 600 × 600 px | Foto de embalagem | Embalagem XP GH Factor |
-| `products/xp-peptide.jpg` | XP Peptide Collagen | 1:1 | 600 × 600 px | Foto de embalagem | Embalagem XP Peptide Collagen |
-| `products/xp-omega3.jpg` | XP Omega-3 Ultra | 1:1 | 600 × 600 px | Foto de embalagem | Embalagem XP Omega-3 Ultra |
-| `products/xp-multivitamin.jpg` | XP Multivitamin Pro | 1:1 | 600 × 600 px | Foto de embalagem | Embalagem XP Multivitamin Pro |
-| `products/xp-vitd3.jpg` | XP Vitamin D3 + K2 | 1:1 | 600 × 600 px | Foto de embalagem | Embalagem XP Vitamin D3 + K2 |
-| `products/xp-recovery.jpg` | XP Recovery Night | 1:1 | 600 × 600 px | Foto de embalagem | Embalagem XP Recovery Night |
-| `products/xp-glutamine.jpg` | XP Glutamine Pro | 1:1 | 600 × 600 px | Foto de embalagem | Embalagem XP Glutamine Pro |
-| `products/xp-antioxidant.jpg` | XP Anti-Oxidant Complex | 1:1 | 600 × 600 px | Foto de embalagem | Embalagem XP Anti-Oxidant Complex |
+| `products/performance-line.jpg` | Performance Line | 1:1 | 600 x 600 px | Product or packaging photo | Performance line product presentation |
+| `products/performance-documentation.jpg` | Performance Documentation | 1:1 | 600 x 600 px | Product or packaging photo | Performance documentation product presentation |
+| `products/performance-portfolio.jpg` | Performance Portfolio | 1:1 | 600 x 600 px | Product or packaging photo | Performance portfolio product presentation |
+| `products/product-documentation.jpg` | Product Documentation | 1:1 | 600 x 600 px | Product or packaging photo | Product documentation presentation |
+| `products/quality-review.jpg` | Quality Review | 1:1 | 600 x 600 px | Product or packaging photo | Quality review product presentation |
+| `products/wellness-line.jpg` | Wellness Line | 1:1 | 600 x 600 px | Product or packaging photo | Wellness line product presentation |
+| `products/wellness-documentation.jpg` | Wellness Documentation | 1:1 | 600 x 600 px | Product or packaging photo | Wellness documentation product presentation |
+| `products/essential-nutrition.jpg` | Essential Nutrition | 1:1 | 600 x 600 px | Product or packaging photo | Essential nutrition product presentation |
+| `products/recovery-line.jpg` | Recovery Line | 1:1 | 600 x 600 px | Product or packaging photo | Recovery line product presentation |
+| `products/recovery-documentation.jpg` | Recovery Documentation | 1:1 | 600 x 600 px | Product or packaging photo | Recovery documentation product presentation |
+| `products/commercial-portfolio.jpg` | Commercial Portfolio | 1:1 | 600 x 600 px | Product or packaging photo | Commercial portfolio product presentation |
 
 ---
 
-## Orientações de Qualidade e Licença
+## Quality and License Requirements
 
-- Fotos reais da empresa são preferíveis a banco de imagens para contextos de laboratório, equipe e fábrica.
-- Se usar banco de imagens, exigir licença comercial livre ou autorização equivalente.
-- Não usar imagens geradas por IA sem licença clara e compatível com uso comercial.
-- Otimizar todos os arquivos antes do upload:
-  - Usar Squoosh ou sharp para compressão.
-  - Manter `.jpg` abaixo de 200 KB por arquivo de produto e abaixo de 400 KB para imagens hero.
-  - Considerar gerar versão `.webp` adicional para browsers modernos.
-- Os caminhos futuros devem seguir exatamente as subpastas documentadas acima.
+- Prefer real company photography for laboratory, team, production, and quality-control contexts.
+- If stock photography is used, require a clear commercial license or equivalent authorization.
+- Do not use AI-generated images unless their license is clear and compatible with commercial use.
+- Optimize every file before upload:
+  - Use Squoosh, sharp, or an equivalent optimization tool.
+  - Keep product `.jpg` files below 200 KB when possible.
+  - Keep hero and wide institutional images below 400 KB when possible.
+  - Consider adding `.webp` versions for modern browsers.
+- Use exact documented paths when replacing placeholders.
 
 ---
 
-## Quando For Trocar os Placeholders
+## Replacing Placeholders
 
-Os placeholders atuais não foram alterados nesta rodada. Quando a substituição visual for feita, usar os caminhos já organizados nas subpastas.
+The current placeholders were not replaced in this language update. When visual replacement happens, use the documented folders and authorized alt text.
 
 ```html
-<!-- Exemplo futuro -->
-<img src="assets/images/institutional/laboratorio.jpg"
-     alt="Laboratório de produção XPharma: equipamentos farmacêuticos, ambiente estéril e bancada de análise"
+<!-- Future example -->
+<img src="assets/images/institutional/team.jpg"
+     alt="XPharma team in a research laboratory"
      width="800" height="1000"
      loading="lazy"
      decoding="async">
 ```
 
-Total de imagens pendentes: **19**
-(3 alta prioridade · 4 média prioridade · 12 baixa prioridade)
+Total pending images: **16**
+(2 high priority, 3 medium priority, 11 product card placeholders)

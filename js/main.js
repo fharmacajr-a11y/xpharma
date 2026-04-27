@@ -1,7 +1,7 @@
 /* ============================================================
-   XPharma — JavaScript Principal
-   Funcionalidades: Navbar scroll, Mobile menu, Scroll reveal,
-  Contadores animados, Filtro de produtos, Formulário de contato
+   XPharma - Main JavaScript
+   Features: navbar scroll, mobile menu, scroll reveal,
+   animated counters, product filter, contact form
    ============================================================ */
 
 (function () {
@@ -12,7 +12,7 @@
   const navLinks = document.querySelectorAll('.nav-links a, .nav-mobile a');
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
-  // Marca o link ativo com base na URL
+  // Mark the active link based on the current URL
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
     if (href === currentPage || (href === 'index.html' && currentPage === '')) {
@@ -20,7 +20,7 @@
     }
   });
 
-  // Navbar fica sólida ao rolar
+  // Make the navbar solid after scrolling
   function handleNavScroll() {
     if (!navbar) return;
     if (window.scrollY > 30) {
@@ -38,13 +38,13 @@
 
   if (navToggle && navMobile) {
     navToggle.addEventListener('click', () => {
-      const isOpen = navToggle.classList.toggle('open');
-      navMobile.classList.toggle('open', isOpen);
-      navToggle.setAttribute('aria-expanded', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+      const menuExpanded = navToggle.classList.toggle('open');
+      navMobile.classList.toggle('open', menuExpanded);
+      navToggle.setAttribute('aria-expanded', menuExpanded);
+      document.body.style.overflow = menuExpanded ? 'hidden' : '';
     });
 
-    // Fecha ao clicar em um link
+    // Close after clicking a link
     navMobile.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navToggle.classList.remove('open');
@@ -54,7 +54,7 @@
       });
     });
 
-    // Fecha ao clicar fora
+    // Close after clicking outside
     document.addEventListener('click', (e) => {
       if (!navbar.contains(e.target) && !navMobile.contains(e.target)) {
         navToggle.classList.remove('open');
@@ -79,7 +79,7 @@
 
     revealEls.forEach(el => revealObserver.observe(el));
   } else {
-    // Fallback: mostra tudo sem animação
+    // Fallback: show everything without animation
     revealEls.forEach(el => el.classList.add('visible'));
   }
 
@@ -98,7 +98,7 @@
       // Easing out expo
       const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
       const value = Math.floor(ease * target);
-      el.textContent = value.toLocaleString('pt-BR') + suffix;
+      el.textContent = value.toLocaleString('en-US') + suffix;
       if (progress < 1) requestAnimationFrame(update);
     }
     requestAnimationFrame(update);
@@ -117,7 +117,7 @@
     counters.forEach(el => counterObserver.observe(el));
   }
 
-  /* ── Filtro de produtos ── */
+  /* ── Product filter ── */
   const filterBtns = document.querySelectorAll('.filter-btn');
   const productCards = document.querySelectorAll('.product-card[data-category]');
 
@@ -144,14 +144,14 @@
     });
   });
 
-  /* ── Formulário de contato ── */
+  /* ── Contact form ── */
   const contactForm = document.getElementById('contact-form');
 
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      // Validação básica
+      // Basic validation
       const fields = contactForm.querySelectorAll('[required]');
       let valid = true;
 
@@ -161,7 +161,7 @@
           field.classList.add('error');
           valid = false;
         }
-        // Validar e-mail
+        // Validate email
         if (field.type === 'email' && field.value) {
           const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
           if (!emailRegex.test(field.value)) {
@@ -172,20 +172,20 @@
       });
 
       if (!valid) {
-        showFormMessage(contactForm, 'Por favor, preencha todos os campos obrigatórios corretamente.', 'error');
+        showFormMessage(contactForm, 'Please complete all required fields correctly.', 'error');
         return;
       }
 
-      // Simulação de envio
+      // Simulated submission
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       submitBtn.disabled = true;
-      submitBtn.textContent = 'Enviando…';
+      submitBtn.textContent = 'Sending…';
 
       setTimeout(() => {
-        showFormMessage(contactForm, 'Mensagem enviada com sucesso! Retornaremos em breve.', 'success');
+        showFormMessage(contactForm, 'Message sent successfully. Our team will get back to you shortly.', 'success');
         contactForm.reset();
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Enviar mensagem';
+        submitBtn.textContent = 'Send Message';
       }, 1800);
     });
   }
@@ -211,7 +211,7 @@
     setTimeout(() => { if (msgEl) msgEl.remove(); }, 6000);
   }
 
-  /* ── Smooth scroll para âncoras ── */
+  /* ── Smooth scroll for anchors ── */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
       const target = document.querySelector(anchor.getAttribute('href'));
@@ -224,7 +224,7 @@
     });
   });
 
-  /* ── Ano dinâmico no rodapé ── */
+  /* ── Dynamic footer year ── */
   const yearEl = document.getElementById('footer-year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 

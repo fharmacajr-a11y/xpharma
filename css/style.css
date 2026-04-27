@@ -1,12 +1,12 @@
 /* ============================================================
-  XPharma — Stylesheet Principal
-  Paleta: Base clara | Vermelho institucional | Acento premium pontual
+  XPharma - Main Stylesheet
+  Palette: light base | institutional red | focused premium accent
   ============================================================ */
 
 /* ── Imports ── */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap');
 
-/* ── Variáveis CSS ── */
+/* ── CSS variables ── */
 :root {
   --bg-primary:     #ffffff;
   --bg-soft:        #faf7f7;
@@ -61,7 +61,7 @@
   --nav-h: 80px;
 }
 
-/* ── Reset & Base ── */
+/* ── Reset & base ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
@@ -94,7 +94,7 @@ select:focus-visible {
   outline-offset: 3px;
 }
 
-/* ── Utilitários ── */
+/* ── Utilities ── */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -153,7 +153,7 @@ select:focus-visible {
 }
 .divider-gold.left { margin-left: 0; }
 
-/* ── Botões ── */
+/* ── Buttons ── */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -206,7 +206,7 @@ select:focus-visible {
   transform: translateY(-2px);
 }
 
-/* ── Navegação ── */
+/* ── Navigation ── */
 .navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -546,10 +546,10 @@ select:focus-visible {
 }
 .card p { color: var(--text-secondary); font-size: 0.9rem; }
 
-/* ── Seções ── */
+/* ── Sections ── */
 section { padding: 100px 0; }
 
-/* ── Sobre (teaser home) ── */
+/* ── About teaser on home ── */
 .about-section { background: var(--bg-soft); }
 
 .about-grid {
@@ -632,7 +632,7 @@ section { padding: 100px 0; }
   color: var(--text-muted);
 }
 
-/* ── Produtos (grid) ── */
+/* ── Products grid ── */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -777,7 +777,7 @@ section { padding: 100px 0; }
   background: var(--red-500);
 }
 
-/* ── Certificações ── */
+/* ── Certifications ── */
 .certs-section { background: var(--bg-soft); }
 
 .certs-grid {
@@ -817,14 +817,14 @@ section { padding: 100px 0; }
   color: var(--text-secondary);
 }
 
-/* ── Por que escolher ── */
+/* ── Why choose ── */
 .why-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
 
-/* ── Autenticidade banner ── */
+/* ── Product information banner ── */
 .auth-section {
   background: linear-gradient(135deg, var(--red-50) 0%, #fff9f9 100%);
   border-top: 1px solid var(--border);
@@ -846,7 +846,7 @@ section { padding: 100px 0; }
 .auth-inner p { color: var(--text-secondary); max-width: 500px; }
 .auth-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
 
-/* ── Depoimentos ── */
+/* ── Testimonials ── */
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1042,7 +1042,7 @@ section { padding: 100px 0; }
 .breadcrumb a { color: var(--red-600); }
 .breadcrumb span { color: var(--text-muted); }
 
-/* ── Sobre — Página Interna ── */
+/* ── About page ── */
 .mvv-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1120,7 +1120,7 @@ section { padding: 100px 0; }
 }
 .timeline-item p { font-size: 0.88rem; color: var(--text-secondary); }
 
-/* ── Produtos — Página Interna ── */
+/* ── Products page ── */
 .products-filter {
   display: flex;
   gap: 0.75rem;
@@ -1149,7 +1149,7 @@ section { padding: 100px 0; }
   background: var(--red-50);
 }
 
-/* ── Contato ── */
+/* ── Contact ── */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
@@ -1187,7 +1187,7 @@ section { padding: 100px 0; }
   color: var(--text-secondary);
 }
 
-/* Formulário de contato */
+/* Contact form */
 .contact-form {
   background: var(--bg-surface);
   border: 1px solid var(--border-red);
@@ -1230,7 +1230,7 @@ section { padding: 100px 0; }
 .form-group textarea { resize: vertical; min-height: 130px; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 
-/* ── Autenticidade ── */
+/* ── Product information components ── */
 .auth-steps {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -1310,7 +1310,7 @@ section { padding: 100px 0; }
 }
 .verify-note { font-size: 0.75rem; color: var(--text-muted); }
 
-/* ── Animações de reveal ── */
+/* ── Reveal animations ── */
 .reveal {
   opacity: 0;
   transform: translateY(32px);
@@ -1326,7 +1326,7 @@ section { padding: 100px 0; }
 .reveal-delay-4 { transition-delay: 0.4s; }
 .reveal-delay-5 { transition-delay: 0.5s; }
 
-/* ── Utilitários de layout ── */
+/* ── Layout utilities ── */
 .text-center { text-align: center; }
 .mt-1 { margin-top: 0.5rem; }
 .mt-2 { margin-top: 1rem; }
@@ -1336,7 +1336,7 @@ section { padding: 100px 0; }
 .flex-center { display: flex; align-items: center; justify-content: center; }
 .gap-1 { gap: 1rem; }
 
-/* ── Imagens placeholder ── */
+/* ── Placeholder images ── */
 .img-placeholder {
   background: linear-gradient(135deg, var(--bg-surface2), var(--bg-surface3));
   border: 1px dashed var(--border-red);
@@ -1353,7 +1353,7 @@ section { padding: 100px 0; }
 .img-placeholder .ph-icon { font-size: 2.5rem; opacity: 0.4; }
 
 /* ══════════════════════════════════════
-   RESPONSIVIDADE
+   RESPONSIVE RULES
 ══════════════════════════════════════ */
 @media (max-width: 1024px) {
   .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -1434,10 +1434,10 @@ section { padding: 100px 0; }
 }
 
 /* ══════════════════════════════════════
-   COMPONENTES EXTRAÍDOS DE INLINE STYLE
+   COMPONENTS EXTRACTED FROM INLINE STYLE
 ══════════════════════════════════════ */
 
-/* ── Páginas legais (Privacidade & Termos) ── */
+/* ── Legal pages (Privacy & Terms) ── */
 .legal-heading {
   font-family: var(--font-heading);
   font-size: 1.2rem;
@@ -1469,7 +1469,7 @@ section { padding: 100px 0; }
   line-height: 1.8;
 }
 
-/* ── Números de destaque (sobre.html) ── */
+/* ── Highlight numbers (about.html) ── */
 .stat-number {
   font-family: var(--font-heading);
   font-size: 3rem;
@@ -1479,7 +1479,7 @@ section { padding: 100px 0; }
   margin-bottom: 0.5rem;
 }
 
-/* ── Nota informativa em tom muted ── */
+/* ── Muted informational note ── */
 .note-muted {
   font-size: 0.8rem;
   color: var(--text-muted);
