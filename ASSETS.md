@@ -29,7 +29,6 @@ Accepted formats: `.jpg` for photography, `.png` for transparency, and `.webp` f
 |---|---|---|
 | `products/lipored-hd-bottle.jpg` | LipoRED HD page and product cards | LipoRED HD bottle with a red and white label |
 | `products/lipored-hd-campaign.jpg` | LipoRED HD campaign visual | LipoRED HD XPharma Premium campaign visual |
-| `products/xpharma-premium-product-boxes.jpg` | Home hero and catalog reference | XPharma Premium product boxes on a clean light background |
 | `products/xpharma-premium-red-package-front.jpg` | Home, About, Products, and LipoRED HD pages | Red XPharma Premium package |
 
 ---
