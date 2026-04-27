@@ -31,7 +31,6 @@ Accepted formats: `.jpg` for photography, `.png` for transparency, and `.webp` f
 | `products/lipored-hd-campaign.jpg` | LipoRED HD campaign visual | LipoRED HD XPharma Premium campaign visual |
 | `products/xpharma-premium-product-boxes.jpg` | Home hero and catalog reference | XPharma Premium product boxes on a clean light background |
 | `products/xpharma-premium-red-package-front.jpg` | Home, About, Products, and LipoRED HD pages | Red XPharma Premium package |
-| `products/sample-bottle-qrcode.jpg` | Product cards and catalog reference | XPharma bottle label sample with QR code |
 
 ---
 
@@ -53,7 +52,7 @@ Additional product and institutional visuals that can improve the catalog and su
 | Expected file | Page(s) | Ratio | Minimum resolution | Type | Suggested alt text | Notes |
 |---|---|---|---|---|---|---|
 | `products/product-performance.jpg` | index.html + products.html | 1:1 | 600 x 600 px | Product or packaging photo | XPharma Performance Pro product presentation | Use only authorized commercial imagery |
-| `products/product-information.jpg` | index.html + products.html | 1:1 | 600 x 600 px | Product or packaging photo | XPharma product information presentation | Use only authorized commercial imagery |
+| `products/product-presentation.jpg` | index.html + products.html | 1:1 | 600 x 600 px | Product or packaging photo | XPharma product presentation | Use only authorized commercial imagery |
 | `products/product-wellness.jpg` | index.html + products.html | 1:1 | 600 x 600 px | Product or packaging photo | XPharma Wellness and Vital product presentation | Use only authorized commercial imagery |
 
 ---
