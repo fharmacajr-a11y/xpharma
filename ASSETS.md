@@ -18,7 +18,7 @@ Accepted formats: `.jpg` for photography, `.png` for transparency, and `.webp` f
 
 | File | Current use | Notes |
 |---|---|---|
-| `brand/logo-xpharma-premium-horizontal.jpg` | Header and footer | Main logo used across the site |
+| `brand/logo-xpharma-premium-horizontal.png` | Header and footer | Main logo used across the site |
 | `brand/logo-xpharma-premium-with-symbol.jpg` | Reserved for future use | Not used in this round |
 
 ---
