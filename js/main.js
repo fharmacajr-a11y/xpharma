@@ -1,8 +1,7 @@
 /* ============================================================
    XPharma — JavaScript Principal
    Funcionalidades: Navbar scroll, Mobile menu, Scroll reveal,
-   Contadores animados, Filtro de produtos, Formulário de contato,
-   Verificação de autenticidade
+  Contadores animados, Filtro de produtos, Formulário de contato
    ============================================================ */
 
 (function () {
@@ -210,61 +209,6 @@
       border: 1px solid ${type === 'success' ? 'rgba(34,197,94,0.3)' : 'rgba(239,68,68,0.3)'};
     `;
     setTimeout(() => { if (msgEl) msgEl.remove(); }, 6000);
-  }
-
-  /* ── Verificação de autenticidade ── */
-  const verifyForm = document.getElementById('verify-form');
-
-  if (verifyForm) {
-    verifyForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const input = document.getElementById('verify-code');
-      const resultArea = document.getElementById('verify-result');
-      if (!input || !resultArea) return;
-
-      const code = input.value.trim().toUpperCase();
-
-      if (!code || code.length < 8) {
-        showVerifyResult(resultArea, 'invalid', 'Código inválido. O código deve ter pelo menos 8 caracteres.');
-        return;
-      }
-
-      // Simulação de verificação (substituir por chamada real à API)
-      resultArea.innerHTML = '<p style="color:var(--text-muted);font-size:0.9rem;">Verificando código…</p>';
-
-      setTimeout(() => {
-        // Simulação: códigos começando com "XP" são válidos
-        if (code.startsWith('XP')) {
-          showVerifyResult(resultArea, 'valid',
-            '✓ Produto Autêntico XPharma',
-            'Este produto foi fabricado e certificado pela XPharma. Lote verificado com sucesso.',
-            code
-          );
-        } else {
-          showVerifyResult(resultArea, 'invalid',
-            '✗ Código não encontrado',
-            'Este código não consta em nosso banco de dados. Se você suspeita de produto falsificado, entre em contato conosco.'
-          );
-        }
-      }, 1500);
-    });
-  }
-
-  function showVerifyResult(container, status, title, desc = '', code = '') {
-    const isValid = status === 'valid';
-    container.innerHTML = `
-      <div style="
-        padding: 1.5rem;
-        border-radius: 10px;
-        border: 1px solid ${isValid ? 'rgba(34,197,94,0.35)' : 'rgba(239,68,68,0.35)'};
-        background: ${isValid ? 'rgba(34,197,94,0.08)' : 'rgba(239,68,68,0.08)'};
-        text-align: left;
-      ">
-        <p style="font-weight:800;font-size:1rem;color:${isValid ? '#4ade80' : '#f87171'};margin-bottom:0.4rem;">${title}</p>
-        ${desc ? `<p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.5rem;">${desc}</p>` : ''}
-        ${code ? `<p style="font-size:0.75rem;color:var(--text-muted);">Código: ${code} · Verificado em ${new Date().toLocaleDateString('pt-BR')}</p>` : ''}
-      </div>
-    `;
   }
 
   /* ── Smooth scroll para âncoras ── */
