@@ -3,24 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Explore the XPharma catalog of injectable singles, injectable blends, oral hormones, oral pharmaceuticals, and oral thyroid hormones." />
-  <meta name="keywords" content="XPharma products, injectable singles, injectable blends, oral hormones, oral pharmaceuticals, oral thyroid hormones, LipoRED HD, product catalog" />
-  <meta property="og:title" content="XPharma Product Catalog | Premium Product Lines" />
-  <meta property="og:description" content="Review XPharma premium product presentations, product categories, and official commercial information channels." />
-  <meta property="og:type" content="website" />
+  <meta name="description" content="Review an XPharma product presentation with institutional product information and official contact options." />
   <meta name="theme-color" content="#0a0a0f" />
-  <meta property="og:url" content="https://fharmacajr-a11y.github.io/xpharma/products.html" />
-  <link rel="canonical" href="https://fharmacajr-a11y.github.io/xpharma/products.html" />
-
-  <title>XPharma Product Catalog | Premium Product Lines</title>
-
+  <title>XPharma Product</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- Navigation -->
   <header>
     <nav class="navbar" role="navigation" aria-label="Main navigation">
       <div class="container nav-inner">
@@ -51,78 +42,27 @@
   </header>
 
   <main id="main-content">
-
-    <!-- Page hero -->
-    <section class="page-hero" aria-labelledby="page-title">
+    <section class="page-hero product-page-hero" aria-labelledby="product-page-title">
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
           <a href="index.html">Home</a>
           <span aria-hidden="true">›</span>
-          <span aria-current="page">Products</span>
+          <a href="products.html">Products</a>
+          <span aria-hidden="true">›</span>
+          <span id="product-breadcrumb-name" aria-current="page">Product</span>
         </nav>
-        <span class="section-tag">Full Catalog</span>
-        <h1 id="page-title">XPharma <span class="gold-text">Product Line</span></h1>
-        <p>Injectable singles, injectable blends, oral hormones, oral pharmaceuticals, and oral thyroid hormone presentations prepared for institutional review and commercial inquiries.</p>
+        <span class="section-tag">Product Detail</span>
+        <h1 id="product-page-title">XPharma Product Detail</h1>
+        <p id="product-page-subtitle">Institutional product presentation prepared for commercial review and official contact follow-up.</p>
       </div>
     </section>
 
-    <!-- Product differentiators -->
-    <section style="padding:60px 0;background:var(--bg-surface);" aria-label="XPharma product differentiators">
+    <section class="product-detail-section" aria-labelledby="product-detail-title">
       <div class="container">
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;text-align:center;">
-          <div class="cert-card reveal reveal-delay-1">
-            <div class="cert-icon" aria-hidden="true">🏅</div>
-            <h4>Manufacturing Documentation</h4>
-            <p>Manufacturing-standard documentation available upon request</p>
-          </div>
-          <div class="cert-card reveal reveal-delay-2">
-            <div class="cert-icon" aria-hidden="true">🔬</div>
-            <h4>Quality Control</h4>
-            <p>Product-specific specifications reviewed through official channels</p>
-          </div>
-          <div class="cert-card reveal reveal-delay-3">
-            <div class="cert-icon" aria-hidden="true">🛡️</div>
-            <h4>Product Clarity</h4>
-            <p>Structured labeling and product information by line</p>
-          </div>
-          <div class="cert-card reveal reveal-delay-4">
-            <div class="cert-icon" aria-hidden="true">🌍</div>
-            <h4>Market Review</h4>
-            <p>Commercial information reviewed by market and distribution context</p>
-          </div>
-        </div>
+        <div id="product-detail-root" aria-live="polite" aria-busy="true"></div>
       </div>
     </section>
 
-    <!-- Filters and product grid -->
-    <section aria-labelledby="catalog-title">
-      <div class="container">
-        <header class="section-header reveal">
-          <span class="section-tag">Catalog</span>
-          <h2 class="section-title" id="catalog-title">Explore the XPharma Line</h2>
-          <p class="section-subtitle">
-            Explore the catalog by product format and oral category. Availability, documentation status, and market-specific requirements may vary by market.
-            Commercial information is available upon request through official channels.
-          </p>
-          <div class="divider-gold"></div>
-        </header>
-
-        <!-- Filters -->
-        <nav class="products-filter" aria-label="Filter products by category">
-          <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All</button>
-          <button class="filter-btn" type="button" data-filter="injectable-singles" aria-pressed="false">Injectable Singles</button>
-          <button class="filter-btn" type="button" data-filter="injectable-blends" aria-pressed="false">Injectable Blends</button>
-          <button class="filter-btn" type="button" data-filter="oral-hormones" aria-pressed="false">Oral Hormones</button>
-          <button class="filter-btn" type="button" data-filter="oral-pharmaceuticals" aria-pressed="false">Oral Pharmaceuticals</button>
-          <button class="filter-btn" type="button" data-filter="oral-thyroid-hormones" aria-pressed="false">Oral Thyroid Hormones</button>
-        </nav>
-
-        <!-- Product grid -->
-        <div class="products-grid" id="products-grid" aria-live="polite"></div>
-      </div>
-    </section>
-
-    <!-- Product notice -->
     <section style="padding:60px 0;background:var(--bg-surface);">
       <div class="container">
         <div style="
@@ -146,23 +86,8 @@
         </div>
       </div>
     </section>
-
-    <!-- CTA -->
-    <section class="cta-section" aria-labelledby="product-cta-title">
-      <div class="container reveal">
-        <span class="section-tag">Questions?</span>
-        <h2 id="product-cta-title">Need Product<br /><span class="gold-text">Information?</span></h2>
-        <p>Our team can provide commercial information, documentation guidance, and market-specific next steps.</p>
-        <div class="cta-btns">
-          <a href="contact.html" class="btn btn-primary">Talk to a Specialist</a>
-          <a href="lipored.html" class="btn btn-outline">Explore LipoRED HD</a>
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <!-- Footer -->
   <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
@@ -190,7 +115,7 @@
         <nav class="footer-col" aria-label="Footer links - products">
           <h4>Products</h4>
           <ul role="list">
-            <li><a href="products.html" aria-current="page">Full Catalog</a></li>
+            <li><a href="products.html">Full Catalog</a></li>
             <li><a href="products.html">Injectable Singles</a></li>
             <li><a href="products.html">Injectable Blends</a></li>
             <li><a href="products.html">Oral Hormones</a></li>
@@ -218,7 +143,7 @@
   </footer>
 
   <script src="js/products-data.js" defer></script>
-  <script src="js/products-render.js" defer></script>
+  <script src="js/product-detail.js" defer></script>
   <script src="js/main.js" defer></script>
 
 </body>
