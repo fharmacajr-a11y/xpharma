@@ -723,6 +723,14 @@ section { padding: 100px 0; }
   letter-spacing: 0.01em;
   margin: 0 0 0.85rem;
   white-space: normal;
+  min-height: 45px;
+}
+
+.product-card-body > p:last-child {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .product-card-link {
