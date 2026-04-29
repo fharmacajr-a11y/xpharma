@@ -760,9 +760,10 @@ section { padding: 100px 0; }
 }
 
 .product-detail-img {
-  width: 100%;
+  width: auto;
+  height: auto;
   max-width: 100%;
-  max-height: 560px;
+  max-height: 460px;
   object-fit: contain;
   object-position: center;
 }
@@ -1402,6 +1403,10 @@ section { padding: 100px 0; }
 
   .product-detail-media {
     min-height: 420px;
+  }
+
+  .product-detail-img {
+    max-height: 360px;
   }
 
   .product-detail-media .img-placeholder {
