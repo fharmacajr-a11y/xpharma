@@ -3,8 +3,10 @@
 
   const injectableDescription = 'Injectable product presentation prepared for institutional and commercial review. Product details are available through official XPharma channels.';
   const oralDescription = 'Product presentation prepared for institutional and commercial review. Product details are available through official XPharma channels.';
+  const oralCardDescription = 'Oral product presentation listed for XPharma catalog and commercial reference.';
+  const oralDetailDescription = 'This oral product presentation is listed within the XPharma catalog for product identification, label review, commercial reference, and documentation requests. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.';
 
-  function buildProduct({ slug, name, category, imageSrc, altName, subtitle, presentation, activeCompound, cardDescription, detailDescription }) {
+  function buildProduct({ slug, name, category, categoryLabel, imageSrc, altName, subtitle, presentation, activeCompound, cardDescription, detailDescription }) {
     const description = category === 'injectable-singles' || category === 'injectable-blends'
       ? injectableDescription
       : oralDescription;
@@ -15,6 +17,10 @@
       category,
       description
     };
+
+    if (categoryLabel) {
+      product.categoryLabel = categoryLabel;
+    }
 
     if (subtitle) {
       product.subtitle = subtitle;
@@ -89,8 +95,209 @@
     buildProduct({ slug: 'cutstak', name: 'Cutstak', category: 'injectable-blends', imageSrc: 'assets/images/products/injectable-blends/cutstak.png' }),
     buildProduct({ slug: 'pure-blood', name: 'Pure Blood', category: 'injectable-blends', imageSrc: 'assets/images/products/injectable-blends/pure-blood.png' }),
     buildProduct({ slug: 'tri-rage', name: 'Tri-Rage', category: 'injectable-blends', imageSrc: 'assets/images/products/injectable-blends/tri-rage.png' }),
-    buildProduct({ slug: 'oral-hormone-line', name: 'Oral Hormone Line', category: 'oral-hormones' }),
-    buildProduct({ slug: 'oral-pharmaceutical-line', name: 'Oral Pharmaceutical Line', category: 'oral-pharmaceuticals' }),
-    buildProduct({ slug: 'oral-thyroid-hormone-line', name: 'Oral Thyroid Hormone Line', category: 'oral-thyroid-hormones' })
+    buildProduct({
+      slug: 'anadrol-xp',
+      name: 'Anadrol XP',
+      category: 'oral-hormones',
+      categoryLabel: 'Oral Hormones',
+      imageSrc: 'assets/images/products/oral-hormones/anadrol-xp.png',
+      subtitle: 'Oxymetholone · 50 mg / 30 capsules',
+      presentation: '50 mg / 30 capsules',
+      activeCompound: 'Oxymetholone',
+      cardDescription: oralCardDescription,
+      detailDescription: oralDetailDescription
+    }),
+    buildProduct({
+      slug: 'dianabol',
+      name: 'Dianabol',
+      category: 'oral-hormones',
+      categoryLabel: 'Oral Hormones',
+      imageSrc: 'assets/images/products/oral-hormones/dianabol.png',
+      subtitle: 'Methandrostenolone · 10 mg / 100 capsules',
+      presentation: '10 mg / 100 capsules',
+      activeCompound: 'Methandrostenolone',
+      cardDescription: oralCardDescription,
+      detailDescription: oralDetailDescription
+    }),
+    buildProduct({
+      slug: 'oxandrol-xp-5mg',
+      name: 'Oxandrol XP 5 mg',
+      category: 'oral-hormones',
+      categoryLabel: 'Oral Hormones',
+      imageSrc: 'assets/images/products/oral-hormones/oxandrol-xp-5mg.png',
+      subtitle: 'Oxandrolone · 5 mg / 100 capsules',
+      presentation: '5 mg / 100 capsules',
+      activeCompound: 'Oxandrolone',
+      cardDescription: oralCardDescription,
+      detailDescription: oralDetailDescription
+    }),
+    buildProduct({
+      slug: 'oxandrol-xp-10mg',
+      name: 'Oxandrol XP 10 mg',
+      category: 'oral-hormones',
+      categoryLabel: 'Oral Hormones',
+      imageSrc: 'assets/images/products/oral-hormones/oxandrol-xp-10mg.png',
+      subtitle: 'Oxandrolone · 10 mg / 100 capsules',
+      presentation: '10 mg / 100 capsules',
+      activeCompound: 'Oxandrolone',
+      cardDescription: oralCardDescription,
+      detailDescription: oralDetailDescription
+    }),
+    buildProduct({
+      slug: 'oxandrol-xp-20mg',
+      name: 'Oxandrol XP 20 mg',
+      category: 'oral-hormones',
+      categoryLabel: 'Oral Hormones',
+      imageSrc: 'assets/images/products/oral-hormones/oxandrol-xp-20mg.png',
+      subtitle: 'Oxandrolone · 20 mg / 100 capsules',
+      presentation: '20 mg / 100 capsules',
+      activeCompound: 'Oxandrolone',
+      cardDescription: oralCardDescription,
+      detailDescription: oralDetailDescription
+    }),
+    buildProduct({
+      slug: 'test-prop-xp',
+      name: 'Test Prop XP',
+      category: 'oral-hormones',
+      categoryLabel: 'Oral Hormones',
+      imageSrc: 'assets/images/products/oral-hormones/test-prop-xp.png',
+      subtitle: 'Testosterone Propionate · 10 mg / 100 capsules',
+      presentation: '10 mg / 100 capsules',
+      activeCompound: 'Testosterone Propionate',
+      cardDescription: oralCardDescription,
+      detailDescription: oralDetailDescription
+    }),
+    buildProduct({
+      slug: 'winstrol-oral',
+      name: 'Winstrol XP',
+      category: 'oral-hormones',
+      categoryLabel: 'Oral Hormones',
+      imageSrc: 'assets/images/products/oral-hormones/winstrol-oral.png',
+      subtitle: 'Stanozolol · 10 mg / 100 capsules',
+      presentation: '10 mg / 100 capsules',
+      activeCompound: 'Stanozolol',
+      cardDescription: oralCardDescription,
+      detailDescription: oralDetailDescription
+    }),
+    buildProduct({
+      slug: 'arimidex',
+      name: 'Arimidex',
+      category: 'oral-pharmaceuticals',
+      categoryLabel: 'Oral Pharmaceuticals',
+      imageSrc: 'assets/images/products/oral-pharmaceuticals/arimidex.png',
+      subtitle: 'Anastrozole · 1 mg / 30 capsules',
+      presentation: '1 mg / 30 capsules',
+      activeCompound: 'Anastrozole',
+      cardDescription: oralCardDescription,
+      detailDescription: oralDetailDescription
+    }),
+    buildProduct({
+      slug: 'cialis-xp',
+      name: 'Cialis XP',
+      category: 'oral-pharmaceuticals',
+      categoryLabel: 'Oral Pharmaceuticals',
+      imageSrc: 'assets/images/products/oral-pharmaceuticals/cialis-xp.png',
+      subtitle: 'Tadalafil · 20 mg / 30 capsules',
+      presentation: '20 mg / 30 capsules',
+      activeCompound: 'Tadalafil',
+      cardDescription: oralCardDescription,
+      detailDescription: oralDetailDescription
+    }),
+    buildProduct({
+      slug: 'clomid-xp',
+      name: 'Clomid XP',
+      category: 'oral-pharmaceuticals',
+      categoryLabel: 'Oral Pharmaceuticals',
+      imageSrc: 'assets/images/products/oral-pharmaceuticals/clomid-xp.png',
+      subtitle: 'Clomiphene · 50 mg / 30 capsules',
+      presentation: '50 mg / 30 capsules',
+      activeCompound: 'Clomiphene',
+      cardDescription: oralCardDescription,
+      detailDescription: oralDetailDescription
+    }),
+    buildProduct({
+      slug: 'desobesi-m-xp',
+      name: 'Desobesi-M XP',
+      category: 'oral-pharmaceuticals',
+      categoryLabel: 'Oral Pharmaceuticals',
+      imageSrc: 'assets/images/products/oral-pharmaceuticals/desobesi-m-xp.png',
+      subtitle: 'Femproporex · 25 mg / 30 capsules',
+      presentation: '25 mg / 30 capsules',
+      activeCompound: 'Femproporex',
+      cardDescription: oralCardDescription,
+      detailDescription: oralDetailDescription
+    }),
+    buildProduct({
+      slug: 'letrozol-2-5-xp',
+      name: 'Letrozol 2.5 XP',
+      category: 'oral-pharmaceuticals',
+      categoryLabel: 'Oral Pharmaceuticals',
+      imageSrc: 'assets/images/products/oral-pharmaceuticals/letrozol-2-5-xp.png',
+      subtitle: 'Letrozole · 2.5 mg / 30 capsules',
+      presentation: '2.5 mg / 30 capsules',
+      activeCompound: 'Letrozole',
+      cardDescription: oralCardDescription,
+      detailDescription: oralDetailDescription
+    }),
+    buildProduct({
+      slug: 'proviron',
+      name: 'Proviron',
+      category: 'oral-pharmaceuticals',
+      categoryLabel: 'Oral Pharmaceuticals',
+      imageSrc: 'assets/images/products/oral-pharmaceuticals/proviron.png',
+      subtitle: 'Mesterolone · 25 mg / 30 capsules',
+      presentation: '25 mg / 30 capsules',
+      activeCompound: 'Mesterolone',
+      cardDescription: oralCardDescription,
+      detailDescription: oralDetailDescription
+    }),
+    buildProduct({
+      slug: 'silimalon-xp',
+      name: 'Silimalon XP',
+      category: 'oral-pharmaceuticals',
+      categoryLabel: 'Oral Pharmaceuticals',
+      imageSrc: 'assets/images/products/oral-pharmaceuticals/silimalon-xp.png',
+      subtitle: 'Silymarin · 300 mg / 30 capsules',
+      presentation: '300 mg / 30 capsules',
+      activeCompound: 'Silymarin',
+      cardDescription: oralCardDescription,
+      detailDescription: oralDetailDescription
+    }),
+    buildProduct({
+      slug: 'tamox-20-xp',
+      name: 'Tamox 20 XP',
+      category: 'oral-pharmaceuticals',
+      categoryLabel: 'Oral Pharmaceuticals',
+      imageSrc: 'assets/images/products/oral-pharmaceuticals/tamox-20-xp.png',
+      subtitle: 'Tamoxifen · 20 mg / 30 capsules',
+      presentation: '20 mg / 30 capsules',
+      activeCompound: 'Tamoxifen',
+      cardDescription: oralCardDescription,
+      detailDescription: oralDetailDescription
+    }),
+    buildProduct({
+      slug: 'citomel',
+      name: 'Citomel',
+      category: 'oral-thyroid-hormones',
+      categoryLabel: 'Oral Thyroid Hormones',
+      imageSrc: 'assets/images/products/oral-thyroid-hormones/citomel.png',
+      subtitle: 'Triiodothyronine (T3) · 25 mcg / 60 capsules',
+      presentation: '25 mcg / 60 capsules',
+      activeCompound: 'Triiodothyronine (T3)',
+      cardDescription: oralCardDescription,
+      detailDescription: oralDetailDescription
+    }),
+    buildProduct({
+      slug: 't4-xp',
+      name: 'T4 XP',
+      category: 'oral-thyroid-hormones',
+      categoryLabel: 'Oral Thyroid Hormones',
+      imageSrc: 'assets/images/products/oral-thyroid-hormones/t4-xp.png',
+      subtitle: 'Thyroxine · 50 mcg / 60 capsules',
+      presentation: '50 mcg / 60 capsules',
+      activeCompound: 'Thyroxine',
+      cardDescription: oralCardDescription,
+      detailDescription: oralDetailDescription
+    })
   ];
 }());
