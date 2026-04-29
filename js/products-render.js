@@ -72,7 +72,16 @@
   }
 
   function getProductHref(product) {
-    return `product.html?id=${encodeURIComponent(product.slug)}`;
+    const href = new URL('product.html', window.location.href);
+    const activeCategory = new URLSearchParams(window.location.search).get('category');
+
+    href.searchParams.set('id', product.slug);
+
+    if (activeCategory && activeCategory !== 'all') {
+      href.searchParams.set('category', activeCategory);
+    }
+
+    return `${href.pathname}${href.search}`;
   }
 
   function createCard(product, index) {

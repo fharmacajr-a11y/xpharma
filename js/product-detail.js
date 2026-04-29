@@ -26,6 +26,24 @@
     'oral-pharmaceuticals': '📦',
     'oral-thyroid-hormones': '☀️'
   };
+  const validCatalogCategories = new Set([
+    'all',
+    'injectable-singles',
+    'injectable-blends',
+    'oral-hormones',
+    'oral-pharmaceuticals',
+    'oral-thyroid-hormones'
+  ]);
+
+  function getCatalogHref() {
+    const category = new URLSearchParams(window.location.search).get('category');
+
+    if (!validCatalogCategories.has(category) || category === 'all') {
+      return 'products.html';
+    }
+
+    return `products.html?category=${encodeURIComponent(category)}`;
+  }
 
   function createPlaceholder(product) {
     const placeholder = document.createElement('div');
@@ -179,7 +197,7 @@
     contactLink.className = 'btn btn-primary';
     contactLink.textContent = 'Contact Us';
 
-    backLink.href = 'products.html';
+    backLink.href = getCatalogHref();
     backLink.className = 'btn btn-outline';
     backLink.textContent = 'Back to Catalog';
 

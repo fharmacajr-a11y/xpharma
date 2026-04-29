@@ -120,6 +120,55 @@
   /* ── Product filter ── */
   const filterBtns = document.querySelectorAll('.filter-btn');
   const productCards = document.querySelectorAll('.product-card[data-category]');
+  const validProductCategories = new Set([
+    'all',
+    'injectable-singles',
+    'injectable-blends',
+    'oral-hormones',
+    'oral-pharmaceuticals',
+    'oral-thyroid-hormones'
+  ]);
+
+  function getCatalogCategoryFromUrl() {
+    const category = new URLSearchParams(window.location.search).get('category');
+    return validProductCategories.has(category) ? category : 'all';
+  }
+
+  function updateCatalogUrl(category) {
+    const nextUrl = new URL(window.location.href);
+
+    if (category === 'all') {
+      nextUrl.searchParams.delete('category');
+    } else {
+      nextUrl.searchParams.set('category', category);
+    }
+
+    window.history.replaceState({}, '', `${nextUrl.pathname}${nextUrl.search}${nextUrl.hash}`);
+  }
+
+  function applyProductFilter(category, activeButton) {
+    const normalizedCategory = validProductCategories.has(category) ? category : 'all';
+
+    if (activeButton) {
+      setActiveFilterButton(activeButton);
+    }
+
+    productCards.forEach(card => {
+      const cardCat = card.getAttribute('data-category');
+      const show = normalizedCategory === 'all' || cardCat === normalizedCategory;
+
+      if (show) {
+        card.style.display = '';
+        // Re-trigger reveal animation
+        setTimeout(() => card.classList.add('visible'), 10);
+      } else {
+        card.style.display = 'none';
+        card.classList.remove('visible');
+      }
+    });
+
+    updateCatalogUrl(normalizedCategory);
+  }
 
   function setActiveFilterButton(activeButton) {
     filterBtns.forEach(button => {
@@ -133,25 +182,20 @@
     btn.setAttribute('aria-pressed', String(btn.classList.contains('active')));
 
     btn.addEventListener('click', () => {
-      setActiveFilterButton(btn);
-
       const category = btn.getAttribute('data-filter');
-
-      productCards.forEach(card => {
-        const cardCat = card.getAttribute('data-category');
-        const show = category === 'all' || cardCat === category;
-
-        if (show) {
-          card.style.display = '';
-          // Re-trigger reveal animation
-          setTimeout(() => card.classList.add('visible'), 10);
-        } else {
-          card.style.display = 'none';
-          card.classList.remove('visible');
-        }
-      });
+      applyProductFilter(category, btn);
     });
   });
+
+  if (filterBtns.length > 0 && productCards.length > 0) {
+    const initialCategory = getCatalogCategoryFromUrl();
+    const initialButton = Array.from(filterBtns).find(btn => btn.getAttribute('data-filter') === initialCategory)
+      || Array.from(filterBtns).find(btn => btn.getAttribute('data-filter') === 'all');
+
+    if (initialButton) {
+      applyProductFilter(initialCategory, initialButton);
+    }
+  }
 
   /* ── Contact form ── */
   const contactForm = document.getElementById('contact-form');
