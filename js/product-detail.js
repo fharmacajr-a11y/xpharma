@@ -72,6 +72,19 @@
     return image;
   }
 
+  function appendDescriptionContent(container, text) {
+    const paragraphs = String(text || '')
+      .split(/\n\s*\n/)
+      .map((paragraph) => paragraph.trim())
+      .filter(Boolean);
+
+    paragraphs.forEach((paragraph) => {
+      const paragraphEl = document.createElement('p');
+      paragraphEl.textContent = paragraph;
+      container.appendChild(paragraphEl);
+    });
+  }
+
   function renderNotFound() {
     document.title = 'Product Not Found | XPharma';
 
@@ -108,19 +121,22 @@
     const panel = document.createElement('div');
     const tag = document.createElement('span');
     const heading = document.createElement('h2');
-    const description = document.createElement('p');
+    const meta = document.createElement('div');
+    const description = document.createElement('div');
     const actions = document.createElement('div');
     const contactLink = document.createElement('a');
     const backLink = document.createElement('a');
+    const subtitleText = product.subtitle || product.presentation;
+    const detailDescription = product.detailDescription || product.description;
 
     document.title = `${product.name} | XPharma Product`;
 
     if (titleEl) {
-      titleEl.textContent = 'XPharma Product Detail';
+      titleEl.textContent = product.name;
     }
 
     if (subtitleEl) {
-      subtitleEl.textContent = `Review the XPharma ${product.name} product presentation prepared for institutional and commercial review.`;
+      subtitleEl.textContent = subtitleText || `Review the XPharma ${product.name} product presentation prepared for institutional and commercial review.`;
     }
 
     if (breadcrumbEl) {
@@ -140,7 +156,22 @@
     heading.id = 'product-detail-title';
     heading.textContent = product.name;
 
-    description.textContent = product.description;
+    meta.className = 'product-detail-meta';
+
+    if (product.activeCompound) {
+      const compoundLine = document.createElement('p');
+      compoundLine.textContent = `Active compound: ${product.activeCompound}`;
+      meta.appendChild(compoundLine);
+    }
+
+    if (product.presentation) {
+      const presentationLine = document.createElement('p');
+      presentationLine.textContent = `Presentation: ${product.presentation}`;
+      meta.appendChild(presentationLine);
+    }
+
+    description.className = 'product-detail-description';
+    appendDescriptionContent(description, detailDescription);
 
     actions.className = 'product-actions';
 
@@ -153,7 +184,13 @@
     backLink.textContent = 'Back to Catalog';
 
     actions.append(contactLink, backLink);
-    panel.append(tag, heading, description, actions);
+    panel.append(tag, heading);
+
+    if (meta.childElementCount > 0) {
+      panel.appendChild(meta);
+    }
+
+    panel.append(description, actions);
     article.append(media, panel);
 
     root.replaceChildren(article);

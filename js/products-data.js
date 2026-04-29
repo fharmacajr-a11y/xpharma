@@ -4,15 +4,37 @@
   const injectableDescription = 'Injectable product presentation prepared for institutional and commercial review. Product details are available through official XPharma channels.';
   const oralDescription = 'Product presentation prepared for institutional and commercial review. Product details are available through official XPharma channels.';
 
-  function buildProduct({ slug, name, category, imageSrc, altName }) {
+  function buildProduct({ slug, name, category, imageSrc, altName, subtitle, presentation, activeCompound, cardDescription, detailDescription }) {
+    const description = category === 'injectable-singles' || category === 'injectable-blends'
+      ? injectableDescription
+      : oralDescription;
+
     const product = {
       slug,
       name,
       category,
-      description: category === 'injectable-singles' || category === 'injectable-blends'
-        ? injectableDescription
-        : oralDescription
+      description
     };
+
+    if (subtitle) {
+      product.subtitle = subtitle;
+    }
+
+    if (presentation) {
+      product.presentation = presentation;
+    }
+
+    if (activeCompound) {
+      product.activeCompound = activeCompound;
+    }
+
+    if (cardDescription) {
+      product.cardDescription = cardDescription;
+    }
+
+    if (detailDescription) {
+      product.detailDescription = detailDescription;
+    }
 
     if (imageSrc) {
       product.image = {
@@ -27,14 +49,34 @@
   window.XPHARMA_PRODUCTS = [
     buildProduct({ slug: 'boldebol-xp', name: 'Boldebol XP', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/boldebol-xp.png' }),
     buildProduct({ slug: 'durateston', name: 'Durateston', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/durateston-xp.png' }),
-    buildProduct({ slug: 'finaplix-xp', name: 'Finaplix XP', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/finaplix-xp.png' }),
+    buildProduct({
+      slug: 'finaplix-xp',
+      name: 'Finaplix XP',
+      category: 'injectable-singles',
+      imageSrc: 'assets/images/products/injectable-singles/finaplix-xp.png',
+      subtitle: 'Trenbolone Enanthate \u00b7 200 mg \u00b7 10 ml',
+      presentation: '200 mg \u00b7 10 ml',
+      activeCompound: 'Trenbolone Enanthate',
+      cardDescription: 'Injectable single presentation based on Trenbolone Enanthate, a long-ester trenbolone compound associated with anabolic-androgenic activity.',
+      detailDescription: 'Finaplix XP is an injectable single presentation based on Trenbolone Enanthate, as identified on the product label. Trenbolone Enanthate is the enanthate ester form of trenbolone, an anabolic-androgenic compound commonly referenced in technical compound references for its androgen receptor activity, anabolic profile, and longer-ester presentation.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests. The enanthate ester format distinguishes this presentation from shorter-ester trenbolone formats in technical product classification.\n\nThis page does not provide usage guidance, treatment recommendations, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+    }),
     buildProduct({ slug: 'laurabolin', name: 'Laurabolin', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/laurabolin.png' }),
     buildProduct({ slug: 'masteron', name: 'Masteron', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/masteron.png' }),
     buildProduct({ slug: 'masteron-slow', name: 'Masteron Slow', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/masteron-slow.png' }),
     buildProduct({ slug: 'masteron-slow-200', name: 'Masteron Slow 200', altName: 'Masteron Slow', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/masteron-slow-200.png' }),
     buildProduct({ slug: 'nadro-rapid-xp', name: 'Nadro Rapid XP', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/nadro-rapid-xp.png' }),
     buildProduct({ slug: 'nandrobolic', name: 'Nandrobolic', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/nandrobolic.png' }),
-    buildProduct({ slug: 'parabolan', name: 'Parabolan', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/parabolan.png' }),
+    buildProduct({
+      slug: 'parabolan',
+      name: 'Parabolan',
+      category: 'injectable-singles',
+      imageSrc: 'assets/images/products/injectable-singles/parabolan.png',
+      subtitle: 'Trenbolone Acetate \u00b7 100 mg \u00b7 10 ml',
+      presentation: '100 mg \u00b7 10 ml',
+      activeCompound: 'Trenbolone Acetate',
+      cardDescription: 'Injectable single presentation based on Trenbolone Acetate, an anabolic-androgenic compound listed for XPharma catalog and commercial reference.',
+      detailDescription: 'Parabolan is an injectable single presentation based on Trenbolone Acetate, an anabolic-androgenic compound identified on the product label. Trenbolone Acetate is commonly referenced in technical compound references for its androgen receptor activity and anabolic profile.\n\nThe product is presented in a 100 mg / 10 ml format and organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, treatment recommendations, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+    }),
     buildProduct({ slug: 'primobolan', name: 'Primobolan', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/primobolan.png' }),
     buildProduct({ slug: 'prop-test', name: 'Prop Test', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/prop-test.png' }),
     buildProduct({ slug: 'testex-xp', name: 'Testex XP', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/testex-xp.png' }),

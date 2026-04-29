@@ -82,7 +82,9 @@
     const body = document.createElement('div');
     const tag = document.createElement('span');
     const title = document.createElement('h3');
+    const subtitle = document.createElement('p');
     const description = document.createElement('p');
+    const subtitleText = product.subtitle || product.presentation;
 
     card.className = `product-card reveal reveal-delay-${(index % 4) + 1}`;
     card.dataset.category = product.category;
@@ -102,9 +104,17 @@
     tag.textContent = categoryLabels[product.category] || product.category;
 
     title.textContent = product.name;
-    description.textContent = product.description;
+    subtitle.className = 'product-card-subtitle';
+    subtitle.textContent = subtitleText || '';
+    description.textContent = product.cardDescription || product.description;
 
-    body.append(tag, title, description);
+    body.append(tag, title);
+
+    if (subtitleText) {
+      body.appendChild(subtitle);
+    }
+
+    body.appendChild(description);
     wrapper.appendChild(body);
     card.appendChild(wrapper);
 
