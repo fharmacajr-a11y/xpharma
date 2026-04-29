@@ -44,7 +44,6 @@
     buildProduct({ slug: 'winstrol-xp', name: 'Winstrol XP', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/winstrol-xp.png' }),
     buildProduct({ slug: 'wintrol', name: 'Wintrol', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/wintrol.png' }),
     buildProduct({ slug: 'bulkstack-xp', name: 'Bulkstack XP', category: 'injectable-blends', imageSrc: 'assets/images/products/injectable-blends/bulkstack-xp.png' }),
-    buildProduct({ slug: 'bulkstak', name: 'Bulkstak', category: 'injectable-blends', imageSrc: 'assets/images/products/injectable-blends/bulkstak.png' }),
     buildProduct({ slug: 'cutstak', name: 'Cutstak', category: 'injectable-blends', imageSrc: 'assets/images/products/injectable-blends/cutstak.png' }),
     buildProduct({ slug: 'pure-blood', name: 'Pure Blood', category: 'injectable-blends', imageSrc: 'assets/images/products/injectable-blends/pure-blood.png' }),
     buildProduct({ slug: 'tri-rage', name: 'Tri-Rage', category: 'injectable-blends', imageSrc: 'assets/images/products/injectable-blends/tri-rage.png' }),
