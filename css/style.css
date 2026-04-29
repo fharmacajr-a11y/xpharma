@@ -706,12 +706,23 @@ section { padding: 100px 0; }
   font-family: var(--font-heading);
   font-size: 1.1rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 .product-card-body p {
   font-size: 0.85rem;
   color: var(--text-secondary);
   line-height: 1.65;
+  margin: 0;
+}
+
+.product-card-subtitle {
+  color: rgba(31, 31, 31, 0.78);
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  margin: 0 0 0.85rem;
+  white-space: normal;
 }
 
 .product-card-link {
