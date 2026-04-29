@@ -64,7 +64,17 @@
       cardDescription: 'Injectable single presentation based on Boldenone Undecylenate, an anabolic-androgenic compound listed for XPharma catalog and commercial reference.',
       detailDescription: 'Boldebol XP is an injectable single presentation based on Boldenone Undecylenate, as identified on the product label. Boldenone Undecylenate is commonly referenced in technical compound references for its androgen receptor activity, anabolic-androgenic profile, and product classification.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, treatment recommendations, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
     }),
-    buildProduct({ slug: 'durateston', name: 'Durateston', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/durateston-xp.png' }),
+    buildProduct({
+      slug: 'durateston',
+      name: 'Durateston',
+      category: 'injectable-singles',
+      imageSrc: 'assets/images/products/injectable-singles/durateston-xp.png',
+      subtitle: 'Testosterone Propionate, Phenylpropionate, Isocaproate, and Decanoate · 250 mg / 10 ml',
+      presentation: '250 mg / 10 ml',
+      activeCompound: 'Testosterone Propionate, Phenylpropionate, Isocaproate, and Decanoate',
+      cardDescription: 'Injectable single presentation based on the multi-component composition identified on the product label and listed for XPharma catalog and commercial reference.',
+      detailDescription: 'Durateston is an injectable single presentation based on the multi-component composition identified on the product label. The label lists 30 mg Testosterone Propionate, 60 mg Phenylpropionate, 60 mg Isocaproate, and 100 mg Decanoate in a 250 mg / 10 ml presentation.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, treatment recommendations, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+    }),
     buildProduct({
       slug: 'finaplix-xp',
       name: 'Finaplix XP',
@@ -121,8 +131,28 @@
       cardDescription: 'Injectable single presentation based on Drostanolone Enanthate, an anabolic-androgenic compound listed for XPharma catalog and commercial reference.',
       detailDescription: 'Masteron Slow 200 is an injectable single presentation based on Drostanolone Enanthate, as identified on the product label. Drostanolone Enanthate is commonly referenced in technical compound references for its androgen receptor activity, anabolic-androgenic profile, and product classification.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, treatment recommendations, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
     }),
-    buildProduct({ slug: 'nadro-rapid-xp', name: 'Nadro Rapid XP', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/nadro-rapid-xp.png' }),
-    buildProduct({ slug: 'nandrobolic', name: 'Nandrobolic', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/nandrobolic.png' }),
+    buildProduct({
+      slug: 'nadro-rapid-xp',
+      name: 'Nandro Rapid XP',
+      category: 'injectable-singles',
+      imageSrc: 'assets/images/products/injectable-singles/nadro-rapid-xp.png',
+      subtitle: 'Nandrolone Phenylpropionate (NPP) · 100 mg / 10 ml',
+      presentation: '100 mg / 10 ml',
+      activeCompound: 'Nandrolone Phenylpropionate (NPP)',
+      cardDescription: 'Injectable single presentation based on Nandrolone Phenylpropionate (NPP), as identified on the product label and listed for XPharma catalog and commercial reference.',
+      detailDescription: 'Nandro Rapid XP is an injectable single presentation based on Nandrolone Phenylpropionate (NPP), as identified on the product label. The label describes a 100 mg / 10 ml presentation for this product.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, treatment recommendations, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+    }),
+    buildProduct({
+      slug: 'nandrobolic',
+      name: 'Nandrobolic',
+      category: 'injectable-singles',
+      imageSrc: 'assets/images/products/injectable-singles/nandrobolic.png',
+      subtitle: 'Nandrolone Decanoate · 200 mg / 10 ml',
+      presentation: '200 mg / 10 ml',
+      activeCompound: 'Nandrolone Decanoate',
+      cardDescription: 'Injectable single presentation based on Nandrolone Decanoate, an anabolic-androgenic compound listed for XPharma catalog and commercial reference.',
+      detailDescription: 'Nandrobolic is an injectable single presentation based on Nandrolone Decanoate, as identified on the product label. Nandrolone Decanoate is commonly referenced in technical compound references for its androgen receptor activity, anabolic-androgenic profile, and product classification.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, treatment recommendations, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+    }),
     buildProduct({
       slug: 'parabolan',
       name: 'Parabolan',
@@ -189,13 +219,83 @@
       cardDescription: 'Injectable single presentation based on 7α-Methyl-19-Nortestosterone, an anabolic-androgenic compound listed for XPharma catalog and commercial reference.',
       detailDescription: 'Trestolona is an injectable single presentation based on 7α-Methyl-19-Nortestosterone, as identified on the product label. 7α-Methyl-19-Nortestosterone is commonly referenced in technical compound references for its androgen receptor activity, anabolic-androgenic profile, and product classification.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, treatment recommendations, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
     }),
-    buildProduct({ slug: 'winstrol', name: 'Winstrol', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/winstrol-20ml.png' }),
-    buildProduct({ slug: 'winstrol-xp', name: 'Winstrol XP', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/winstrol-xp.png' }),
-    buildProduct({ slug: 'wintrol', name: 'Wintrol', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/wintrol.png' }),
-    buildProduct({ slug: 'bulkstack-xp', name: 'Bulkstack XP', category: 'injectable-blends', imageSrc: 'assets/images/products/injectable-blends/bulkstack-xp.png' }),
-    buildProduct({ slug: 'cutstak', name: 'Cutstak', category: 'injectable-blends', imageSrc: 'assets/images/products/injectable-blends/cutstak.png' }),
-    buildProduct({ slug: 'pure-blood', name: 'Pure Blood', category: 'injectable-blends', imageSrc: 'assets/images/products/injectable-blends/pure-blood.png' }),
-    buildProduct({ slug: 'tri-rage', name: 'Tri-Rage', category: 'injectable-blends', imageSrc: 'assets/images/products/injectable-blends/tri-rage.png' }),
+    buildProduct({
+      slug: 'winstrol',
+      name: 'Winstrol XP',
+      category: 'injectable-singles',
+      imageSrc: 'assets/images/products/injectable-singles/winstrol-20ml.png',
+      subtitle: 'Stanozolol · 50 mg / 20 ml',
+      presentation: '50 mg / 20 ml',
+      activeCompound: 'Stanozolol',
+      cardDescription: 'Injectable single presentation based on Stanozolol, an anabolic-androgenic compound listed for XPharma catalog and commercial reference.',
+      detailDescription: 'Winstrol XP is an injectable single presentation based on Stanozolol, as identified on the product label. The label describes a depot oil presentation in a 50 mg / 20 ml format.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, treatment recommendations, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+    }),
+    buildProduct({
+      slug: 'winstrol-xp',
+      name: 'Winstrol XP',
+      category: 'injectable-singles',
+      imageSrc: 'assets/images/products/injectable-singles/winstrol-xp.png',
+      subtitle: 'Stanozolol · 50 mg / 30 ml',
+      presentation: '50 mg / 30 ml',
+      activeCompound: 'Stanozolol',
+      cardDescription: 'Injectable single presentation based on Stanozolol, an anabolic-androgenic compound listed for XPharma catalog and commercial reference.',
+      detailDescription: 'Winstrol XP is an injectable single presentation based on Stanozolol, as identified on the product label. The label describes a depot oil presentation in a 50 mg / 30 ml format. Stanozolol is commonly referenced in technical compound references for its androgen receptor activity, anabolic-androgenic profile, and product classification.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, treatment recommendations, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+    }),
+    buildProduct({
+      slug: 'wintrol',
+      name: 'Winstrol XP',
+      category: 'injectable-singles',
+      imageSrc: 'assets/images/products/injectable-singles/wintrol.png',
+      subtitle: 'Stanozolol · 100 mg / 30 ml',
+      presentation: '100 mg / 30 ml',
+      activeCompound: 'Stanozolol',
+      cardDescription: 'Injectable single presentation based on Stanozolol, an anabolic-androgenic compound listed for XPharma catalog and commercial reference.',
+      detailDescription: 'Winstrol XP is an injectable single presentation based on Stanozolol, as identified on the product label. The label describes a depot oil presentation in a 100 mg / 30 ml format.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, treatment recommendations, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+    }),
+    buildProduct({
+      slug: 'bulkstack-xp',
+      name: 'Bulkstack XP',
+      category: 'injectable-blends',
+      imageSrc: 'assets/images/products/injectable-blends/bulkstack-xp.png',
+      subtitle: 'Testosterone Cipionate, Nandrolone Decanoate, Boldenone Undecylenate · 300 mg / 10 ml',
+      presentation: '300 mg / 10 ml',
+      activeCompound: 'Testosterone Cipionate, Nandrolone Decanoate, Boldenone Undecylenate',
+      cardDescription: 'Injectable blend presentation based on Testosterone Cipionate, Nandrolone Decanoate, and Boldenone Undecylenate, anabolic-androgenic compounds listed for XPharma catalog and commercial reference.',
+      detailDescription: 'Bulkstack XP is an injectable blend presentation based on Testosterone Cipionate, Nandrolone Decanoate, and Boldenone Undecylenate, as identified on the product label. The label describes a combined composition of 100 mg Testosterone Cipionate, 100 mg Nandrolone Decanoate, and 100 mg Boldenone Undecylenate in a 300 mg / 10 ml presentation. These compounds are commonly referenced in technical compound references for androgen receptor activity, anabolic-androgenic profile, and blend classification.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, treatment recommendations, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+    }),
+    buildProduct({
+      slug: 'cutstak',
+      name: 'Cutstak',
+      category: 'injectable-blends',
+      imageSrc: 'assets/images/products/injectable-blends/cutstak.png',
+      subtitle: 'Testosterone Propionate, Trenbolone Acetate, Drostanolone Propionate · 200 mg / 10 ml',
+      presentation: '200 mg / 10 ml',
+      activeCompound: 'Testosterone Propionate, Trenbolone Acetate, Drostanolone Propionate',
+      cardDescription: 'Injectable blend presentation based on Testosterone Propionate, Trenbolone Acetate, and Drostanolone Propionate, anabolic-androgenic compounds listed for XPharma catalog and commercial reference.',
+      detailDescription: 'Cutstak is an injectable blend presentation based on Testosterone Propionate, Trenbolone Acetate, and Drostanolone Propionate, as identified on the product label. The label describes a combined composition of 100 mg Testosterone Propionate, 50 mg Trenbolone Acetate, and 50 mg Drostanolone Propionate in a 200 mg / 10 ml presentation. These compounds are commonly referenced in technical compound references for androgen receptor activity, anabolic-androgenic profile, and blend classification.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, treatment recommendations, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+    }),
+    buildProduct({
+      slug: 'pure-blood',
+      name: 'Pure Blood',
+      category: 'injectable-blends',
+      imageSrc: 'assets/images/products/injectable-blends/pure-blood.png',
+      subtitle: 'Trenbolone Enanthate, Nandrolone Decanoate, Testosterone Enanthate · 300 mg / 10 ml',
+      presentation: '300 mg / 10 ml',
+      activeCompound: 'Trenbolone Enanthate, Nandrolone Decanoate, Testosterone Enanthate',
+      cardDescription: 'Injectable blend presentation based on Trenbolone Enanthate, Nandrolone Decanoate, and Testosterone Enanthate, anabolic-androgenic compounds listed for XPharma catalog and commercial reference.',
+      detailDescription: 'Pure Blood is an injectable blend presentation based on Trenbolone Enanthate, Nandrolone Decanoate, and Testosterone Enanthate, as identified on the product label. The label describes a combined composition of 100 mg Trenbolone Enanthate, 50 mg Nandrolone Decanoate, and 150 mg Testosterone Enanthate in a 300 mg / 10 ml presentation. These compounds are commonly referenced in technical compound references for androgen receptor activity, anabolic-androgenic profile, and blend classification.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, treatment recommendations, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+    }),
+    buildProduct({
+      slug: 'tri-rage',
+      name: 'Tri-Rage',
+      category: 'injectable-blends',
+      imageSrc: 'assets/images/products/injectable-blends/tri-rage.png',
+      subtitle: 'Stanozolol Depot, Testosterone Propionate, Trenbolone Acetate · 250 mg / 10 ml',
+      presentation: '250 mg / 10 ml',
+      activeCompound: 'Stanozolol Depot, Testosterone Propionate, Trenbolone Acetate',
+      cardDescription: 'Injectable blend presentation based on Stanozolol Depot, Testosterone Propionate, and Trenbolone Acetate, anabolic-androgenic compounds listed for XPharma catalog and commercial reference.',
+      detailDescription: 'Tri-Rage is an injectable blend presentation based on Stanozolol Depot, Testosterone Propionate, and Trenbolone Acetate, as identified on the product label. The label describes a combined composition of 50 mg Stanozolol Depot, 100 mg Testosterone Propionate, and 100 mg Trenbolone Acetate in a 250 mg / 10 ml presentation. These compounds are commonly referenced in technical compound references for androgen receptor activity, anabolic-androgenic profile, and blend classification.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, treatment recommendations, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+    }),
     buildProduct({
       slug: 'anadrol-xp',
       name: 'Anadrol XP',
