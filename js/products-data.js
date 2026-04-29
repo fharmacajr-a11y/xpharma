@@ -98,8 +98,29 @@
       cardDescription: 'Injectable single presentation based on Drostanolone Propionate, an anabolic-androgenic compound listed for XPharma catalog and commercial reference.',
       detailDescription: 'Masteron is an injectable single presentation based on Drostanolone Propionate, as identified on the product label. Drostanolone Propionate is commonly referenced in technical compound references for its androgen receptor activity, anabolic-androgenic profile, and product classification.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, treatment recommendations, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
     }),
-    buildProduct({ slug: 'masteron-slow', name: 'Masteron Slow', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/masteron-slow.png' }),
-    buildProduct({ slug: 'masteron-slow-200', name: 'Masteron Slow 200', altName: 'Masteron Slow', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/masteron-slow-200.png' }),
+    buildProduct({
+      slug: 'masteron-slow',
+      name: 'Masteron Slow',
+      category: 'injectable-singles',
+      imageSrc: 'assets/images/products/injectable-singles/masteron-slow.png',
+      subtitle: 'Drostanolone Enanthate · 100 mg / 10 ml',
+      presentation: '100 mg / 10 ml',
+      activeCompound: 'Drostanolone Enanthate',
+      cardDescription: 'Injectable single presentation based on Drostanolone Enanthate, an anabolic-androgenic compound listed for XPharma catalog and commercial reference.',
+      detailDescription: 'Masteron Slow is an injectable single presentation based on Drostanolone Enanthate, as identified on the product label. Drostanolone Enanthate is commonly referenced in technical compound references for its androgen receptor activity, anabolic-androgenic profile, and product classification.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, treatment recommendations, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+    }),
+    buildProduct({
+      slug: 'masteron-slow-200',
+      name: 'Masteron Slow 200',
+      altName: 'Masteron Slow',
+      category: 'injectable-singles',
+      imageSrc: 'assets/images/products/injectable-singles/masteron-slow-200.png',
+      subtitle: 'Drostanolone Enanthate · 200 mg / 10 ml',
+      presentation: '200 mg / 10 ml',
+      activeCompound: 'Drostanolone Enanthate',
+      cardDescription: 'Injectable single presentation based on Drostanolone Enanthate, an anabolic-androgenic compound listed for XPharma catalog and commercial reference.',
+      detailDescription: 'Masteron Slow 200 is an injectable single presentation based on Drostanolone Enanthate, as identified on the product label. Drostanolone Enanthate is commonly referenced in technical compound references for its androgen receptor activity, anabolic-androgenic profile, and product classification.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, treatment recommendations, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+    }),
     buildProduct({ slug: 'nadro-rapid-xp', name: 'Nadro Rapid XP', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/nadro-rapid-xp.png' }),
     buildProduct({ slug: 'nandrobolic', name: 'Nandrobolic', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/nandrobolic.png' }),
     buildProduct({
@@ -135,9 +156,39 @@
       cardDescription: 'Injectable single presentation based on Testosterone Propionate, an anabolic-androgenic compound listed for XPharma catalog and commercial reference.',
       detailDescription: 'Prop Test is an injectable single presentation based on Testosterone Propionate, as identified on the product label. Testosterone Propionate is commonly referenced in technical compound references for its androgen receptor activity, anabolic-androgenic profile, and product classification.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, treatment recommendations, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
     }),
-    buildProduct({ slug: 'testex-xp', name: 'Testex XP', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/testex-xp.png' }),
-    buildProduct({ slug: 'testoviron', name: 'Testoviron', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/testoviron.png' }),
-    buildProduct({ slug: 'trestolona', name: 'Trestolona', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/trestolona.png' }),
+    buildProduct({
+      slug: 'testex-xp',
+      name: 'Testex XP',
+      category: 'injectable-singles',
+      imageSrc: 'assets/images/products/injectable-singles/testex-xp.png',
+      subtitle: 'Testosterone Cipionate · 200 mg / 10 ml',
+      presentation: '200 mg / 10 ml',
+      activeCompound: 'Testosterone Cipionate',
+      cardDescription: 'Injectable single presentation based on Testosterone Cipionate, an anabolic-androgenic compound listed for XPharma catalog and commercial reference.',
+      detailDescription: 'Testex XP is an injectable single presentation based on Testosterone Cipionate, as identified on the product label. Testosterone Cipionate is commonly referenced in technical compound references for its androgen receptor activity, anabolic-androgenic profile, and product classification.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, treatment recommendations, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+    }),
+    buildProduct({
+      slug: 'testoviron',
+      name: 'Testoviron',
+      category: 'injectable-singles',
+      imageSrc: 'assets/images/products/injectable-singles/testoviron.png',
+      subtitle: 'Testosterone Enanthate · 250 mg / 10 ml',
+      presentation: '250 mg / 10 ml',
+      activeCompound: 'Testosterone Enanthate',
+      cardDescription: 'Injectable single presentation based on Testosterone Enanthate, an anabolic-androgenic compound listed for XPharma catalog and commercial reference.',
+      detailDescription: 'Testoviron is an injectable single presentation based on Testosterone Enanthate, as identified on the product label. Testosterone Enanthate is commonly referenced in technical compound references for its androgen receptor activity, anabolic-androgenic profile, and product classification.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, treatment recommendations, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+    }),
+    buildProduct({
+      slug: 'trestolona',
+      name: 'Trestolona',
+      category: 'injectable-singles',
+      imageSrc: 'assets/images/products/injectable-singles/trestolona.png',
+      subtitle: '7α-Methyl-19-Nortestosterone · 50 mg / 10 ml',
+      presentation: '50 mg / 10 ml',
+      activeCompound: '7α-Methyl-19-Nortestosterone',
+      cardDescription: 'Injectable single presentation based on 7α-Methyl-19-Nortestosterone, an anabolic-androgenic compound listed for XPharma catalog and commercial reference.',
+      detailDescription: 'Trestolona is an injectable single presentation based on 7α-Methyl-19-Nortestosterone, as identified on the product label. 7α-Methyl-19-Nortestosterone is commonly referenced in technical compound references for its androgen receptor activity, anabolic-androgenic profile, and product classification.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, treatment recommendations, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+    }),
     buildProduct({ slug: 'winstrol', name: 'Winstrol', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/winstrol-20ml.png' }),
     buildProduct({ slug: 'winstrol-xp', name: 'Winstrol XP', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/winstrol-xp.png' }),
     buildProduct({ slug: 'wintrol', name: 'Wintrol', category: 'injectable-singles', imageSrc: 'assets/images/products/injectable-singles/wintrol.png' }),
