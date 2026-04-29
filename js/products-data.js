@@ -306,7 +306,7 @@
       presentation: '50 mg / 30 capsules',
       activeCompound: 'Oxymetholone',
       cardDescription: 'Oral hormone presentation based on Oxymetholone, a compound listed for XPharma catalog and commercial reference.',
-      detailDescription: 'Anadrol XP is an oral product presentation based on Oxymetholone, as identified on the product label and listed for XPharma catalog and commercial reference.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+      detailDescription: 'Anadrol XP is an oral hormone presentation based on Oxymetholone, as identified on the product label. Oxymetholone is commonly referenced in technical steroid literature as a 17-alpha-alkylated anabolic-androgenic compound, a classification used for compound identification and catalog reference.\n\nThe label identifies a 50 mg / 30 capsules presentation for this listing. This product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, labeling, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
     }),
     buildProduct({
       slug: 'dianabol',
@@ -318,7 +318,7 @@
       presentation: '10 mg / 100 capsules',
       activeCompound: 'Methandrostenolone',
       cardDescription: 'Oral hormone presentation based on Methandrostenolone, a compound listed for XPharma catalog and commercial reference.',
-      detailDescription: 'Dianabol is an oral product presentation based on Methandrostenolone, as identified on the product label and listed for XPharma catalog and commercial reference.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+      detailDescription: 'Dianabol is an oral hormone presentation based on Methandrostenolone, as identified on the product label. Methandrostenolone is commonly referenced in technical steroid literature as a 17-alpha-alkylated anabolic-androgenic compound, a classification used for compound identification and product differentiation.\n\nThe label identifies a 10 mg / 100 capsules presentation for this listing. This product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, labeling, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
     }),
     buildProduct({
       slug: 'oxandrol-xp-5mg',
@@ -330,7 +330,7 @@
       presentation: '5 mg / 100 capsules',
       activeCompound: 'Oxandrolone',
       cardDescription: 'Oral hormone presentation based on Oxandrolone, a compound listed for XPharma catalog and commercial reference.',
-      detailDescription: 'Oxandrol XP is an oral product presentation based on Oxandrolone, as identified on the product label and listed for XPharma catalog and commercial reference.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+      detailDescription: 'Oxandrol XP is an oral hormone presentation based on Oxandrolone, as identified on the product label. Oxandrolone is commonly referenced in technical steroid literature as a dihydrotestosterone-derived, 17-alpha-alkylated anabolic-androgenic compound, a classification used for compound identification and catalog reference.\n\nThe label identifies a 5 mg / 100 capsules presentation for this listing. This product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, labeling, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
     }),
     buildProduct({
       slug: 'oxandrol-xp-10mg',
@@ -342,7 +342,7 @@
       presentation: '10 mg / 100 capsules',
       activeCompound: 'Oxandrolone',
       cardDescription: 'Oral hormone presentation based on Oxandrolone, a compound listed for XPharma catalog and commercial reference.',
-      detailDescription: 'Oxandrol XP is an oral product presentation based on Oxandrolone, as identified on the product label and listed for XPharma catalog and commercial reference.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+      detailDescription: 'Oxandrol XP is an oral hormone presentation based on Oxandrolone, as identified on the product label. Oxandrolone is commonly referenced in technical steroid literature as a dihydrotestosterone-derived, 17-alpha-alkylated anabolic-androgenic compound, a classification used for compound identification and catalog reference.\n\nThe label identifies a 10 mg / 100 capsules presentation for this listing. This product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, labeling, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
     }),
     buildProduct({
       slug: 'oxandrol-xp-20mg',
@@ -354,7 +354,7 @@
       presentation: '20 mg / 100 capsules',
       activeCompound: 'Oxandrolone',
       cardDescription: 'Oral hormone presentation based on Oxandrolone, a compound listed for XPharma catalog and commercial reference.',
-      detailDescription: 'Oxandrol XP is an oral product presentation based on Oxandrolone, as identified on the product label and listed for XPharma catalog and commercial reference.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+      detailDescription: 'Oxandrol XP is an oral hormone presentation based on Oxandrolone, as identified on the product label. Oxandrolone is commonly referenced in technical steroid literature as a dihydrotestosterone-derived, 17-alpha-alkylated anabolic-androgenic compound, a classification used for compound identification and catalog reference.\n\nThe label identifies a 20 mg / 100 capsules presentation for this listing. This product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, labeling, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
     }),
     buildProduct({
       slug: 'test-prop-xp',
@@ -366,7 +366,7 @@
       presentation: '10 mg / 100 capsules',
       activeCompound: 'Testosterone Propionate',
       cardDescription: 'Oral hormone presentation based on Testosterone Propionate, a compound listed for XPharma catalog and commercial reference.',
-      detailDescription: 'Test Prop XP is an oral product presentation based on Testosterone Propionate, as identified on the product label and listed for XPharma catalog and commercial reference.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+      detailDescription: 'Test Prop XP is an oral hormone presentation based on Testosterone Propionate, as identified on the product label. Testosterone Propionate is commonly classified in technical compound literature as an esterified testosterone compound, and this listing follows the label identification used for product classification and catalog reference.\n\nThe label identifies a 10 mg / 100 capsules presentation for this listing. This product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, labeling, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
     }),
     buildProduct({
       slug: 'winstrol-oral',
@@ -378,7 +378,7 @@
       presentation: '10 mg / 100 capsules',
       activeCompound: 'Stanozolol',
       cardDescription: 'Oral hormone presentation based on Stanozolol, a compound listed for XPharma catalog and commercial reference.',
-      detailDescription: 'Winstrol XP is an oral product presentation based on Stanozolol, as identified on the product label and listed for XPharma catalog and commercial reference.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+      detailDescription: 'Winstrol XP is an oral hormone presentation based on Stanozolol, as identified on the product label. Stanozolol is commonly referenced in technical steroid literature as a synthetic anabolic-androgenic compound, a classification used for stanozolol-based product identification and label review.\n\nThe label identifies a 10 mg / 100 capsules presentation for this listing. This product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, labeling, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
     }),
     buildProduct({
       slug: 'arimidex',
@@ -390,7 +390,7 @@
       presentation: '1 mg / 30 capsules',
       activeCompound: 'Anastrozole',
       cardDescription: 'Oral pharmaceutical presentation based on Anastrozole, a compound listed for XPharma catalog and commercial reference.',
-      detailDescription: 'Arimidex is an oral product presentation based on Anastrozole, as identified on the product label and listed for XPharma catalog and commercial reference.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+      detailDescription: 'Arimidex is an oral pharmaceutical presentation based on Anastrozole, as identified on the product label. Anastrozole is commonly classified in pharmaceutical literature as a nonsteroidal aromatase inhibitor, a designation used for ingredient identification and category reference.\n\nThe label identifies a 1 mg / 30 capsules presentation for this listing. This product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, labeling, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
     }),
     buildProduct({
       slug: 'cialis-xp',
@@ -402,7 +402,7 @@
       presentation: '20 mg / 30 capsules',
       activeCompound: 'Tadalafil',
       cardDescription: 'Oral pharmaceutical presentation based on Tadalafil, a compound listed for XPharma catalog and commercial reference.',
-      detailDescription: 'Cialis XP is an oral product presentation based on Tadalafil, as identified on the product label and listed for XPharma catalog and commercial reference.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+      detailDescription: 'Cialis XP is an oral pharmaceutical presentation based on Tadalafil, as identified on the product label. Tadalafil is commonly classified in pharmaceutical literature as a phosphodiesterase type 5 inhibitor, a designation used for compound identification and commercial reference.\n\nThe label identifies a 20 mg / 30 capsules presentation for this listing. This product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, labeling, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
     }),
     buildProduct({
       slug: 'clomid-xp',
@@ -414,7 +414,7 @@
       presentation: '50 mg / 30 capsules',
       activeCompound: 'Clomiphene',
       cardDescription: 'Oral pharmaceutical presentation based on Clomiphene, a compound listed for XPharma catalog and commercial reference.',
-      detailDescription: 'Clomid XP is an oral product presentation based on Clomiphene, as identified on the product label and listed for XPharma catalog and commercial reference.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+      detailDescription: 'Clomid XP is an oral pharmaceutical presentation based on Clomiphene, as identified on the product label. Clomiphene is commonly referenced in pharmaceutical literature as a selective estrogen receptor modulator, a classification used for ingredient identification and label review.\n\nThe label identifies a 50 mg / 30 capsules presentation for this listing. This product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, labeling, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
     }),
     buildProduct({
       slug: 'desobesi-m-xp',
@@ -426,7 +426,7 @@
       presentation: '25 mg / 30 capsules',
       activeCompound: 'Femproporex',
       cardDescription: 'Oral pharmaceutical presentation based on Femproporex, a compound listed for XPharma catalog and commercial reference.',
-      detailDescription: 'Desobesi-M XP is an oral product presentation based on Femproporex, as identified on the product label and listed for XPharma catalog and commercial reference.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+      detailDescription: 'Desobesi-M XP is an oral pharmaceutical presentation based on Femproporex, as identified on the product label. Femproporex is commonly referenced in pharmaceutical and regulatory literature as a substituted amphetamine derivative, a classification used for compound identification and documentation reference.\n\nThe label identifies a 25 mg / 30 capsules presentation for this listing. This product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, labeling, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
     }),
     buildProduct({
       slug: 'letrozol-2-5-xp',
@@ -438,7 +438,7 @@
       presentation: '2.5 mg / 30 capsules',
       activeCompound: 'Letrozole',
       cardDescription: 'Oral pharmaceutical presentation based on Letrozole, a compound listed for XPharma catalog and commercial reference.',
-      detailDescription: 'Letrozol 2.5 XP is an oral product presentation based on Letrozole, as identified on the product label and listed for XPharma catalog and commercial reference.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+      detailDescription: 'Letrozol 2.5 XP is an oral pharmaceutical presentation based on Letrozole, as identified on the product label. Letrozole is commonly classified in pharmaceutical literature as a nonsteroidal aromatase inhibitor, a designation used for ingredient identification and category reference.\n\nThe label identifies a 2.5 mg / 30 capsules presentation for this listing. This product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, labeling, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
     }),
     buildProduct({
       slug: 'proviron',
@@ -450,7 +450,7 @@
       presentation: '25 mg / 30 capsules',
       activeCompound: 'Mesterolone',
       cardDescription: 'Oral pharmaceutical presentation based on Mesterolone, a compound listed for XPharma catalog and commercial reference.',
-      detailDescription: 'Proviron is an oral product presentation based on Mesterolone, as identified on the product label and listed for XPharma catalog and commercial reference.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+      detailDescription: 'Proviron is an oral pharmaceutical presentation based on Mesterolone, as identified on the product label. Mesterolone is commonly referenced in technical steroid literature as a dihydrotestosterone-derived androgenic compound, a classification used for product identification and catalog reference.\n\nThe label identifies a 25 mg / 30 capsules presentation for this listing. This product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, labeling, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
     }),
     buildProduct({
       slug: 'silimalon-xp',
@@ -462,7 +462,7 @@
       presentation: '300 mg / 30 capsules',
       activeCompound: 'Silymarin',
       cardDescription: 'Oral pharmaceutical presentation based on Silymarin, a compound listed for XPharma catalog and commercial reference.',
-      detailDescription: 'Silimalon XP is an oral product presentation based on Silymarin, as identified on the product label and listed for XPharma catalog and commercial reference.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+      detailDescription: 'Silimalon XP is an oral pharmaceutical presentation based on Silymarin, as identified on the product label. Silymarin is commonly referenced in botanical and pharmaceutical literature as a flavonolignan complex derived from Silybum marianum, a classification used for ingredient identification and formulation reference.\n\nThe label identifies a 300 mg / 30 capsules presentation for this listing. This product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, labeling, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
     }),
     buildProduct({
       slug: 'tamox-20-xp',
@@ -474,7 +474,7 @@
       presentation: '20 mg / 30 capsules',
       activeCompound: 'Tamoxifen',
       cardDescription: 'Oral pharmaceutical presentation based on Tamoxifen, a compound listed for XPharma catalog and commercial reference.',
-      detailDescription: 'Tamox 20 XP is an oral product presentation based on Tamoxifen, as identified on the product label and listed for XPharma catalog and commercial reference.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+      detailDescription: 'Tamox 20 XP is an oral pharmaceutical presentation based on Tamoxifen, as identified on the product label. Tamoxifen is commonly referenced in pharmaceutical literature as a selective estrogen receptor modulator, a classification used for ingredient identification and label review.\n\nThe label identifies a 20 mg / 30 capsules presentation for this listing. This product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, labeling, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
     }),
     buildProduct({
       slug: 'citomel',
@@ -486,7 +486,7 @@
       presentation: '25 mcg / 60 capsules',
       activeCompound: 'Triiodothyronine (T3)',
       cardDescription: 'Oral thyroid hormone presentation based on Triiodothyronine (T3), a compound listed for XPharma catalog and commercial reference.',
-      detailDescription: 'Citomel is an oral product presentation based on Triiodothyronine (T3), as identified on the product label and listed for XPharma catalog and commercial reference.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+      detailDescription: 'Citomel is an oral thyroid hormone presentation based on Triiodothyronine (T3), as identified on the product label. Triiodothyronine is commonly referenced in endocrine literature as the active triiodothyronine form within thyroid hormone classification, a designation used for compound identification and catalog reference.\n\nThe label identifies a 25 mcg / 60 capsules presentation for this listing. This product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, labeling, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
     }),
     buildProduct({
       slug: 't4-xp',
@@ -498,7 +498,7 @@
       presentation: '50 mcg / 60 capsules',
       activeCompound: 'Thyroxine',
       cardDescription: 'Oral thyroid hormone presentation based on Thyroxine, a compound listed for XPharma catalog and commercial reference.',
-      detailDescription: 'T4 XP is an oral product presentation based on Thyroxine, as identified on the product label and listed for XPharma catalog and commercial reference.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+      detailDescription: 'T4 XP is an oral thyroid hormone presentation based on Thyroxine, as identified on the product label. Thyroxine is commonly referenced in endocrine literature as a tetraiodinated thyroid hormone within iodothyronine classification, a designation used for compound identification and catalog reference.\n\nThe label identifies a 50 mcg / 60 capsules presentation for this listing. This product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, labeling, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
     })
   ];
 }());
