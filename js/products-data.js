@@ -121,7 +121,7 @@
     }),
     buildProduct({
       slug: 'masteron-slow-200',
-      name: 'Masteron Slow 200',
+      name: 'Masteron Slow',
       altName: 'Masteron Slow',
       category: 'injectable-singles',
       imageSrc: 'assets/images/products/injectable-singles/masteron-slow-200.png',
@@ -129,7 +129,7 @@
       presentation: '200 mg / 10 ml',
       activeCompound: 'Drostanolone Enanthate',
       cardDescription: 'Injectable single presentation based on Drostanolone Enanthate, an anabolic-androgenic compound listed for XPharma catalog and commercial reference.',
-      detailDescription: 'Masteron Slow 200 is an injectable single presentation based on Drostanolone Enanthate, as identified on the product label. Drostanolone Enanthate is commonly referenced in technical compound references for its androgen receptor activity, anabolic-androgenic profile, and product classification.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+      detailDescription: 'Masteron Slow is an injectable single presentation based on Drostanolone Enanthate, as identified on the product label. The label describes a 200 mg / 10 ml presentation for this product. Drostanolone Enanthate is commonly referenced in technical compound references for its androgen receptor activity, anabolic-androgenic profile, and product classification.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
     }),
     buildProduct({
       slug: 'nadro-rapid-xp',
@@ -210,14 +210,14 @@
     }),
     buildProduct({
       slug: 'trestolona',
-      name: 'Trestolona',
+      name: '(MENT) - TRESTOLONA',
       category: 'injectable-singles',
       imageSrc: 'assets/images/products/injectable-singles/trestolona.png',
       subtitle: '7α-Methyl-19-Nortestosterone · 50 mg / 10 ml',
       presentation: '50 mg / 10 ml',
       activeCompound: '7α-Methyl-19-Nortestosterone',
       cardDescription: 'Injectable single presentation based on 7α-Methyl-19-Nortestosterone, an anabolic-androgenic compound listed for XPharma catalog and commercial reference.',
-      detailDescription: 'Trestolona is an injectable single presentation based on 7α-Methyl-19-Nortestosterone, as identified on the product label. 7α-Methyl-19-Nortestosterone is commonly referenced in technical compound references for its androgen receptor activity, anabolic-androgenic profile, and product classification.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+      detailDescription: '(MENT) - TRESTOLONA is an injectable single presentation based on 7α-Methyl-19-Nortestosterone, as identified on the product label. 7α-Methyl-19-Nortestosterone is commonly referenced in technical compound references for its androgen receptor activity, anabolic-androgenic profile, and product classification.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
     }),
     buildProduct({
       slug: 'winstrol',
