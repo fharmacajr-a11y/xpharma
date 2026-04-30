@@ -233,6 +233,7 @@ select:focus-visible {
   justify-content: space-between;
   gap: 1rem;
   width: 100%;
+  min-width: 0;
 }
 
 .nav-logo {
@@ -303,15 +304,26 @@ select:focus-visible {
 .nav-toggle {
   display: none;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 5px;
   width: 28px;
+  min-width: 44px;
+  min-height: 44px;
   padding: 4px;
-  background: none;
-  border: none;
+  background: rgba(255,255,255,0.96);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 10px 22px rgba(82,0,6,0.08);
   cursor: pointer;
+  flex-shrink: 0;
+  margin-left: auto;
+  position: relative;
+  z-index: 1001;
 }
 .nav-toggle span {
   display: block;
+  width: 100%;
   height: 2px;
   border-radius: 2px;
   background: var(--red-700);
@@ -336,6 +348,8 @@ select:focus-visible {
   z-index: 999;
   flex-direction: column;
   gap: 0;
+  max-height: calc(100vh - var(--nav-h));
+  overflow-y: auto;
 }
 .nav-mobile.open { display: flex; }
 .nav-mobile a {
@@ -1160,26 +1174,38 @@ section { padding: 100px 0; }
   border-bottom: 1px solid var(--border);
   text-align: center;
 }
+.page-hero .container {
+  min-width: 0;
+}
 .page-hero h1 {
   font-family: var(--font-heading);
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 900;
+  line-height: 1.15;
   margin-bottom: 0.75rem;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 .page-hero p {
   color: var(--text-secondary);
   font-size: 1.05rem;
   max-width: 540px;
   margin-inline: auto;
+  max-width: min(100%, 540px);
+  overflow-wrap: anywhere;
 }
 .breadcrumb {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 0.5rem;
   font-size: 0.8rem;
   color: var(--text-muted);
   margin-bottom: 1.5rem;
+}
+.breadcrumb > * {
+  min-width: 0;
 }
 .breadcrumb a { color: var(--red-600); }
 .breadcrumb span { color: var(--text-muted); }
@@ -1446,8 +1472,17 @@ section { padding: 100px 0; }
 
   section { padding: 72px 0; }
 
+  .nav-inner {
+    position: relative;
+    justify-content: flex-start;
+    gap: 0.75rem;
+  }
+
+  .nav-logo {
+    max-width: calc(100% - 64px);
+  }
   .brand-logo {
-    max-width: min(220px, calc(100vw - 120px));
+    max-width: min(220px, calc(100vw - 96px));
   }
   .brand-logo-img { height: 40px; }
   .hero-product-image { width: 100%; }
@@ -1462,7 +1497,28 @@ section { padding: 100px 0; }
   }
 
   .nav-links, .nav-cta { display: none; }
-  .nav-toggle { display: flex; }
+  .nav-toggle {
+    display: inline-flex;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  .page-hero {
+    padding: calc(var(--nav-h) + 3rem) 0 3rem;
+  }
+  .page-hero h1 {
+    font-size: clamp(1.8rem, 7vw, 2.6rem);
+  }
+  .page-hero p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+  .breadcrumb {
+    row-gap: 0.35rem;
+    margin-bottom: 1rem;
+  }
 
   .hero-stats {
     flex-wrap: wrap;
@@ -1496,10 +1552,51 @@ section { padding: 100px 0; }
 }
 
 @media (max-width: 480px) {
-  .brand-logo {
-    max-width: min(190px, calc(100vw - 110px));
+  .nav-logo {
+    max-width: calc(100% - 56px);
   }
-  .brand-logo-img { height: 36px; }
+  .brand-logo {
+    max-width: min(170px, calc(100vw - 84px));
+  }
+  .brand-logo-img { height: 32px; }
+
+  .nav-toggle {
+    min-width: 40px;
+    min-height: 40px;
+    padding: 6px;
+  }
+
+  .page-hero {
+    padding: calc(var(--nav-h) + 2.5rem) 0 2.5rem;
+  }
+  .page-hero:not(.product-page-hero) h1 {
+    width: min(100%, 11ch);
+    margin-inline: auto;
+  }
+  .product-page-hero h1 {
+    width: min(100%, 16ch);
+    margin-inline: auto;
+  }
+  .page-hero h1 {
+    font-size: clamp(1.55rem, 8vw, 2.15rem);
+    line-height: 1.12;
+    text-wrap: balance;
+  }
+  .page-hero:not(.product-page-hero) p {
+    width: min(100%, 32ch);
+    margin-inline: auto;
+  }
+  .product-page-hero p {
+    width: min(100%, 30ch);
+    margin-inline: auto;
+  }
+  .page-hero p {
+    font-size: 0.95rem;
+  }
+  .breadcrumb {
+    font-size: 0.74rem;
+    gap: 0.35rem;
+  }
 
   .hero-product-visual { margin-top: 2rem; }
 
