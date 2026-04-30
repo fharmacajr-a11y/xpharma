@@ -53,6 +53,23 @@
     return `${href.pathname}${href.search}${href.hash}`;
   }
 
+  function appendSpecItem(container, label, value) {
+    if (!value) {
+      return;
+    }
+
+    const item = document.createElement('div');
+    const term = document.createElement('dt');
+    const description = document.createElement('dd');
+
+    item.className = 'product-detail-spec';
+    term.textContent = label;
+    description.textContent = value;
+
+    item.append(term, description);
+    container.appendChild(item);
+  }
+
   function createPlaceholder(product) {
     const placeholder = document.createElement('div');
     const icon = document.createElement('span');
@@ -112,6 +129,8 @@
   }
 
   function renderNotFound() {
+    const catalogHref = getCatalogHref();
+
     document.title = 'Product Not Found | XPharma';
 
     if (titleEl) {
@@ -132,7 +151,7 @@
       '<h2 id="product-detail-title">This product could not be found.</h2>',
       '<p>Please return to the catalog to review the currently available product presentations or contact the team for official guidance.</p>',
       '<div class="product-actions">',
-      '<a href="products.html" class="btn btn-primary">Back to Catalog</a>',
+      `<a href="${catalogHref}" class="btn btn-primary">Back to Catalog</a>`,
       '<a href="contact.html" class="btn btn-outline">Contact Us</a>',
       '</div>',
       '</div>'
@@ -147,7 +166,7 @@
     const panel = document.createElement('div');
     const tag = document.createElement('span');
     const heading = document.createElement('h2');
-    const meta = document.createElement('div');
+    const specs = document.createElement('dl');
     const description = document.createElement('div');
     const actions = document.createElement('div');
     const contactLink = document.createElement('a');
@@ -182,19 +201,9 @@
     heading.id = 'product-detail-title';
     heading.textContent = product.name;
 
-    meta.className = 'product-detail-meta';
-
-    if (product.activeCompound) {
-      const compoundLine = document.createElement('p');
-      compoundLine.textContent = `Active compound: ${product.activeCompound}`;
-      meta.appendChild(compoundLine);
-    }
-
-    if (product.presentation) {
-      const presentationLine = document.createElement('p');
-      presentationLine.textContent = `Presentation: ${product.presentation}`;
-      meta.appendChild(presentationLine);
-    }
+    specs.className = 'product-detail-specs';
+    appendSpecItem(specs, 'Active compound', product.activeCompound);
+    appendSpecItem(specs, 'Presentation', product.presentation);
 
     description.className = 'product-detail-description';
     appendDescriptionContent(description, detailDescription);
@@ -212,8 +221,8 @@
     actions.append(contactLink, backLink);
     panel.append(tag, heading);
 
-    if (meta.childElementCount > 0) {
-      panel.appendChild(meta);
+    if (specs.childElementCount > 0) {
+      panel.appendChild(specs);
     }
 
     panel.append(description, actions);
