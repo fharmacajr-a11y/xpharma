@@ -34,15 +34,23 @@
     'oral-pharmaceuticals',
     'oral-thyroid-hormones'
   ]);
+  const validCatalogTargetPattern = /^product-[a-z0-9-]+$/i;
 
   function getCatalogHref() {
-    const category = new URLSearchParams(window.location.search).get('category');
+    const searchParams = new URLSearchParams(window.location.search);
+    const category = searchParams.get('category');
+    const from = searchParams.get('from');
+    const href = new URL('products.html', window.location.href);
 
-    if (!validCatalogCategories.has(category) || category === 'all') {
-      return 'products.html';
+    if (validCatalogCategories.has(category) && category !== 'all') {
+      href.searchParams.set('category', category);
     }
 
-    return `products.html?category=${encodeURIComponent(category)}`;
+    if (validCatalogTargetPattern.test(from || '')) {
+      href.hash = from;
+    }
+
+    return `${href.pathname}${href.search}${href.hash}`;
   }
 
   function createPlaceholder(product) {

@@ -128,19 +128,32 @@
     'oral-pharmaceuticals',
     'oral-thyroid-hormones'
   ]);
+  const initialCatalogTargetId = getCatalogTargetIdFromUrl();
+  let hasRestoredCatalogTarget = false;
+  let catalogTargetRestoreAttempts = 0;
 
   function getCatalogCategoryFromUrl() {
     const category = new URLSearchParams(window.location.search).get('category');
     return validProductCategories.has(category) ? category : 'all';
   }
 
-  function updateCatalogUrl(category) {
+  function getCatalogTargetIdFromUrl() {
+    const targetId = window.location.hash.replace(/^#/, '').trim();
+    return /^product-[a-z0-9-]+$/i.test(targetId) ? targetId : '';
+  }
+
+  function updateCatalogUrl(category, options = {}) {
     const nextUrl = new URL(window.location.href);
+    const preserveHash = options.preserveHash === true;
 
     if (category === 'all') {
       nextUrl.searchParams.delete('category');
     } else {
       nextUrl.searchParams.set('category', category);
+    }
+
+    if (!preserveHash) {
+      nextUrl.hash = '';
     }
 
     window.history.replaceState({}, '', `${nextUrl.pathname}${nextUrl.search}${nextUrl.hash}`);
@@ -168,7 +181,73 @@
     });
   }
 
-  function applyProductFilter(category, activeButton) {
+  function scrollCatalogTargetIntoView(targetCard) {
+    const scrollingElement = document.scrollingElement || document.documentElement;
+    const previousRootScrollBehavior = document.documentElement.style.scrollBehavior;
+    const previousBodyScrollBehavior = document.body ? document.body.style.scrollBehavior : '';
+    const nextScrollTop = Math.max(targetCard.getBoundingClientRect().top + window.scrollY - 160, 0);
+
+    document.documentElement.style.scrollBehavior = 'auto';
+
+    if (document.body) {
+      document.body.style.scrollBehavior = 'auto';
+    }
+
+    scrollingElement.scrollTop = nextScrollTop;
+    window.scrollTo(0, nextScrollTop);
+
+    requestAnimationFrame(() => {
+      document.documentElement.style.scrollBehavior = previousRootScrollBehavior;
+
+      if (document.body) {
+        document.body.style.scrollBehavior = previousBodyScrollBehavior;
+      }
+    });
+  }
+
+  function restoreCatalogTarget() {
+    if (hasRestoredCatalogTarget || !initialCatalogTargetId || catalogTargetRestoreAttempts > 12) {
+      return;
+    }
+
+    const targetCard = document.getElementById(initialCatalogTargetId);
+
+    if (!targetCard || getComputedStyle(targetCard).display === 'none') {
+      catalogTargetRestoreAttempts += 1;
+
+      window.setTimeout(restoreCatalogTarget, 120);
+      return;
+    }
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        const targetRect = targetCard.getBoundingClientRect();
+        const isTargetVisible = targetRect.bottom > 0 && targetRect.top < window.innerHeight;
+
+        if (isTargetVisible) {
+          hasRestoredCatalogTarget = true;
+          return;
+        }
+
+        scrollCatalogTargetIntoView(targetCard);
+        catalogTargetRestoreAttempts += 1;
+
+        requestAnimationFrame(() => {
+          const nextTargetRect = targetCard.getBoundingClientRect();
+          const isTargetNowVisible = nextTargetRect.bottom > 0 && nextTargetRect.top < window.innerHeight;
+
+          if (isTargetNowVisible) {
+            hasRestoredCatalogTarget = true;
+            return;
+          }
+
+          window.setTimeout(restoreCatalogTarget, 120);
+        });
+      });
+    });
+  }
+
+  function applyProductFilter(category, activeButton, options = {}) {
     const normalizedCategory = validProductCategories.has(category) ? category : 'all';
 
     if (activeButton) {
@@ -190,7 +269,7 @@
     });
 
     updateProductCardLinks(normalizedCategory);
-    updateCatalogUrl(normalizedCategory);
+    updateCatalogUrl(normalizedCategory, options);
   }
 
   function setActiveFilterButton(activeButton) {
@@ -216,7 +295,8 @@
       || Array.from(filterBtns).find(btn => btn.getAttribute('data-filter') === 'all');
 
     if (initialButton) {
-      applyProductFilter(initialCategory, initialButton);
+      applyProductFilter(initialCategory, initialButton, { preserveHash: Boolean(initialCatalogTargetId) });
+      restoreCatalogTarget();
     }
   }
 

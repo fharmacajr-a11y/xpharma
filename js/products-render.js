@@ -24,6 +24,10 @@
     'oral-thyroid-hormones': '☀️'
   };
 
+  function getProductCardId(product) {
+    return `product-${product.slug}`;
+  }
+
   function createPlaceholder(product) {
     const placeholder = document.createElement('div');
     const icon = document.createElement('span');
@@ -76,6 +80,7 @@
     const activeCategory = new URLSearchParams(window.location.search).get('category');
 
     href.searchParams.set('id', product.slug);
+    href.searchParams.set('from', getProductCardId(product));
 
     if (activeCategory && activeCategory !== 'all') {
       href.searchParams.set('category', activeCategory);
@@ -96,6 +101,7 @@
     const subtitleText = product.subtitle || product.presentation;
 
     card.className = `product-card reveal reveal-delay-${(index % 4) + 1}`;
+    card.id = getProductCardId(product);
     card.dataset.category = product.category;
 
     wrapper.className = 'product-card-link';
