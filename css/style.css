@@ -1196,6 +1196,46 @@ section { padding: 100px 0; }
   color: var(--text-muted);
 }
 
+/* ── Assurance Statement ── */
+.assurance-section {
+  background: var(--bg-soft);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 64px 0;
+}
+.assurance-block {
+  max-width: 780px;
+  margin: 0 auto;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--red-600);
+  border-radius: var(--radius-md);
+  padding: 2.25rem 2.75rem;
+}
+.assurance-content h2 {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red-700);
+  margin-bottom: 1rem;
+}
+.assurance-content p {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.85;
+  margin-bottom: 0;
+}
+.assurance-close {
+  font-style: italic;
+  color: var(--text-muted) !important;
+  font-size: 0.86rem !important;
+  margin-top: 1rem !important;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
 /* ── CTA Section ── */
 .cta-section {
   text-align: center;
@@ -1844,6 +1884,7 @@ section { padding: 100px 0; }
 
   .products-filter { justify-content: flex-start; }
   .footer-seals img { height: 48px; }
+  .assurance-block { padding: 1.5rem 1.25rem; }
 
 }
 
