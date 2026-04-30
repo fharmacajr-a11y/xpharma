@@ -146,6 +146,28 @@
     window.history.replaceState({}, '', `${nextUrl.pathname}${nextUrl.search}${nextUrl.hash}`);
   }
 
+  function updateProductCardLinks(category) {
+    const normalizedCategory = validProductCategories.has(category) ? category : 'all';
+
+    productCards.forEach(card => {
+      const cardLink = card.querySelector('.product-card-link');
+
+      if (!cardLink) {
+        return;
+      }
+
+      const nextHref = new URL(cardLink.getAttribute('href') || cardLink.href, window.location.href);
+
+      if (normalizedCategory === 'all') {
+        nextHref.searchParams.delete('category');
+      } else {
+        nextHref.searchParams.set('category', normalizedCategory);
+      }
+
+      cardLink.href = `${nextHref.pathname}${nextHref.search}`;
+    });
+  }
+
   function applyProductFilter(category, activeButton) {
     const normalizedCategory = validProductCategories.has(category) ? category : 'all';
 
@@ -167,6 +189,7 @@
       }
     });
 
+    updateProductCardLinks(normalizedCategory);
     updateCatalogUrl(normalizedCategory);
   }
 
