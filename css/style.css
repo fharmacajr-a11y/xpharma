@@ -1579,6 +1579,10 @@ section { padding: 100px 0; }
 }
 
 @media (max-width: 480px) {
+  .products-differentiators .container > div {
+    grid-template-columns: 1fr !important;
+  }
+
   .nav-logo {
     max-width: calc(100% - 56px);
   }
