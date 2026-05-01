@@ -1866,6 +1866,7 @@ section { padding: 100px 0; }
   .products-differentiators .container > div {
     grid-template-columns: 1fr !important;
   }
+  .contact-cards-grid { grid-template-columns: 1fr; }
 
   .nav-logo {
     max-width: calc(100% - 56px);
