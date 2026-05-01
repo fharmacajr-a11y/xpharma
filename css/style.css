@@ -673,9 +673,15 @@ section { padding: 100px 0; }
 
 .apparel-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
+}
+@media (max-width: 880px) {
+  .apparel-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 580px) {
+  .apparel-grid { grid-template-columns: 1fr; }
 }
 
 /* ── Apparel hover-swap (front → back on desktop hover) ── */
@@ -702,6 +708,8 @@ section { padding: 100px 0; }
   width: 100%;
   height: 100%;
   max-height: unset;
+  object-fit: contain;
+  object-position: center;
 }
 @media (hover: hover) and (pointer: fine) {
   .product-card:hover .apparel-card-view-front { opacity: 0; }
@@ -770,8 +778,14 @@ section { padding: 100px 0; }
   padding: 0.55rem 1.1rem;
   pointer-events: none;
 }
+.apparel-view-btn--disabled {
+  opacity: 0.5;
+}
 /* Dim media for in-production cards, applied directly */
 .apparel-card-media-dim { opacity: 0.72; }
+
+/* Section-header spacing override for apparel listing page */
+.apparel-listing .section-header { margin-bottom: 2rem; }
 
 /* ── Apparel detail page: image grid ── */
 .apparel-detail-grid {
@@ -2088,7 +2102,6 @@ section { padding: 100px 0; }
     grid-template-columns: 1fr !important;
   }
   .contact-cards-grid { grid-template-columns: 1fr; }
-  .apparel-grid { grid-template-columns: 1fr; }
 
   .nav-logo {
     max-width: calc(100% - 56px);
