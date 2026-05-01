@@ -300,8 +300,8 @@
     }
   }
 
-  /* ── Contact form ── */
-  const contactForm = document.getElementById('contact-form');
+  /* ── Inquiry / Contact form ── */
+  const contactForm = document.querySelector('[data-inquiry-form]') || document.getElementById('contact-form');
 
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -332,16 +332,30 @@
         return;
       }
 
-      // Simulated submission
+      // Simulated submission — preserve original button content (SVG + label)
       const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const labelEl = submitBtn.querySelector('.btn-label');
+      const originalContent = labelEl ? labelEl.textContent : submitBtn.innerHTML;
+
       submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending…';
+      if (labelEl) {
+        labelEl.textContent = 'Sending…';
+      } else {
+        submitBtn.innerHTML = 'Sending…';
+      }
+
+      const successMsg = contactForm.dataset.successMessage ||
+        'Message sent successfully. Our team will get back to you shortly.';
 
       setTimeout(() => {
-        showFormMessage(contactForm, 'Message sent successfully. Our team will get back to you shortly.', 'success');
+        showFormMessage(contactForm, successMsg, 'success');
         contactForm.reset();
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Message';
+        if (labelEl) {
+          labelEl.textContent = originalContent;
+        } else {
+          submitBtn.innerHTML = originalContent;
+        }
       }, 1800);
     });
   }
