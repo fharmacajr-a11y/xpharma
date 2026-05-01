@@ -678,6 +678,213 @@ section { padding: 100px 0; }
   margin-top: 3rem;
 }
 
+/* ── Apparel hover-swap (front → back on desktop hover) ── */
+.apparel-hover-swap {
+  position: relative;
+  width: 100%;
+}
+.apparel-card-view {
+  display: block;
+  transition: opacity 0.32s ease;
+}
+.apparel-card-view-front {
+  position: relative;
+  opacity: 1;
+  z-index: 1;
+}
+.apparel-card-view-back {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  z-index: 2;
+}
+.apparel-card-view-back .product-card-img {
+  width: 100%;
+  height: 100%;
+  max-height: unset;
+}
+@media (hover: hover) and (pointer: fine) {
+  .product-card:hover .apparel-card-view-front { opacity: 0; }
+  .product-card:hover .apparel-card-view-back  { opacity: 1; }
+}
+
+/* ── Apparel card: stretched link, badge alignment, height consistency ── */
+.apparel-card-anchor {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  border-radius: inherit;
+}
+.apparel-card-anchor:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: -2px;
+}
+.apparel-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+.apparel-badge-row .product-tag {
+  margin-bottom: 0;
+  display: inline-flex;
+  align-items: center;
+}
+.apparel-status-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  padding: 0.25em 0.6em;
+  line-height: 1;
+  white-space: nowrap;
+}
+.apparel-status-badge.available {
+  color: #fff;
+  background: #2a7a2a;
+}
+.apparel-status-badge.in-production {
+  color: var(--text-secondary);
+  background: var(--bg-surface2);
+  border: 1px solid var(--border);
+}
+.apparel-grid .product-card {
+  display: flex;
+  flex-direction: column;
+}
+.apparel-grid .product-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.apparel-card-cta {
+  margin-top: auto;
+  padding-top: 1.25rem;
+}
+.apparel-view-btn {
+  font-size: 0.82rem;
+  padding: 0.55rem 1.1rem;
+  pointer-events: none;
+}
+/* Dim media for in-production cards, applied directly */
+.apparel-card-media-dim { opacity: 0.72; }
+
+/* ── Apparel detail page: image grid ── */
+.apparel-detail-grid {
+  display: grid;
+  grid-template-columns: 55% 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.apparel-img-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+.apparel-img-grid figure {
+  margin: 0;
+  cursor: zoom-in;
+}
+.apparel-img-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-md);
+  object-fit: contain;
+  aspect-ratio: 4 / 5;
+  background: var(--bg-surface2);
+  transition: opacity 0.2s;
+}
+.apparel-img-grid img:hover { opacity: 0.86; }
+.apparel-img-figcaption {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-top: 0.4rem;
+}
+
+/* ── Apparel lightbox ── */
+.apparel-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  background: rgba(0,0,0,0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  cursor: zoom-out;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.22s ease, visibility 0.22s ease;
+}
+.apparel-lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+.apparel-lightbox-inner {
+  cursor: default;
+  position: relative;
+}
+.apparel-lightbox-inner img {
+  max-width: min(90vw, 520px);
+  max-height: 88vh;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  display: block;
+  box-shadow: 0 8px 48px rgba(0,0,0,0.6);
+}
+.apparel-lightbox-close {
+  position: absolute;
+  top: -2.75rem;
+  right: 0;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  opacity: 0.75;
+  transition: opacity 0.15s;
+}
+.apparel-lightbox-close:hover { opacity: 1; }
+.apparel-lightbox-caption {
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.55);
+  margin-top: 0.65rem;
+}
+
+/* ── Apparel action buttons ── */
+.apparel-action-btns {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.apparel-action-btns .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+}
+
+@media (max-width: 760px) {
+  .apparel-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .apparel-img-grid { gap: 0.75rem; }
+  .apparel-action-btns { flex-direction: column; }
+  .apparel-action-btns .btn { width: 100%; text-align: center; }
+}
+
 .product-card {
   background: var(--bg-surface);
   border: 1px solid var(--border);
