@@ -295,15 +295,63 @@
   </main>
 
   <!-- Footer -->
-  <footer class="footer" role="contentinfo">
+    <footer class="footer footer--with-contact" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
+
+        <!-- Brand + Logos -->
         <div class="footer-brand">
-          <a href="index.html" class="nav-logo brand-logo footer-logo" aria-label="XPharma home page">
-            <img src="assets/images/brand/logo-xpharma-premium-horizontal.png" alt="XPharma Premium" class="brand-logo-img" width="1453" height="464" loading="lazy" decoding="async" />
-          </a>
-          <p>Quality-focused standards, product information, and commercial support for institutional and commercial inquiries.</p>
+          <div class="footer-brand-logos">
+            <a href="index.html" aria-label="XPharma home page">
+              <picture>
+                <source srcset="assets/images/logos/footer/xpharma-logo-footer-white.webp" type="image/webp" />
+                <img src="assets/images/logos/footer/xpharma-logo-footer-white.png" alt="XPharma Premium" class="footer-brand-logo footer-brand-logo--xpharma" width="2169" height="725" decoding="async" />
+              </picture>
+            </a>
+            <div class="footer-brand-divider" role="presentation"></div>
+            <picture>
+              <source srcset="assets/images/logos/footer/mr-laboratorios-footer-white-trimmed.webp" type="image/webp" />
+              <img src="assets/images/logos/footer/mr-laboratorios-footer-white-trimmed.png" alt="MR Laboratórios" class="footer-brand-logo footer-brand-logo--mr" width="478" height="726" decoding="async" />
+            </picture>
+          </div>
+          <p class="footer-brand-copy">
+            Premium product information and commercial support for institutional and professional inquiries.
+          </p>
         </div>
+
+        <!-- Contact -->
+        <div class="footer-col footer-contact">
+          <h4>Contact</h4>
+          <address class="footer-contact-list">
+
+            <!-- Location -->
+            <div class="footer-contact-item">
+              <svg class="footer-contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <span>Miami, Florida, United States</span>
+            </div>
+
+            <!-- Hours -->
+            <div class="footer-contact-item">
+              <svg class="footer-contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm.5 5v5.25l3.949 2.37-.75 1.25L11 13V7h1.5z"/></svg>
+              <span>Mon–Fri: 9:00 AM–6:00 PM EST</span>
+            </div>
+
+            <!-- WhatsApp / Phone -->
+            <div class="footer-contact-item">
+              <svg class="footer-contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <a href="https://wa.me/14706734904" class="footer-contact-link" target="_blank" rel="noopener noreferrer">+1 (470) 673-4904</a>
+            </div>
+
+            <!-- Email (pending) -->
+            <div class="footer-contact-item">
+              <svg class="footer-contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <span class="footer-contact-pending">Email coming soon</span>
+            </div>
+
+          </address>
+        </div>
+
+        <!-- Company -->
         <nav class="footer-col" aria-label="Footer links - company">
           <h4>Company</h4>
           <ul role="list">
@@ -313,16 +361,20 @@
             <li><a href="about.html#technology">Technology</a></li>
           </ul>
         </nav>
+
+        <!-- Products -->
         <nav class="footer-col" aria-label="Footer links - products">
           <h4>Products</h4>
           <ul role="list">
             <li><a href="products.html">Full Catalog</a></li>
             <li><a href="products.html">Injectable Singles</a></li>
-            <li><a href="products.html">Injectable Blends</a></li>
             <li><a href="products.html">Oral Hormones</a></li>
-            <li><a href="apparel.html" aria-current="page">Apparel</a></li>
+            <li><a href="products.html">Oral Pharmaceuticals</a></li>
+            <li><a href="apparel.html">Apparel</a></li>
           </ul>
         </nav>
+
+        <!-- Support -->
         <nav class="footer-col" aria-label="Footer links - support">
           <h4>Support</h4>
           <ul role="list">
@@ -331,19 +383,21 @@
             <li><a href="contact.html#faq">FAQ</a></li>
           </ul>
         </nav>
+
       </div>
 
-      <!-- Trust seals -->
-      <div class="footer-seals" aria-label="Quality certification seals">
-        <img src="assets/images/seals/seal-fda.png" alt="FDA seal" width="88" height="74" loading="lazy" decoding="async" />
-        <img src="assets/images/seals/seal-premium-quality.png" alt="Premium Quality seal" width="88" height="79" loading="lazy" decoding="async" />
-      </div>
-
+      <!-- Footer bottom (seals integrados) -->
       <div class="footer-bottom">
         <p>&copy; <span id="footer-year"></span> XPharma. All rights reserved.</p>
-        <div class="footer-bottom-links">
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Use</a>
+        <div class="footer-bottom-right">
+          <div class="footer-seals" aria-label="Quality certification seals">
+            <img src="assets/images/seals/seal-fda.png" alt="FDA seal" width="88" height="74" loading="lazy" decoding="async" />
+            <img src="assets/images/seals/seal-premium-quality.png" alt="Premium Quality seal" width="88" height="79" loading="lazy" decoding="async" />
+          </div>
+          <div class="footer-bottom-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Use</a>
+          </div>
         </div>
       </div>
     </div>
