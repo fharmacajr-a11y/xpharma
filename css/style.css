@@ -2500,3 +2500,26 @@ address.footer-contact-list {
   .floating-action  { width: 44px; height: 44px; }
   .floating-action svg { width: 22px; height: 22px; }
 }
+
+/* ── Skip-to-main accessibility link ── */
+.skip-link {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  z-index: 9999;
+  padding: 0.75rem 1.25rem;
+  background: var(--red-600);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 0 0 var(--radius-md) 0;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  transition: top 0.15s ease;
+}
+.skip-link:focus-visible {
+  top: 0;
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}

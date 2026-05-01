@@ -131,7 +131,7 @@
   function renderNotFound() {
     const catalogHref = getCatalogHref();
 
-    document.title = 'Product Not Found | XPharma';
+    document.title = 'Products | XPharma';
 
     if (titleEl) {
       titleEl.textContent = 'Product Not Found';
