@@ -94,23 +94,47 @@
     return placeholder;
   }
 
+  function isInjectableSrc(src) {
+    return src.includes('/injectable-singles/') || src.includes('/injectable-blends/');
+  }
+
   function createMedia(product) {
     if (!product.image || !product.image.src) {
       return createPlaceholder(product);
     }
 
+    const src = product.image.src;
+    const alt = product.image.alt || `XPharma ${product.name} product presentation`;
+    const width = product.image.width || 1024;
+    const height = product.image.height || 1536;
+
     const image = document.createElement('img');
 
     image.className = 'product-detail-img';
-    image.src = product.image.src;
-    image.alt = product.image.alt || `XPharma ${product.name} product presentation`;
-    image.width = product.image.width || 1024;
-    image.height = product.image.height || 1536;
+    image.src = src;
+    image.alt = alt;
+    image.width = width;
+    image.height = height;
     image.decoding = 'async';
 
     image.addEventListener('error', () => {
-      image.replaceWith(createPlaceholder(product));
+      const wrapper = image.closest('picture');
+      if (wrapper) {
+        wrapper.replaceWith(createPlaceholder(product));
+      } else {
+        image.replaceWith(createPlaceholder(product));
+      }
     }, { once: true });
+
+    if (isInjectableSrc(src)) {
+      const picture = document.createElement('picture');
+      const source = document.createElement('source');
+      source.srcset = src.replace(/\.png$/i, '.webp');
+      source.type = 'image/webp';
+      picture.appendChild(source);
+      picture.appendChild(image);
+      return picture;
+    }
 
     return image;
   }
