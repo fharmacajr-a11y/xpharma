@@ -571,6 +571,9 @@ select:focus-visible {
 /* ── Sections ── */
 section { padding: 100px 0; }
 
+/* Reduce bottom padding of technology section so stats block sits closer to facility image */
+#technology { padding-bottom: 48px; }
+
 /* ── About teaser on home ── */
 .about-section { background: var(--bg-soft); }
 
