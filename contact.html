@@ -67,52 +67,71 @@
     </section>
 
     <!-- Main contact -->
-    <section aria-labelledby="contact-title">
+    <section id="contact-channels" aria-labelledby="contact-title">
       <div class="container">
-        <div class="reveal">
+        <header class="section-header reveal">
           <span class="section-tag">Information</span>
           <h2 class="section-title" id="contact-title">How Can We Help?</h2>
-            <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.75;margin-bottom:0.5rem;">
-              For product information, commercial support, or documentation requests,
-              reach out using the contact details below.
-            </p>
-            <div class="divider-gold left mt-2"></div>
+          <p class="section-subtitle">Use the channels below for product information, commercial support, documentation requests, and general institutional inquiries.</p>
+          <div class="divider-gold"></div>
+        </header>
 
-            <div class="contact-info-list">
-              <div class="contact-info-item">
-                <div class="contact-info-icon" aria-hidden="true">📍</div>
-                <div class="contact-info-text">
-                  <strong>Location</strong>
-                  <span>Sao Paulo, SP, Brazil<br /><em class="note-muted">Full office details available upon request.</em></span>
-                </div>
-              </div>
+        <!-- 4-column contact cards -->
+        <div class="contact-cards-grid">
 
-              <div class="contact-info-item">
-                <div class="contact-info-icon" aria-hidden="true">📞</div>
-                <div class="contact-info-text">
-                  <strong>Phone / WhatsApp</strong>
-                  <span>Use the form to request direct contact.<br /><em class="note-muted">Official direct channel coming soon.</em></span>
-                </div>
-              </div>
-
-              <div class="contact-info-item">
-                <div class="contact-info-icon" aria-hidden="true">✉️</div>
-                <div class="contact-info-text">
-                  <strong>Email</strong>
-                  <span>Use the form to send your message.<br /><em class="note-muted">Official email coming soon.</em></span>
-                </div>
-              </div>
-
-              <div class="contact-info-item">
-                <div class="contact-info-icon" aria-hidden="true">🕐</div>
-                <div class="contact-info-text">
-                  <strong>Business Hours</strong>
-                  <span>Monday to Friday: 8:00 AM-6:00 PM<br />Saturday: 9:00 AM-1:00 PM</span>
-                </div>
-              </div>
-
+          <div class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
             </div>
+            <h3>Location</h3>
+            <p class="contact-card-value">Miami, Florida, United States</p>
+            <!-- placeholder: update full office address before publication -->
+            <p class="contact-card-sub">Official office address placeholder — update before publication.</p>
           </div>
+
+          <div class="card reveal reveal-delay-1">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            </div>
+            <h3>Phone / WhatsApp</h3>
+            <p class="contact-card-value">+1 (305) 555-0198</p>
+            <!-- placeholder: update phone number before publication -->
+            <p class="contact-card-sub">Available for direct contact requests and WhatsApp support.</p>
+          </div>
+
+          <div class="card reveal reveal-delay-2">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <h3>Email</h3>
+            <p class="contact-card-value">contact@xpharma.example</p>
+            <!-- placeholder: update email address before publication -->
+            <p class="contact-card-sub">Use this channel for product information and institutional inquiries.</p>
+          </div>
+
+          <div class="card reveal reveal-delay-3">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3>Business Hours</h3>
+            <p class="contact-card-value">Monday to Friday: 9:00 AM–6:00 PM EST</p>
+            <p class="contact-card-sub">Messages received outside business hours are reviewed on the next business day.</p>
+          </div>
+
+        </div>
+
+        <!-- WhatsApp CTA -->
+        <!-- placeholder: update number before publication -->
+        <div class="reveal" style="text-align:center;margin-top:3rem;">
+          <a href="https://wa.me/13055550198" class="btn btn-primary" target="_blank" rel="noopener">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" viewBox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+            <span>Contact via WhatsApp</span>
+          </a>
+          <p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.75rem;line-height:1.5;">
+            WhatsApp channel placeholder — update the number before publication.
+          </p>
+        </div>
+
       </div>
     </section>
 
@@ -127,68 +146,60 @@
 
         <div style="max-width:760px;margin-inline:auto;" id="faq-list">
 
-          <details class="reveal reveal-delay-1" style="
-            background:var(--bg-surface2);
-            border:1px solid var(--border);
-            border-radius:var(--radius-md);
-            margin-bottom:0.75rem;
-            overflow:hidden;
-            transition:border-color var(--transition-fast);
-          ">
-            <summary style="
-              padding:1.2rem 1.5rem;
-              cursor:pointer;
-              font-family:var(--font-heading);
-              font-size:0.95rem;
-              font-weight:700;
-              list-style:none;
-              display:flex;
-              justify-content:space-between;
-              align-items:center;
-              color:var(--text-primary);
-            ">
-              Does XPharma provide manufacturing documentation?
-              <span aria-hidden="true" style="color:var(--gold);font-size:1.2rem;">+</span>
-            </summary>
-            <p style="padding:0 1.5rem 1.2rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.75;">
-              XPharma communicates manufacturing documentation and quality information through official channels.
-              Product-specific documentation may vary by product and market and is available upon request.
-            </p>
-          </details>
-
-          <details class="reveal reveal-delay-2" style="
-            background:var(--bg-surface2);border:1px solid var(--border);border-radius:var(--radius-md);
-            margin-bottom:0.75rem;overflow:hidden;
-          ">
+          <details class="reveal reveal-delay-1" style="background:var(--bg-surface2);border:1px solid var(--border);border-radius:var(--radius-md);margin-bottom:0.75rem;overflow:hidden;">
             <summary style="padding:1.2rem 1.5rem;cursor:pointer;font-family:var(--font-heading);font-size:0.95rem;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--text-primary);">
               Where can I find product line information?
               <span aria-hidden="true" style="color:var(--gold);font-size:1.2rem;">+</span>
             </summary>
             <p style="padding:0 1.5rem 1.2rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.75;">
-              Visit the <a href="products.html" style="color:var(--gold);">Products</a> page and the <a href="lipored.html" style="color:var(--gold);">LipoRED HD</a>
-              page for current product presentations. For specific details, contact the XPharma team through official channels.
+              You can review the <a href="products.html" style="color:var(--gold);">product catalog</a> for available product lines and presentation details.
+              For specific availability or market requirements, contact the XPharma team through the official channels listed above.
             </p>
           </details>
 
-          <details class="reveal reveal-delay-3" style="
-            background:var(--bg-surface2);border:1px solid var(--border);border-radius:var(--radius-md);
-            overflow:hidden;
-          ">
+          <details class="reveal reveal-delay-2" style="background:var(--bg-surface2);border:1px solid var(--border);border-radius:var(--radius-md);margin-bottom:0.75rem;overflow:hidden;">
             <summary style="padding:1.2rem 1.5rem;cursor:pointer;font-family:var(--font-heading);font-size:0.95rem;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--text-primary);">
-              Is product information support available?
+              Can I request product information by email or WhatsApp?
               <span aria-hidden="true" style="color:var(--gold);font-size:1.2rem;">+</span>
             </summary>
             <p style="padding:0 1.5rem 1.2rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.75;">
-              Yes. XPharma can provide commercial and product information guidance for professional
-              and institutional inquiries. This site does not provide professional health guidance or individualized product-use guidance.
+              Yes. Use the listed email or WhatsApp channel for product information, commercial questions, and documentation-related requests.
+            </p>
+          </details>
+
+          <details class="reveal reveal-delay-3" style="background:var(--bg-surface2);border:1px solid var(--border);border-radius:var(--radius-md);margin-bottom:0.75rem;overflow:hidden;">
+            <summary style="padding:1.2rem 1.5rem;cursor:pointer;font-family:var(--font-heading);font-size:0.95rem;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--text-primary);">
+              Do you provide product documentation?
+              <span aria-hidden="true" style="color:var(--gold);font-size:1.2rem;">+</span>
+            </summary>
+            <p style="padding:0 1.5rem 1.2rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.75;">
+              Documentation may be available upon request for qualified commercial or institutional inquiries. Requirements can vary by market and should be confirmed directly with the XPharma team.
+            </p>
+          </details>
+
+          <details class="reveal reveal-delay-4" style="background:var(--bg-surface2);border:1px solid var(--border);border-radius:var(--radius-md);margin-bottom:0.75rem;overflow:hidden;">
+            <summary style="padding:1.2rem 1.5rem;cursor:pointer;font-family:var(--font-heading);font-size:0.95rem;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--text-primary);">
+              How long does it take to receive a response?
+              <span aria-hidden="true" style="color:var(--gold);font-size:1.2rem;">+</span>
+            </summary>
+            <p style="padding:0 1.5rem 1.2rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.75;">
+              Most inquiries are reviewed during business hours. Complex product, documentation, or market-specific requests may require additional review time.
+            </p>
+          </details>
+
+          <details class="reveal reveal-delay-5" style="background:var(--bg-surface2);border:1px solid var(--border);border-radius:var(--radius-md);overflow:hidden;">
+            <summary style="padding:1.2rem 1.5rem;cursor:pointer;font-family:var(--font-heading);font-size:0.95rem;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--text-primary);">
+              How can I apply to become a distributor?
+              <span aria-hidden="true" style="color:var(--gold);font-size:1.2rem;">+</span>
+            </summary>
+            <p style="padding:0 1.5rem 1.2rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.75;">
+              Distributor and partnership requests should be submitted through the <a href="distributor.html" style="color:var(--gold);">Become a Distributor</a> page so the commercial team can review your company profile and target market.
             </p>
           </details>
 
         </div>
       </div>
     </section>
-
-
 
   </main>
 
