@@ -398,4 +398,24 @@
   const yearEl = document.getElementById('footer-year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* ── Floating back-to-top ── */
+  const backToTopBtn = document.querySelector('.floating-action--top');
+
+  if (backToTopBtn) {
+    function handleBackToTopVisibility() {
+      if (window.scrollY > 350) {
+        backToTopBtn.classList.add('floating-action--visible');
+      } else {
+        backToTopBtn.classList.remove('floating-action--visible');
+      }
+    }
+
+    window.addEventListener('scroll', handleBackToTopVisibility, { passive: true });
+    handleBackToTopVisibility();
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
 })();
