@@ -57,6 +57,15 @@
     return src.includes('/injectable-singles/') || src.includes('/injectable-blends/');
   }
 
+  function isOralSrc(src) {
+    return src.includes('/oral-hormones/') || src.includes('/oral-pharmaceuticals/') || src.includes('/oral-thyroid-hormones/');
+  }
+
+  function getOralOptimizedPath(src) {
+    const lastSlash = src.lastIndexOf('/');
+    return src.slice(0, lastSlash + 1) + 'optimized/' + src.slice(lastSlash + 1);
+  }
+
   function createMedia(product) {
     if (!product.image || !product.image.src) {
       return createPlaceholder(product);
@@ -64,16 +73,10 @@
 
     const src = product.image.src;
     const alt = product.image.alt || `XPharma ${product.name} product presentation`;
-    const width = product.image.width || 1024;
-    const height = product.image.height || 1536;
 
     const image = document.createElement('img');
-
     image.className = 'product-card-img';
-    image.src = src;
     image.alt = alt;
-    image.width = width;
-    image.height = height;
     image.loading = 'lazy';
     image.decoding = 'async';
 
@@ -87,6 +90,9 @@
     }, { once: true });
 
     if (isInjectableSrc(src)) {
+      image.src    = src;
+      image.width  = product.image.width  || 1024;
+      image.height = product.image.height || 1536;
       const picture = document.createElement('picture');
       const source = document.createElement('source');
       source.srcset = src.replace(/\.png$/i, '.webp');
@@ -96,6 +102,24 @@
       return picture;
     }
 
+    if (isOralSrc(src)) {
+      const optPng  = getOralOptimizedPath(src);
+      const optWebp = optPng.replace(/\.png$/i, '.webp');
+      image.src    = optPng;
+      image.width  = 792;
+      image.height = 1188;
+      const picture = document.createElement('picture');
+      const source  = document.createElement('source');
+      source.srcset = optWebp;
+      source.type   = 'image/webp';
+      picture.appendChild(source);
+      picture.appendChild(image);
+      return picture;
+    }
+
+    image.src    = src;
+    image.width  = product.image.width  || 1024;
+    image.height = product.image.height || 1536;
     return image;
   }
 
