@@ -283,6 +283,7 @@ select:focus-visible {
   text-transform: uppercase;
   color: var(--text-strong);
   position: relative;
+  white-space: nowrap;
   transition: color var(--transition-fast);
 }
 .nav-links a::after {
@@ -298,7 +299,7 @@ select:focus-visible {
 .nav-links a:hover::after,
 .nav-links a.active::after { width: 100%; }
 
-.nav-cta { margin-left: 1rem; }
+.nav-cta { margin-left: 1rem; flex-shrink: 0; }
 
 /* Hamburger */
 .nav-toggle {
@@ -670,6 +671,13 @@ section { padding: 100px 0; }
   gap: 1.5rem;
 }
 
+.apparel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
 .product-card {
   background: var(--bg-surface);
   border: 1px solid var(--border);
@@ -724,6 +732,12 @@ section { padding: 100px 0; }
   --category-accent-strong: #65243c;
   --category-accent-soft: rgba(126,45,75,0.1);
   --category-accent-border: rgba(126,45,75,0.22);
+}
+.product-card[data-category="apparel"] {
+  --category-accent: #d6a536;
+  --category-accent-strong: #b8871f;
+  --category-accent-soft: rgba(214,165,54,0.08);
+  --category-accent-border: rgba(214,165,54,0.20);
 }
 .product-card:hover {
   border-color: var(--border-red);
@@ -1867,6 +1881,7 @@ section { padding: 100px 0; }
     grid-template-columns: 1fr !important;
   }
   .contact-cards-grid { grid-template-columns: 1fr; }
+  .apparel-grid { grid-template-columns: 1fr; }
 
   .nav-logo {
     max-width: calc(100% - 56px);

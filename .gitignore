@@ -49,3 +49,9 @@ assets/temp/
 imagens produtos inject/
 imgs prod injec/
 imgs prod injec.zip
+
+# ─── Arquivos temporários locais de auditoria ─────────────────────────────────
+.tmp/
+audit_*.png
+fix_*.png
+fix2_*.png
