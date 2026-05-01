@@ -80,6 +80,10 @@
           <div class="divider-gold"></div>
         </header>
 
+        <div class="apparel-category-label" aria-hidden="true">
+          <span>T-Shirts</span>
+        </div>
+
         <div class="apparel-grid">
 
           <!-- Black T-Shirt — Available now -->
@@ -210,18 +214,10 @@
     </section>
 
     <!-- Availability notice -->
-    <section style="padding:60px 0;background:var(--bg-surface);">
+    <section class="apparel-notice-section">
       <div class="container">
-        <div style="
-          background:var(--bg-surface2);
-          border:1px solid var(--gold-border);
-          border-radius:var(--radius-lg);
-          padding:2rem;
-          display:flex;
-          gap:1.5rem;
-          align-items:flex-start;
-        " role="note" aria-label="Apparel availability notice">
-          <div class="card-icon" aria-hidden="true" style="flex-shrink:0;margin-bottom:0;">
+        <div class="apparel-notice-box" role="note" aria-label="Apparel availability notice">
+          <div class="card-icon" aria-hidden="true">
             <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
@@ -239,7 +235,7 @@
     </section>
 
     <!-- FAQ -->
-    <section id="apparel-faq" style="padding-top:80px;padding-bottom:100px;" aria-labelledby="apparel-faq-title">
+    <section id="apparel-faq" class="apparel-faq-section" aria-labelledby="apparel-faq-title">
       <div class="container">
         <header class="section-header reveal">
           <span class="section-tag">FAQ</span>
