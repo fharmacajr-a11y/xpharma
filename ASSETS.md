@@ -27,9 +27,18 @@ Accepted formats: `.jpg` for photography, `.png` for transparency, and `.webp` f
 
 | File | Current use | Suggested alt text |
 |---|---|---|
-| `products/lipored-hd-bottle.jpg` | LipoRED HD page and product cards | LipoRED HD bottle with a red and white label |
-| `products/lipored-hd-campaign.jpg` | LipoRED HD campaign visual | LipoRED HD XPharma Premium campaign visual |
-| `products/xpharma-premium-red-package-front.jpg` | Home, About, Products, and LipoRED HD pages | Red XPharma Premium package |
+| `products/lipored-hd-bottle.jpg` | Legacy LipoRED HD card image on the Home page | LipoRED HD bottle with a red and white label |
+| `products/lipored-hd/lipored-hd-vial-presentation.jpg` | LipoRED HD page — Visual Presentation section (`.webp` pair available) | LipoRED HD vial presentation from the XPharma line |
+| `products/lipored-hd/lipored-hd-banner.png` | LipoRED HD page — banner section (`.webp` pair available) | LipoRED HD institutional banner from the XPharma line |
+| `products/lipored-hd/lipored-hd-documentation.png` | LipoRED HD page — Product Documentation section (`.webp` pair available) | LipoRED HD usage manual and documentation material |
+| `products/lipored-hd/lipored-hd-carton-front.jpg` | Available — future use, carton packaging visual (`.webp` pair available) | LipoRED HD carton front presentation |
+| `products/xpharma-premium-red-package-front.jpg` | Home, About, and Products pages | Red XPharma package presentation |
+
+## Docs Already Added
+
+| File | Current use | Notes |
+|---|---|---|
+| `docs/lipored-hd/manual-lipo-red-hd-pt-en.pdf` | LipoRED HD page — Download usage manual button | Bilingual PT/EN manual |
 
 ---
 

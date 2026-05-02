@@ -1246,6 +1246,124 @@ section { padding: 100px 0; }
   margin: 0.75rem 0 1.5rem;
 }
 
+.documentation-placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  min-height: 420px;
+  background: linear-gradient(180deg, #ffffff 0%, var(--bg-soft) 100%);
+}
+
+.documentation-placeholder .section-tag {
+  align-self: flex-start;
+}
+
+.documentation-placeholder h3,
+.documentation-placeholder p {
+  margin: 0;
+}
+
+.documentation-placeholder h3 {
+  font-size: clamp(1.45rem, 2.4vw, 1.9rem);
+  color: var(--text-primary);
+}
+
+.lipored-banner-section {
+  padding-top: 48px;
+  padding-bottom: 32px;
+}
+
+.lipored-product-section {
+  padding-top: 48px;
+}
+
+.lipored-banner-frame {
+  background: linear-gradient(180deg, #ffffff 0%, var(--bg-soft) 100%);
+}
+
+.lipored-banner-frame picture {
+  display: block;
+}
+
+.media-panel.lipored-vial-frame {
+  max-width: 70%;
+  margin-inline: auto;
+  aspect-ratio: 3 / 4;
+  padding: 0.5rem;
+  background: #333333;
+}
+
+.media-panel.lipored-vial-frame picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.media-panel.lipored-vial-frame img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.media-panel.documentation-frame {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  background: linear-gradient(180deg, #ffffff 0%, var(--bg-soft) 100%);
+  padding: 0;
+}
+
+.documentation-frame picture {
+  display: block;
+  position: absolute;
+  inset: 0;
+}
+
+.media-panel.documentation-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.lipored-title-accent {
+  color: var(--red-600);
+}
+
+/* Visual Presentation: text top-aligned when tall vial frame drives grid height */
+.lipored-product-section .feature-grid {
+  align-items: start;
+}
+
+/* Product Documentation: stretch image column to match text column height */
+section[aria-labelledby="lipored-line-title"] .feature-grid {
+  align-items: stretch;
+}
+
+.lipored-doc-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .lipored-banner-section {
+    padding-top: 32px;
+    padding-bottom: 24px;
+  }
+
+  .lipored-product-section {
+    padding-top: 36px;
+  }
+}
+
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
