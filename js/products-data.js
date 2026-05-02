@@ -86,6 +86,7 @@
       cardDescription: 'Injectable single presentation based on Trenbolone Enanthate, a long-ester trenbolone compound associated with anabolic-androgenic activity.',
       detailDescription: 'Finaplix XP is an injectable single presentation based on Trenbolone Enanthate, as identified on the product label. Trenbolone Enanthate is the enanthate ester form of trenbolone, an anabolic-androgenic compound commonly referenced in technical compound references for its androgen receptor activity, anabolic profile, and longer-ester presentation.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests. The enanthate ester format distinguishes this presentation from shorter-ester trenbolone formats in technical product classification.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
     }),
+    // TODO(!): Replace Laurabolin product image manually - source artwork needs correction.
     buildProduct({
       slug: 'laurabolin',
       name: 'Laurabolin',
@@ -241,6 +242,7 @@
       cardDescription: 'Injectable single presentation based on Stanozolol, an anabolic-androgenic compound listed for XPharma catalog and commercial reference.',
       detailDescription: 'Winstrol XP is an injectable single presentation based on Stanozolol, as identified on the product label. The label describes a depot oil presentation in a 50 mg / 30 ml format. Stanozolol is commonly referenced in technical compound references for its androgen receptor activity, anabolic-androgenic profile, and product classification.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
     }),
+    // TODO(!): Replace Stanozolol 100 mg / 30 ml product image manually - source artwork needs correction.
     buildProduct({
       slug: 'wintrol',
       name: 'Winstrol XP',
