@@ -2542,10 +2542,10 @@ address.footer-contact-list {
   bottom: 1.5rem;
   right: 1.5rem;
   z-index: 500;
+  width: 48px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 0.625rem;
+  justify-content: center;
 }
 
 .floating-action {
@@ -2565,17 +2565,20 @@ address.footer-contact-list {
 
 /* Back to top: hidden until user scrolls */
 .floating-action--top {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 0.625rem);
   background: linear-gradient(135deg, var(--red-600), var(--red-800));
   color: #fff;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(8px);
+  transform: translate(-50%, 8px);
 }
 
 .floating-action--top.floating-action--visible {
   opacity: 1;
   pointer-events: auto;
-  transform: translateY(0);
+  transform: translate(-50%, 0);
 }
 
 /* WhatsApp: always visible */
@@ -2614,7 +2617,7 @@ address.footer-contact-list {
 }
 
 @media (max-width: 580px) {
-  .floating-actions { bottom: 1rem; right: 1rem; }
+  .floating-actions { bottom: 1rem; right: 1rem; width: 44px; }
   .floating-action  { width: 44px; height: 44px; }
   .floating-action svg { width: 22px; height: 22px; }
 }
