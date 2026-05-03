@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MR Laboratorios — an XPharma company. Premium product information and commercial support for institutional and professional inquiries." />
+  <meta name="author" content="XPharma" />
+  <meta name="theme-color" content="#070707" />
+  <title>MR Laboratorios | XPharma</title>
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/images/favicons/favicon-48x48.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicons/favicon-96x96.png" />
+  <link rel="apple-touch-icon" href="assets/images/favicons/apple-touch-icon.png" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background-color: #070707;
+      background-image:
+        radial-gradient(ellipse 68% 52% at 50% 36%, rgba(255,255,255,0.042) 0%, transparent 68%),
+        linear-gradient(rgba(255,255,255,0.014) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.014) 1px, transparent 1px);
+      background-size: auto, 72px 72px, 72px 72px;
+      color: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem 1.25rem;
+    }
+
+    /* ── Vignette ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse 100% 100% at 50% 50%, transparent 50%, rgba(0,0,0,0.55) 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Main container ── */
+    .mr-page {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      width: 100%;
+      max-width: 480px;
+      text-align: center;
+    }
+
+    /* ── Skull / MR brand logo ── */
+    .mr-page__skull-img {
+      width: min(240px, 52vw);
+      height: auto;
+      display: block;
+    }
+
+    /* ── Divider ── */
+    .mr-page__divider {
+      width: 100%;
+      max-width: 300px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12) 30%, rgba(255,255,255,0.12) 70%, transparent);
+      margin: 1.75rem auto;
+      border: none;
+    }
+
+    /* ── Brand portfolio section ── */
+    .mr-page__xpharma {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    /* ── Brand row: XPharma | Coming Soon ── */
+    .mr-page__brands {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mr-page__brand-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 1.25rem;
+    }
+
+    .mr-page__brand-sep {
+      width: 1px;
+      height: 30px;
+      background: rgba(255, 255, 255, 0.15);
+      flex-shrink: 0;
+    }
+
+    .mr-page__xpharma-link {
+      display: inline-block;
+      line-height: 0;
+      cursor: pointer;
+    }
+
+    .mr-page__xpharma-img {
+      width: min(160px, 38vw);
+      height: auto;
+      display: block;
+    }
+
+    .mr-page__coming-soon {
+      font-size: 0.58rem;
+      font-weight: 600;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.2);
+      white-space: nowrap;
+    }
+
+    /* ── Back link ── */
+    .mr-page__back {
+      position: fixed;
+      top: 1.25rem;
+      left: 1.5rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.32);
+      text-decoration: none;
+      transition: color 0.2s;
+      z-index: 2;
+    }
+    .mr-page__back:hover { color: rgba(255, 255, 255, 0.85); }
+
+    /* ── Tagline ── */
+    .mr-page__tagline {
+      font-size: clamp(0.72rem, 2.2vw, 0.8rem);
+      font-weight: 400;
+      line-height: 1.65;
+      color: rgba(255, 255, 255, 0.28);
+      max-width: 340px;
+      letter-spacing: 0.01em;
+    }
+
+    /* ── Mobile: stack brand row ── */
+    @media (max-width: 420px) {
+      .mr-page__brands {
+        flex-direction: column;
+        gap: 0.85rem;
+      }
+      .mr-page__brand-sep {
+        width: 36px;
+        height: 1px;
+      }
+      .mr-page__brand-item {
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index.html" class="mr-page__back" aria-label="Back to XPharma home">← Back to XPharma</a>
+
+  <main class="mr-page" role="main">
+
+    <!-- MR Laboratorios skull logo -->
+    <img
+      src="assets/images/logos/footer/mr-laboratorios-footer-white-trimmed.webp"
+      alt="MR Laboratorios"
+      class="mr-page__skull-img"
+      width="478"
+      height="726"
+      draggable="false"
+    />
+
+    <hr class="mr-page__divider" aria-hidden="true" />
+
+    <!-- Brand portfolio row -->
+    <section class="mr-page__xpharma" aria-label="Brand portfolio">
+      <div class="mr-page__brands">
+        <div class="mr-page__brand-item">
+          <a href="index.html" class="mr-page__xpharma-link" aria-label="Back to XPharma home">
+            <img
+              src="assets/images/logos/footer/xpharma-logo-footer-white.webp"
+              alt="XPharma Premium"
+              class="mr-page__xpharma-img"
+              width="2169"
+              height="725"
+              draggable="false"
+            />
+          </a>
+        </div>
+        <div class="mr-page__brand-sep" aria-hidden="true"></div>
+        <div class="mr-page__brand-item">
+          <span class="mr-page__coming-soon" aria-label="Coming soon">Coming Soon</span>
+        </div>
+      </div>
+      <p class="mr-page__tagline">
+        Premium product information and commercial support for institutional and professional inquiries.
+      </p>
+    </section>
+
+  </main>
+
+</body>
+</html>

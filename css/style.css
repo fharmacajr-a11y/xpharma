@@ -2527,6 +2527,13 @@ section[aria-labelledby="lipored-info-title"] .card {
   max-width: 100px;
 }
 
+.footer-brand-link {
+  display: inline-block;
+  line-height: 0;
+  transition: opacity 0.2s;
+}
+.footer-brand-link:hover .footer-brand-logo { opacity: 1; }
+
 /* Subtle vertical divider between the two logos */
 .footer-brand-divider {
   width: 1px;
