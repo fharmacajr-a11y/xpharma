@@ -3,6 +3,9 @@
 
   const productsGrid = document.getElementById('products-grid');
   const products = Array.isArray(window.XPHARMA_PRODUCTS) ? window.XPHARMA_PRODUCTS : [];
+  const productRoutes = window.XPHARMA_PRODUCT_ROUTES && window.XPHARMA_PRODUCT_ROUTES.byLegacySlug
+    ? window.XPHARMA_PRODUCT_ROUTES.byLegacySlug
+    : null;
 
   if (!productsGrid) {
     return;
@@ -124,16 +127,12 @@
   }
 
   function getProductHref(product) {
-    const href = new URL('product.html', window.location.href);
-    const activeCategory = new URLSearchParams(window.location.search).get('category');
-
-    href.searchParams.set('id', product.slug);
-    href.searchParams.set('from', getProductCardId(product));
-
-    if (activeCategory && activeCategory !== 'all') {
-      href.searchParams.set('category', activeCategory);
+    if (productRoutes && productRoutes[product.slug] && productRoutes[product.slug].publicPath) {
+      return productRoutes[product.slug].publicPath;
     }
 
+    const href = new URL('product.html', window.location.href);
+    href.searchParams.set('id', product.slug);
     return `${href.pathname}${href.search}`;
   }
 

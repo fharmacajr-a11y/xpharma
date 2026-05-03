@@ -2,6 +2,9 @@
   'use strict';
 
   const products = Array.isArray(window.XPHARMA_PRODUCTS) ? window.XPHARMA_PRODUCTS : [];
+  const productRoutes = window.XPHARMA_PRODUCT_ROUTES && window.XPHARMA_PRODUCT_ROUTES.byLegacySlug
+    ? window.XPHARMA_PRODUCT_ROUTES.byLegacySlug
+    : null;
   const root = document.getElementById('product-detail-root');
   const titleEl = document.getElementById('product-page-title');
   const subtitleEl = document.getElementById('product-page-subtitle');
@@ -282,6 +285,12 @@
 
   const slug = new URLSearchParams(window.location.search).get('id');
   const product = products.find((item) => item.slug === slug);
+  const route = slug && productRoutes ? productRoutes[slug] : null;
+
+  if (product && route && route.publicPath) {
+    window.location.replace(route.publicPath);
+    return;
+  }
 
   if (!slug || !product) {
     renderNotFound();
