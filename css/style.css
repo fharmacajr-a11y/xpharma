@@ -250,7 +250,8 @@ select:focus-visible {
 .brand-logo-img {
   display: block;
   width: auto;
-  height: clamp(42px, 4.5vw, 52px);
+    height: auto;
+    max-height: clamp(56px, 6vw, 72px);
   max-width: 100%;
   object-fit: contain;
 }
@@ -668,6 +669,28 @@ section { padding: 100px 0; }
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
+}
+
+.featured-products-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.featured-products-grid .product-card,
+.featured-products-grid .product-card-link {
+  height: 100%;
+}
+
+@media (max-width: 980px) {
+  .featured-products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .featured-products-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .apparel-grid {
@@ -1625,7 +1648,7 @@ section[aria-labelledby="lipored-line-title"] .feature-grid {
 }
 .assurance-logo {
   display: block;
-  width: 120px;
+  width: min(150px, 42vw);
   height: auto;
   margin-bottom: 1.25rem;
   opacity: 0.85;
@@ -2195,7 +2218,10 @@ section[aria-labelledby="lipored-line-title"] .feature-grid {
   .brand-logo {
     max-width: min(220px, calc(100vw - 96px));
   }
-  .brand-logo-img { height: 40px; }
+  .brand-logo-img {
+    height: auto;
+    max-height: 44px;
+  }
   .hero-product-image { width: 100%; }
   .footer-logo .brand-logo-img {
     height: 34px;
@@ -2276,7 +2302,10 @@ section[aria-labelledby="lipored-line-title"] .feature-grid {
   .brand-logo {
     max-width: min(170px, calc(100vw - 84px));
   }
-  .brand-logo-img { height: 32px; }
+  .brand-logo-img {
+    height: auto;
+    max-height: 34px;
+  }
 
   .nav-toggle {
     min-width: 40px;
