@@ -692,6 +692,10 @@ section { padding: 100px 0; }
   max-height: clamp(355px, 32vw, 405px);
 }
 
+.featured-products-grid .catalog-card-img {
+  max-height: clamp(270px, 25vw, 320px);
+}
+
 .featured-products-actions {
   flex-wrap: wrap;
 }

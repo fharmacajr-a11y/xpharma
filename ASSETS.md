@@ -51,7 +51,8 @@ The current identity layer includes a canonical header logo, favicon set, and th
 | `assets/images/apparel/*.jpg`, `assets/images/apparel/*.png`, `assets/images/apparel/*.webp` | Front and back media for the 3 apparel product pages |
 | `assets/images/brand/logo-oficial.png` | Source file used to derive the current header logo and favicon set |
 | `assets/images/favicons/favicon-32x32.png`, `assets/images/favicons/favicon-48x48.png`, `assets/images/favicons/apple-touch-icon.png` | Shared favicon and touch icon files for root pages and subfolders |
-| `assets/images/home/home-card-catalog.webp`, `assets/images/home/home-card-apparel.webp` | Featured product cards on the home page |
+| `assets/images/home/home-card-apparel.webp` | Apparel featured card on the home page |
+| `assets/images/home/home-card-catalog-premium-carton-clean.webp` | Full Catalog card image — Premium carton in 3/4 perspective, background removed; active asset in index.html |
 | `assets/images/institutional/about-lab-environment.png` | About page institutional visual |
 | `assets/images/institutional/facility.png` | About page facility and technology visual |
 | `assets/images/logos/header/xpharma-logo-header.png` | Canonical header logo and assurance logo asset |
