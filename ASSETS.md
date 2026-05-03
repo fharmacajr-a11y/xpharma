@@ -23,7 +23,7 @@ The current identity layer includes a canonical header logo, favicon set, and th
 | `assets/icons/` | Empty | Present in the repository, but currently has no files or published references |
 | `assets/images/apparel/` | In use | 12 image files supporting the 3 apparel detail pages |
 | `assets/images/brand/` | Mixed | Source logo, reserved logo, and review candidates |
-| `assets/images/home/` | In use | Delivery WebP assets for the 3 featured home cards |
+| `assets/images/home/` | In use | Delivery WebP assets for the 3 featured home cards and Who We Are section image |
 | `assets/images/favicons/` | In use | Shared PNG favicon set for root pages and subfolders |
 | `assets/images/institutional/` | In use + placeholder | 2 published images plus 1 `.gitkeep` placeholder |
 | `assets/images/logos/header/` | In use | Canonical header logo used by root pages, apparel pages, and generated product pages |
@@ -51,8 +51,9 @@ The current identity layer includes a canonical header logo, favicon set, and th
 | `assets/images/apparel/*.jpg`, `assets/images/apparel/*.png`, `assets/images/apparel/*.webp` | Front and back media for the 3 apparel product pages |
 | `assets/images/brand/logo-oficial.png` | Source file used to derive the current header logo and favicon set |
 | `assets/images/favicons/favicon-32x32.png`, `assets/images/favicons/favicon-48x48.png`, `assets/images/favicons/apple-touch-icon.png` | Shared favicon and touch icon files for root pages and subfolders |
-| `assets/images/home/home-card-apparel.webp` | Apparel featured card on the home page |
-| `assets/images/home/home-card-catalog-premium-carton-clean.webp` | Full Catalog card image — Premium carton in 3/4 perspective, background removed; active asset in index.html |
+| `assets/images/home/home-card-catalog-standard.webp` | Full Catalog featured card on the home page |
+| `assets/images/home/home-card-lipored-standard.webp` | LipoRED HD featured card on the home page |
+| `assets/images/home/home-card-apparel-standard.webp` | XPharma Apparel featured card on the home page |
 | `assets/images/institutional/about-lab-environment.png` | About page institutional visual |
 | `assets/images/institutional/facility.png` | About page facility and technology visual |
 | `assets/images/logos/header/xpharma-logo-header.png` | Canonical header logo and assurance logo asset |
@@ -62,11 +63,10 @@ The current identity layer includes a canonical header logo, favicon set, and th
 | `assets/images/products/oral-hormones/*.png` and `assets/images/products/oral-hormones/optimized/*.png`, `assets/images/products/oral-hormones/optimized/*.webp` | OG/source assets and rendered product media for oral hormone products |
 | `assets/images/products/oral-pharmaceuticals/*.png` and `assets/images/products/oral-pharmaceuticals/optimized/*.png`, `assets/images/products/oral-pharmaceuticals/optimized/*.webp` | OG/source assets and rendered product media for oral pharmaceutical products |
 | `assets/images/products/oral-thyroid-hormones/*.png` and `assets/images/products/oral-thyroid-hormones/optimized/*.png`, `assets/images/products/oral-thyroid-hormones/optimized/*.webp` | OG/source assets and rendered product media for thyroid hormone products |
-| `assets/images/home/injectable-premium-carton-front.jpg`, `assets/images/home/injectable-premium-carton-front.webp` | Injectable Premium XPharma package visual; reserved (replaced by presentation-clean) |
 | `assets/images/home/injectable-premium-presentation-clean.webp` | Injectable Premium two-carton presentation (background removed); used in the About / Who We Are section on the home page |
 | `assets/images/products/lipored-hd/lipored-hd-banner.png`, `assets/images/products/lipored-hd/lipored-hd-banner.webp` | LipoRED HD banner section |
 | `assets/images/products/lipored-hd/lipored-hd-documentation.png`, `assets/images/products/lipored-hd/lipored-hd-documentation.webp` | LipoRED HD documentation section |
-| `assets/images/products/lipored-hd/lipored-hd-vial-clean.webp` | LipoRED HD canonical vial asset; used in visual presentation section and home card |
+| `assets/images/products/lipored-hd/lipored-hd-vial-clean.webp` | LipoRED HD canonical vial asset; used in visual presentation section |
 | `assets/images/seals/seal-fda.png`, `assets/images/seals/seal-premium-quality.png` | Footer seals on public pages |
 
 ---
