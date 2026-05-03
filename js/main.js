@@ -332,31 +332,10 @@
         return;
       }
 
-      // Simulated submission — preserve original button content (SVG + label)
-      const submitBtn = contactForm.querySelector('button[type="submit"]');
-      const labelEl = submitBtn.querySelector('.btn-label');
-      const originalContent = labelEl ? labelEl.textContent : submitBtn.innerHTML;
+      const unavailableMsg = contactForm.dataset.unavailableMessage ||
+        'Your inquiry could not be submitted online yet. Please use the official contact channel.';
 
-      submitBtn.disabled = true;
-      if (labelEl) {
-        labelEl.textContent = 'Sending…';
-      } else {
-        submitBtn.innerHTML = 'Sending…';
-      }
-
-      const successMsg = contactForm.dataset.successMessage ||
-        'Message sent successfully. Our team will get back to you shortly.';
-
-      setTimeout(() => {
-        showFormMessage(contactForm, successMsg, 'success');
-        contactForm.reset();
-        submitBtn.disabled = false;
-        if (labelEl) {
-          labelEl.textContent = originalContent;
-        } else {
-          submitBtn.innerHTML = originalContent;
-        }
-      }, 1800);
+      showFormMessage(contactForm, unavailableMsg, 'notice');
     });
   }
 
@@ -374,9 +353,9 @@
       border-radius: 8px;
       font-size: 0.88rem;
       font-weight: 600;
-      background: ${type === 'success' ? 'rgba(34,197,94,0.12)' : 'rgba(239,68,68,0.12)'};
-      color: ${type === 'success' ? '#4ade80' : '#f87171'};
-      border: 1px solid ${type === 'success' ? 'rgba(34,197,94,0.3)' : 'rgba(239,68,68,0.3)'};
+      background: ${type === 'success' ? 'rgba(34,197,94,0.12)' : type === 'notice' ? 'rgba(201,164,92,0.14)' : 'rgba(239,68,68,0.12)'};
+      color: ${type === 'success' ? '#4ade80' : type === 'notice' ? '#8b6a21' : '#f87171'};
+      border: 1px solid ${type === 'success' ? 'rgba(34,197,94,0.3)' : type === 'notice' ? 'rgba(201,164,92,0.35)' : 'rgba(239,68,68,0.3)'};
     `;
     setTimeout(() => { if (msgEl) msgEl.remove(); }, 6000);
   }

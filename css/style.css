@@ -2163,6 +2163,7 @@ section[aria-labelledby="lipored-line-title"] .feature-grid {
 @media (max-width: 480px) {
   .why-grid { grid-template-columns: 1fr; }
   .contact-cards-grid { grid-template-columns: 1fr; }
+  .apparel-img-grid { grid-template-columns: 1fr; }
 
   .product-detail-section {
     padding: 1rem 0 64px;

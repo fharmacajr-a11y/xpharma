@@ -49,6 +49,7 @@ yarn-error.log*
 # â”€â”€â”€ Assets temporÃ¡rios / uploads locais â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 assets/uploads/
 assets/temp/
+assets/icons/favicon.ico
 imagens produtos inject/
 imgs prod injec/
 imgs prod injec.zip
