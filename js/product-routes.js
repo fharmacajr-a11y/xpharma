@@ -30,6 +30,7 @@
   function sanitizeNameForSlug(name) {
     return String(name || '')
       .replace(/^\(([^)]+)\)\s*-\s*/i, '')
+      .replace(/^ment-(?=trestolona\b)/i, '')
       .trim();
   }
 
