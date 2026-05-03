@@ -211,14 +211,14 @@
     }),
     buildProduct({
       slug: 'trestolona',
-      name: '(MENT) - TRESTOLONA',
+      name: 'Trestolona',
       category: 'injectable-singles',
       imageSrc: 'assets/images/products/injectable-singles/trestolona.png',
       subtitle: '7α-Methyl-19-Nortestosterone · 50 mg / 10 ml',
       presentation: '50 mg / 10 ml',
       activeCompound: '7α-Methyl-19-Nortestosterone',
       cardDescription: 'Injectable single presentation based on 7α-Methyl-19-Nortestosterone, an anabolic-androgenic compound listed for XPharma catalog and commercial reference.',
-      detailDescription: '(MENT) - TRESTOLONA is an injectable single presentation based on 7α-Methyl-19-Nortestosterone, as identified on the product label. 7α-Methyl-19-Nortestosterone is commonly referenced in technical compound references for its androgen receptor activity, anabolic-androgenic profile, and product classification.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
+      detailDescription: 'Trestolona is an injectable single presentation based on 7α-Methyl-19-Nortestosterone, as identified on the product label. 7α-Methyl-19-Nortestosterone, sometimes referenced as MENT in technical compound references, is commonly described for its androgen receptor activity, anabolic-androgenic profile, and product classification.\n\nThis product is organized within the XPharma catalog for product identification, label review, commercial reference, and documentation requests.\n\nThis page does not provide usage guidance, medical advice, or performance claims. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.'
     }),
     buildProduct({
       slug: 'winstrol',

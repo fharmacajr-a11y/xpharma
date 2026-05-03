@@ -215,13 +215,8 @@ ${ogImageMarkup ? `${ogImageMarkup}\n` : ''}  <meta name="theme-color" content="
             ${buildImageMarkup(product)}
           </div>
           <div class="product-detail-panel reveal reveal-delay-1">
-            <span class="product-tag">${escapeHtml(route.categoryLabel)}</span>
             <h2 id="product-detail-title">${escapeHtml(route.displayName)}</h2>
             <dl class="product-detail-specs">
-              <div class="product-detail-spec">
-                <dt>Category</dt>
-                <dd>${escapeHtml(route.categoryLabel)}</dd>
-              </div>
               <div class="product-detail-spec">
                 <dt>Active compound</dt>
                 <dd>${escapeHtml(product.activeCompound || 'Available on request')}</dd>
