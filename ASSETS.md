@@ -1,117 +1,108 @@
-# XPharma Asset Guide
+# XPharma Asset Inventory
 
-All files should be stored under `assets/images/` using the folders below.
-Use only images with a clear commercial license or written company authorization.
-Accepted formats: `.jpg` for photography, `.png` for transparency, and `.webp` for optimized delivery.
-
----
-
-## Current Folder Structure
-
-- `assets/images/brand/` - official logos, brand symbol, future favicon
-- `assets/images/institutional/` - laboratory, team, facility, quality-control environments
-- `assets/images/products/` - catalog images, packaging visuals, product cards, campaign visuals
+This document reflects the current asset structure verified during the pre-publication audit.
+This pass is documentation-only: no assets were deleted, moved, renamed, or re-optimized.
 
 ---
 
-## Brand Assets Already Added
+## Verified Project Baseline
 
-| File | Current use | Notes |
+- 52 public HTML files are currently part of the site output: 10 in the root, 39 in `products/`, and 3 in `apparel/`.
+- The 39 routes created from `js/product-routes.js` match the 39 generated files in `products/`.
+- `product.html` remains in the repository as a legacy fallback and should stay for now.
+- The asset audit found 11 unreferenced files. They are now classified below as placeholders, reserved assets, or review candidates.
+
+---
+
+## Current Asset Structure
+
+| Folder | Status | Notes |
 |---|---|---|
-| `brand/logo-xpharma-premium-horizontal.png` | Header and footer | Main logo used across the site |
-| `brand/logo-xpharma-premium-with-symbol.jpg` | Reserved for future use | Not used in this round |
+| `assets/docs/lipored-hd/` | In use | Downloadable LipoRED HD manual |
+| `assets/icons/` | Empty | Present in the repository, but currently has no files or published references |
+| `assets/images/apparel/` | In use | 12 image files supporting the 3 apparel detail pages |
+| `assets/images/brand/` | Mixed | Active brand logo, reserved logo, and review candidates |
+| `assets/images/institutional/` | In use + placeholder | 2 published images plus 1 `.gitkeep` placeholder |
+| `assets/images/logos/footer/` | In use | Footer logos in `.png` and `.webp` |
+| `assets/images/products/` | Mixed | Root product marketing images, product subfolders, and 1 `.gitkeep` placeholder |
+| `assets/images/products/injectable-blends/` | In use | Injectable blend product renders used by generated product pages |
+| `assets/images/products/injectable-singles/` | In use | Injectable single product renders used by generated product pages |
+| `assets/images/products/lipored-hd/` | Mixed | Active LipoRED HD visuals, reserved carton renders, and review candidates |
+| `assets/images/products/oral-hormones/` | In use | Source images used for OG metadata and product references |
+| `assets/images/products/oral-hormones/optimized/` | In use | Delivery images rendered inside generated oral hormone product pages |
+| `assets/images/products/oral-pharmaceuticals/` | In use | Source images used for OG metadata and product references |
+| `assets/images/products/oral-pharmaceuticals/optimized/` | In use | Delivery images rendered inside generated oral pharmaceutical product pages |
+| `assets/images/products/oral-thyroid-hormones/` | In use | Source images used for OG metadata and product references |
+| `assets/images/products/oral-thyroid-hormones/optimized/` | In use | Delivery images rendered inside generated thyroid product pages |
+| `assets/images/seals/` | In use | Footer certification seals |
 
 ---
 
-## Product Assets Already Added
+## Assets Currently In Use
 
-| File | Current use | Suggested alt text |
-|---|---|---|
-| `products/lipored-hd-bottle.jpg` | Legacy LipoRED HD card image on the Home page | LipoRED HD bottle with a red and white label |
-| `products/lipored-hd/lipored-hd-vial-presentation.jpg` | LipoRED HD page — Visual Presentation section (`.webp` pair available) | LipoRED HD vial presentation from the XPharma line |
-| `products/lipored-hd/lipored-hd-banner.png` | LipoRED HD page — banner section (`.webp` pair available) | LipoRED HD institutional banner from the XPharma line |
-| `products/lipored-hd/lipored-hd-documentation.png` | LipoRED HD page — Product Documentation section (`.webp` pair available) | LipoRED HD usage manual and documentation material |
-| `products/lipored-hd/lipored-hd-carton-front.jpg` | Available — future use, carton packaging visual (`.webp` pair available) | LipoRED HD carton front presentation |
-| `products/xpharma-premium-red-package-front.jpg` | Home, About, and Products pages | Red XPharma package presentation |
-
-## Docs Already Added
-
-| File | Current use | Notes |
-|---|---|---|
-| `docs/lipored-hd/manual-lipo-red-hd-pt-en.pdf` | LipoRED HD page — Download usage manual button | Bilingual PT/EN manual |
-
----
-
-## Pending Assets - High Priority
-
-Visible images for the highest-traffic institutional sections. Current HTML placeholders remain in place until these assets are authorized for use.
-
-| Expected file | Page(s) | Ratio | Minimum resolution | Type | Suggested alt text | Notes |
-|---|---|---|---|---|---|---|
-| `institutional/team.jpg` | about.html - Who We Are section | 4:5 | 800 x 1000 px | Real photo - team in laboratory | XPharma team in a research laboratory | Appears near the top of the About page |
-| `institutional/facility.jpg` | about.html - Technology section | 16:9 | 1200 x 675 px | Real photo - production or quality-control environment | XPharma production facility or quality control environment | Wide image for the technology section |
+| Files | Current use |
+|---|---|
+| `assets/docs/lipored-hd/manual-lipo-red-hd-pt-en.pdf` | Download button on the LipoRED HD page |
+| `assets/images/apparel/*.jpg`, `assets/images/apparel/*.png`, `assets/images/apparel/*.webp` | Front and back media for the 3 apparel product pages |
+| `assets/images/brand/logo-xpharma-premium-horizontal.png` | Main header and footer logo across the site |
+| `assets/images/institutional/about-lab-environment.png` | About page institutional visual |
+| `assets/images/institutional/facility.png` | About page facility and technology visual |
+| `assets/images/logos/footer/*.png`, `assets/images/logos/footer/*.webp` | Footer partner and brand logo rendering |
+| `assets/images/products/injectable-blends/*.png`, `assets/images/products/injectable-blends/*.webp` | Generated product pages for injectable blends |
+| `assets/images/products/injectable-singles/*.png`, `assets/images/products/injectable-singles/*.webp` | Generated product pages for injectable singles |
+| `assets/images/products/oral-hormones/*.png` and `assets/images/products/oral-hormones/optimized/*.png`, `assets/images/products/oral-hormones/optimized/*.webp` | OG/source assets and rendered product media for oral hormone products |
+| `assets/images/products/oral-pharmaceuticals/*.png` and `assets/images/products/oral-pharmaceuticals/optimized/*.png`, `assets/images/products/oral-pharmaceuticals/optimized/*.webp` | OG/source assets and rendered product media for oral pharmaceutical products |
+| `assets/images/products/oral-thyroid-hormones/*.png` and `assets/images/products/oral-thyroid-hormones/optimized/*.png`, `assets/images/products/oral-thyroid-hormones/optimized/*.webp` | OG/source assets and rendered product media for thyroid hormone products |
+| `assets/images/products/lipored-hd-bottle.jpg` | Legacy LipoRED HD card image on the home page |
+| `assets/images/products/xpharma-premium-red-package-front.jpg` | Home, About, and Products marketing sections |
+| `assets/images/products/lipored-hd/lipored-hd-banner.png`, `assets/images/products/lipored-hd/lipored-hd-banner.webp` | LipoRED HD banner section |
+| `assets/images/products/lipored-hd/lipored-hd-documentation.png`, `assets/images/products/lipored-hd/lipored-hd-documentation.webp` | LipoRED HD documentation section |
+| `assets/images/products/lipored-hd/lipored-hd-vial-presentation.jpg`, `assets/images/products/lipored-hd/lipored-hd-vial-presentation.webp` | LipoRED HD visual presentation section |
+| `assets/images/seals/seal-fda.png`, `assets/images/seals/seal-premium-quality.png` | Footer seals on public pages |
 
 ---
 
-## Pending Assets - Medium Priority
+## Placeholder Files Kept Intentionally
 
-Additional product and institutional visuals that can improve the catalog and supporting pages.
+These files are not public assets. They are repository placeholders and should remain classified as such until a cleanup round is approved.
 
-| Expected file | Page(s) | Ratio | Minimum resolution | Type | Suggested alt text | Notes |
-|---|---|---|---|---|---|---|
-| `products/product-performance.jpg` | index.html + products.html | 1:1 | 600 x 600 px | Product or packaging photo | XPharma Performance Pro product presentation | Use only authorized commercial imagery |
-| `products/product-presentation.jpg` | index.html + products.html | 1:1 | 600 x 600 px | Product or packaging photo | XPharma product presentation | Use only authorized commercial imagery |
-| `products/product-wellness.jpg` | index.html + products.html | 1:1 | 600 x 600 px | Product or packaging photo | XPharma Wellness and Vital product presentation | Use only authorized commercial imagery |
-
----
-
-## Pending Assets - Product Card Placeholders
-
-Each file corresponds to a product card currently represented by a placeholder in `products.html`.
-Do not use imagery that implies unauthorized health-related or market-authorization claims.
-
-| Expected file | Product | Ratio | Minimum resolution | Type | Suggested alt text |
-|---|---|---|---|---|---|
-| `products/performance-line.jpg` | Performance Line | 1:1 | 600 x 600 px | Product or packaging photo | Performance line product presentation |
-| `products/performance-documentation.jpg` | Performance Documentation | 1:1 | 600 x 600 px | Product or packaging photo | Performance documentation product presentation |
-| `products/performance-portfolio.jpg` | Performance Portfolio | 1:1 | 600 x 600 px | Product or packaging photo | Performance portfolio product presentation |
-| `products/product-documentation.jpg` | Product Documentation | 1:1 | 600 x 600 px | Product or packaging photo | Product documentation presentation |
-| `products/quality-review.jpg` | Quality Review | 1:1 | 600 x 600 px | Product or packaging photo | Quality review product presentation |
-| `products/wellness-line.jpg` | Wellness Line | 1:1 | 600 x 600 px | Product or packaging photo | Wellness line product presentation |
-| `products/wellness-documentation.jpg` | Wellness Documentation | 1:1 | 600 x 600 px | Product or packaging photo | Wellness documentation product presentation |
-| `products/essential-nutrition.jpg` | Essential Nutrition | 1:1 | 600 x 600 px | Product or packaging photo | Essential nutrition product presentation |
-| `products/recovery-line.jpg` | Recovery Line | 1:1 | 600 x 600 px | Product or packaging photo | Recovery line product presentation |
-| `products/recovery-documentation.jpg` | Recovery Documentation | 1:1 | 600 x 600 px | Product or packaging photo | Recovery documentation product presentation |
-| `products/commercial-portfolio.jpg` | Commercial Portfolio | 1:1 | 600 x 600 px | Product or packaging photo | Commercial portfolio product presentation |
+| File | Purpose |
+|---|---|
+| `assets/images/.gitkeep` | Historical placeholder file; not referenced by public output |
+| `assets/images/institutional/.gitkeep` | Historical placeholder file; not referenced by public output |
+| `assets/images/products/.gitkeep` | Historical placeholder file; not referenced by public output |
 
 ---
 
-## Quality and License Requirements
+## Reserved For Future Use
 
-- Prefer real company photography for laboratory, team, production, and quality-control contexts.
-- If stock photography is used, require a clear commercial license or equivalent authorization.
-- Do not use AI-generated images unless their license is clear and compatible with commercial use.
-- Optimize every file before upload:
-  - Use Squoosh, sharp, or an equivalent optimization tool.
-  - Keep product `.jpg` files below 200 KB when possible.
-  - Keep hero and wide institutional images below 400 KB when possible.
-  - Consider adding `.webp` versions for modern browsers.
-- Use exact documented paths when replacing placeholders.
+These files are intentionally kept in the repository even though they are not referenced by the current HTML, CSS, JS, or generated routes.
+
+| File | Reason |
+|---|---|
+| `assets/images/brand/logo-xpharma-premium-with-symbol.jpg` | Reserved alternate brand lockup for a future design round |
+| `assets/images/products/lipored-hd/lipored-hd-carton-front.jpg` | Reserved LipoRED HD carton visual |
+| `assets/images/products/lipored-hd/lipored-hd-carton-front.webp` | WebP pair for the reserved carton visual |
 
 ---
 
-## Replacing Placeholders
+## Orphan Assets Requiring Review Before Publication
 
-The current placeholders were not replaced in this language update. When visual replacement happens, use the documented folders and authorized alt text.
+These files are present in the repository but were not found in live HTML, CSS, JS, or generated product routes during the audit. No deletion or move is authorized in this pass.
 
-```html
-<!-- Future example -->
-<img src="assets/images/institutional/team.jpg"
-     alt="XPharma team in a research laboratory"
-     width="800" height="1000"
-     loading="lazy"
-     decoding="async">
-```
+| File | Current audit status |
+|---|---|
+| `assets/images/brand/logo-mr.jpg` | Not referenced; review whether it belongs in active brand assets or a local archive |
+| `assets/images/brand/logo-oficial.png` | Not referenced; review whether it is still part of the approved brand system |
+| `assets/images/products/lipored-hd-campaign.jpg` | Not referenced; review whether it should be documented as future campaign media |
+| `assets/images/products/lipored-hd/lipored-hd-vial-front.jpg` | Not referenced; review whether it should be reserved or removed in a later cleanup round |
+| `assets/images/products/lipored-hd/lipored-hd-vial-front.webp` | WebP pair for the same review item above |
 
-Total pending images: **16**
-(2 high priority, 3 medium priority, 11 product card placeholders)
+---
+
+## Future Upload Standards
+
+- Use only company-owned or commercially authorized imagery.
+- Prefer `.jpg` for photography, `.png` for transparency, and `.webp` when a delivery pair is needed.
+- Use exact documented paths when replacing placeholders or enabling reserved assets.
+- Re-audit references before publishing any currently orphan or reserved file.
