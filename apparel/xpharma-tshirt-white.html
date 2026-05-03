@@ -289,7 +289,7 @@
   <div id="apparel-lightbox" class="apparel-lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
     <div class="apparel-lightbox-inner">
       <button class="apparel-lightbox-close" aria-label="Close preview">&#215;</button>
-      <img id="apparel-lightbox-img" src="" alt="" />
+      <img id="apparel-lightbox-img" alt="" />
       <p class="apparel-lightbox-caption" id="apparel-lightbox-caption"></p>
     </div>
   </div>
@@ -309,7 +309,9 @@
     function close() {
       lb.classList.remove('is-open');
       document.body.style.overflow = '';
-      lbImg.src = '';
+      lbImg.removeAttribute('src');
+      lbImg.alt = '';
+      lbCap.textContent = '';
       if (lastFocused) lastFocused.focus();
     }
     document.querySelectorAll('.apparel-img-grid img').forEach(function (img) {
