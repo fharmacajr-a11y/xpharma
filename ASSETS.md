@@ -1,7 +1,7 @@
 # XPharma Asset Inventory
 
 This document reflects the current asset structure verified during the pre-publication audit.
-This pass is documentation-only: no assets were deleted, moved, renamed, or re-optimized.
+The current identity layer includes a canonical header logo, favicon set, and the source logo used to derive them.
 
 ---
 
@@ -10,7 +10,8 @@ This pass is documentation-only: no assets were deleted, moved, renamed, or re-o
 - 52 public HTML files are currently part of the site output: 10 in the root, 39 in `products/`, and 3 in `apparel/`.
 - The 39 routes created from `js/product-routes.js` match the 39 generated files in `products/`.
 - `product.html` remains in the repository as a legacy fallback and should stay for now.
-- The asset audit found 11 unreferenced files. They are now classified below as placeholders, reserved assets, or review candidates.
+- Header identity now uses `assets/images/logos/header/xpharma-logo-header.png` with shared favicons in `assets/images/favicons/` and `favicon.ico` at the project root.
+- Review candidates are classified below as placeholders, reserved assets, or assets pending publication review.
 
 ---
 
@@ -21,8 +22,10 @@ This pass is documentation-only: no assets were deleted, moved, renamed, or re-o
 | `assets/docs/lipored-hd/` | In use | Downloadable LipoRED HD manual |
 | `assets/icons/` | Empty | Present in the repository, but currently has no files or published references |
 | `assets/images/apparel/` | In use | 12 image files supporting the 3 apparel detail pages |
-| `assets/images/brand/` | Mixed | Active brand logo, reserved logo, and review candidates |
+| `assets/images/brand/` | Mixed | Source logo, reserved logo, and review candidates |
+| `assets/images/favicons/` | In use | Shared PNG favicon set for root pages and subfolders |
 | `assets/images/institutional/` | In use + placeholder | 2 published images plus 1 `.gitkeep` placeholder |
+| `assets/images/logos/header/` | In use | Canonical header logo used by root pages, apparel pages, and generated product pages |
 | `assets/images/logos/footer/` | In use | Footer logos in `.png` and `.webp` |
 | `assets/images/products/` | Mixed | Root product marketing images, product subfolders, and 1 `.gitkeep` placeholder |
 | `assets/images/products/injectable-blends/` | In use | Injectable blend product renders used by generated product pages |
@@ -42,11 +45,14 @@ This pass is documentation-only: no assets were deleted, moved, renamed, or re-o
 
 | Files | Current use |
 |---|---|
+| `favicon.ico` | Root favicon for browsers that resolve the icon from the site root |
 | `assets/docs/lipored-hd/manual-lipo-red-hd-pt-en.pdf` | Download button on the LipoRED HD page |
 | `assets/images/apparel/*.jpg`, `assets/images/apparel/*.png`, `assets/images/apparel/*.webp` | Front and back media for the 3 apparel product pages |
-| `assets/images/brand/logo-xpharma-premium-horizontal.png` | Main header and footer logo across the site |
+| `assets/images/brand/logo-oficial.png` | Source file used to derive the current header logo and favicon set |
+| `assets/images/favicons/favicon-32x32.png`, `assets/images/favicons/favicon-48x48.png`, `assets/images/favicons/apple-touch-icon.png` | Shared favicon and touch icon files for root pages and subfolders |
 | `assets/images/institutional/about-lab-environment.png` | About page institutional visual |
 | `assets/images/institutional/facility.png` | About page facility and technology visual |
+| `assets/images/logos/header/xpharma-logo-header.png` | Canonical header logo and assurance logo asset |
 | `assets/images/logos/footer/*.png`, `assets/images/logos/footer/*.webp` | Footer partner and brand logo rendering |
 | `assets/images/products/injectable-blends/*.png`, `assets/images/products/injectable-blends/*.webp` | Generated product pages for injectable blends |
 | `assets/images/products/injectable-singles/*.png`, `assets/images/products/injectable-singles/*.webp` | Generated product pages for injectable singles |
@@ -93,8 +99,6 @@ These files are present in the repository but were not found in live HTML, CSS, 
 | File | Current audit status |
 |---|---|
 | `assets/images/brand/logo-mr.jpg` | Not referenced; review whether it belongs in active brand assets or a local archive |
-| `assets/images/brand/logo-oficial.png` | Not referenced; review whether it is still part of the approved brand system |
-| `assets/images/products/lipored-hd-campaign.jpg` | Not referenced; review whether it should be documented as future campaign media |
 | `assets/images/products/lipored-hd/lipored-hd-vial-front.jpg` | Not referenced; review whether it should be reserved or removed in a later cleanup round |
 | `assets/images/products/lipored-hd/lipored-hd-vial-front.webp` | WebP pair for the same review item above |
 
