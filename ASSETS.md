@@ -61,7 +61,8 @@ The current identity layer includes a canonical header logo, favicon set, and th
 | `assets/images/products/oral-hormones/*.png` and `assets/images/products/oral-hormones/optimized/*.png`, `assets/images/products/oral-hormones/optimized/*.webp` | OG/source assets and rendered product media for oral hormone products |
 | `assets/images/products/oral-pharmaceuticals/*.png` and `assets/images/products/oral-pharmaceuticals/optimized/*.png`, `assets/images/products/oral-pharmaceuticals/optimized/*.webp` | OG/source assets and rendered product media for oral pharmaceutical products |
 | `assets/images/products/oral-thyroid-hormones/*.png` and `assets/images/products/oral-thyroid-hormones/optimized/*.png`, `assets/images/products/oral-thyroid-hormones/optimized/*.webp` | OG/source assets and rendered product media for thyroid hormone products |
-| `assets/images/home/injectable-premium-carton-front.jpg`, `assets/images/home/injectable-premium-carton-front.webp` | Injectable Premium XPharma package visual; used in the About / Who We Are section on the home page |
+| `assets/images/home/injectable-premium-carton-front.jpg`, `assets/images/home/injectable-premium-carton-front.webp` | Injectable Premium XPharma package visual; reserved (replaced by presentation-clean) |
+| `assets/images/home/injectable-premium-presentation-clean.webp` | Injectable Premium two-carton presentation (background removed); used in the About / Who We Are section on the home page |
 | `assets/images/products/lipored-hd/lipored-hd-banner.png`, `assets/images/products/lipored-hd/lipored-hd-banner.webp` | LipoRED HD banner section |
 | `assets/images/products/lipored-hd/lipored-hd-documentation.png`, `assets/images/products/lipored-hd/lipored-hd-documentation.webp` | LipoRED HD documentation section |
 | `assets/images/products/lipored-hd/lipored-hd-vial-clean.webp` | LipoRED HD canonical vial asset; used in visual presentation section and home card |
