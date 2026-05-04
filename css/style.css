@@ -2692,7 +2692,7 @@ address.footer-contact-list {
 }
 
 /* ══════════════════════════════════════
-   FLOATING ACTIONS — WhatsApp + Back to top
+   FLOATING ACTIONS — Back to top
 ══════════════════════════════════════ */
 
 .floating-actions {
@@ -2723,26 +2723,17 @@ address.footer-contact-list {
 
 /* Back to top: hidden until user scrolls */
 .floating-action--top {
-  position: absolute;
-  left: 50%;
-  bottom: calc(100% + 0.625rem);
   background: linear-gradient(135deg, var(--red-600), var(--red-800));
   color: #fff;
   opacity: 0;
   pointer-events: none;
-  transform: translate(-50%, 8px);
+  transform: translateY(8px);
 }
 
 .floating-action--top.floating-action--visible {
   opacity: 1;
   pointer-events: auto;
-  transform: translate(-50%, 0);
-}
-
-/* WhatsApp: always visible */
-.floating-action--whatsapp {
-  background: #25d366;
-  color: #fff;
+  transform: translateY(0);
 }
 
 .floating-action:hover,
@@ -2755,16 +2746,11 @@ address.footer-contact-list {
 .floating-action--top:hover,
 .floating-action--top:focus-visible {
   background: linear-gradient(135deg, var(--red-700), var(--red-900));
-  transform: translate(-50%, -3px);
+  transform: translateY(-3px);
 }
 
 .floating-action--top:active {
-  transform: translate(-50%, -1px);
-}
-
-.floating-action--whatsapp:hover,
-.floating-action--whatsapp:focus-visible {
-  background: #1ebe5b;
+  transform: translateY(-1px);
 }
 
 .floating-action svg {
