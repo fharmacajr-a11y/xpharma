@@ -2722,6 +2722,11 @@ address.footer-contact-list {
 .floating-action--top:hover,
 .floating-action--top:focus-visible {
   background: linear-gradient(135deg, var(--red-700), var(--red-900));
+  transform: translate(-50%, -3px);
+}
+
+.floating-action--top:active {
+  transform: translate(-50%, -1px);
 }
 
 .floating-action--whatsapp:hover,
