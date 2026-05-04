@@ -1330,6 +1330,7 @@ section { padding: 100px 0; }
 
 .lipored-product-section {
   padding-top: 48px;
+  padding-bottom: 80px;
 }
 
 .lipored-banner-frame {
@@ -1411,8 +1412,11 @@ section { padding: 100px 0; }
 }
 
 /* Visual Presentation: texto à esquerda, card à direita */
+/* Right column max matches the vial-frame max-width (420px) so that
+   both the vial card border and the composition card share the same
+   right edge as the container. */
 .lipored-product-section .feature-grid {
-  grid-template-columns: minmax(0, 1fr) minmax(360px, 500px);
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 420px);
   align-items: start;
   gap: clamp(3rem, 6vw, 5rem);
 }
@@ -1456,6 +1460,7 @@ section[aria-labelledby="lipored-info-title"] .card {
 
   .lipored-product-section {
     padding-top: 36px;
+    padding-bottom: 56px;
   }
 
   .lipored-product-section .feature-grid {
@@ -1488,6 +1493,98 @@ section[aria-labelledby="lipored-info-title"] .card {
 @media (max-width: 560px) {
   section[aria-labelledby="lipored-info-title"] .why-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ── LipoRED HD: Composition card ── */
+.lipored-composition-card {
+  position: relative;
+  width: 100%;
+  margin-top: 2.5rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 2rem 2.25rem;
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  scroll-margin-top: calc(var(--nav-h) + 1.5rem);
+}
+
+.lipored-composition-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--red-600) 0%, transparent 72%);
+  pointer-events: none;
+}
+
+.lipored-composition-header {
+  margin-bottom: 1.5rem;
+}
+
+.lipored-composition-note {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 0.35rem;
+  line-height: 1.6;
+}
+
+.lipored-composition-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  list-style: none;
+}
+
+.lipored-composition-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.9rem 1rem;
+  background: linear-gradient(180deg, rgba(255,255,255,0.92), var(--bg-surface2));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.45);
+}
+
+.lipored-composition-name {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--red-700);
+  line-height: 1.35;
+}
+
+.lipored-composition-dose {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .lipored-composition-card {
+    margin-top: 1.75rem;
+    padding: 1.5rem;
+    border-radius: var(--radius-lg);
+  }
+}
+
+@media (max-width: 540px) {
+  .lipored-composition-list {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .lipored-composition-card {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
   }
 }
 
