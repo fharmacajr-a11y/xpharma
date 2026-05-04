@@ -351,6 +351,7 @@ select:focus-visible {
   gap: 0;
   max-height: calc(100vh - var(--nav-h));
   overflow-y: auto;
+  overscroll-behavior: contain;
 }
 .nav-mobile.open { display: flex; }
 .nav-mobile a {
@@ -369,6 +370,13 @@ select:focus-visible {
 .nav-mobile a:hover,
 .nav-mobile a.active { color: var(--red-600); }
 .nav-mobile .btn { margin-top: 1.5rem; width: 100%; justify-content: center; }
+.nav-mobile .btn-primary {
+  display: flex;
+  align-items: center;
+  color: var(--text-primary);
+  padding: 0.875rem 1.5rem;
+  border-bottom: none;
+}
 
 /* ── Hero ── */
 .hero {
@@ -1464,6 +1472,17 @@ section[aria-labelledby="lipored-info-title"] .card {
   section[aria-labelledby="lipored-info-title"] .why-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  /* Fix: documentation image needs explicit height in single-column mobile */
+  .lipored-doc-col {
+    min-height: 260px;
+  }
+
+  /* Fix: documentation section download button */
+  section[aria-labelledby="lipored-line-title"] .product-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 560px) {
@@ -2292,6 +2311,20 @@ section[aria-labelledby="lipored-info-title"] .card {
   section { padding: 72px 0; }
   #contact-channels { padding-bottom: 40px; }
   #faq { padding-top: 48px; }
+
+  /* Fix: hero whitespace on mobile — remove 100vh min-height and align to top */
+  .hero {
+    min-height: auto;
+    justify-content: flex-start;
+    padding-bottom: 2rem;
+  }
+  .hero-content {
+    padding: 2rem 0 2rem;
+  }
+  .hero-stats {
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
 
   .nav-inner {
     position: relative;

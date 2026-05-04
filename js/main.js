@@ -37,29 +37,49 @@
   const navMobile = document.querySelector('.nav-mobile');
 
   if (navToggle && navMobile) {
+    // iOS Safari requires position:fixed on body to block background scroll
+    function openMobileMenu() {
+      const y = window.scrollY;
+      navToggle.classList.add('open');
+      navMobile.classList.add('open');
+      navToggle.setAttribute('aria-expanded', 'true');
+      document.body.dataset.navScrollY = y;
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${y}px`;
+      document.body.style.width = '100%';
+    }
+
+    function closeMobileMenu() {
+      const y = parseFloat(document.body.dataset.navScrollY || '0');
+      navToggle.classList.remove('open');
+      navMobile.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, y);
+    }
+
     navToggle.addEventListener('click', () => {
-      const menuExpanded = navToggle.classList.toggle('open');
-      navMobile.classList.toggle('open', menuExpanded);
-      navToggle.setAttribute('aria-expanded', menuExpanded);
-      document.body.style.overflow = menuExpanded ? 'hidden' : '';
+      if (navToggle.classList.contains('open')) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
     });
 
     // Close after clicking a link
     navMobile.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navToggle.classList.remove('open');
-        navMobile.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      });
+      link.addEventListener('click', closeMobileMenu);
     });
 
     // Close after clicking outside
     document.addEventListener('click', (e) => {
-      if (!navbar.contains(e.target) && !navMobile.contains(e.target)) {
-        navToggle.classList.remove('open');
-        navMobile.classList.remove('open');
-        document.body.style.overflow = '';
+      if (navToggle.classList.contains('open') &&
+          !navbar.contains(e.target) && !navMobile.contains(e.target)) {
+        closeMobileMenu();
       }
     });
   }
