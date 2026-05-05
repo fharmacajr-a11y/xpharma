@@ -153,7 +153,7 @@
 
     wrapper.className = 'product-card-link';
     wrapper.href = getProductHref(product);
-    wrapper.setAttribute('aria-label', `View details for ${product.name}`);
+    wrapper.setAttribute('aria-label', `View details for ${product.displayName || product.name}`);
 
     media.className = 'product-card-media';
     media.appendChild(createMedia(product));
@@ -165,7 +165,7 @@
     tag.className = 'product-tag';
     tag.textContent = categoryLabels[product.category] || product.category;
 
-    title.textContent = product.name;
+    title.textContent = product.displayName || product.name;
     subtitle.className = 'product-card-subtitle';
     subtitle.textContent = subtitleText || '';
     description.textContent = product.cardDescription || product.description;

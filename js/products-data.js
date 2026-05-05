@@ -6,7 +6,7 @@
   const oralCardDescription = 'Oral product presentation listed for XPharma catalog and commercial reference.';
   const oralDetailDescription = 'This oral product presentation is listed within the XPharma catalog for product identification, label review, commercial reference, and documentation requests. Composition, regulatory status, market availability, and supporting documentation should be confirmed through official XPharma channels.';
 
-  function buildProduct({ slug, name, category, categoryLabel, imageSrc, altName, subtitle, presentation, activeCompound, cardDescription, detailDescription }) {
+  function buildProduct({ slug, name, displayName, category, categoryLabel, imageSrc, altName, subtitle, presentation, activeCompound, cardDescription, detailDescription }) {
     const description = category === 'injectable-singles' || category === 'injectable-blends'
       ? injectableDescription
       : oralDescription;
@@ -17,6 +17,10 @@
       category,
       description
     };
+
+    if (displayName) {
+      product.displayName = displayName;
+    }
 
     if (categoryLabel) {
       product.categoryLabel = categoryLabel;
@@ -189,6 +193,7 @@
     buildProduct({
       slug: 'prop-test',
       name: 'Prop Test',
+      displayName: 'Testo. Prop',
       category: 'injectable-singles',
       imageSrc: 'assets/images/products/injectable-singles/prop-test.png',
       subtitle: 'Testosterone Propionate · 100 mg / 10 ml',
@@ -370,6 +375,7 @@
     buildProduct({
       slug: 'test-prop-xp',
       name: 'Test Prop XP',
+      displayName: 'Testo. Prop XP',
       category: 'oral-hormones',
       categoryLabel: 'Oral Hormones',
       imageSrc: 'assets/images/products/oral-hormones/test-prop-xp.png',
