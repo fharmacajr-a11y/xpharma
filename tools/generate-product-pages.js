@@ -218,11 +218,44 @@ ${ogImageMarkup ? `${ogImageMarkup}\n` : ''}  <meta name="theme-color" content="
           <li><a href="../contact.html">Contact</a></li>
         </ul>
         <a href="../distributor.html" class="btn btn-primary nav-cta">Become a Distributor</a>
+
+        <!-- Desktop search -->
+        <form class="nav-search js-nav-search-form" role="search" action="../products.html" method="GET" aria-label="Search products">
+          <div class="nav-search-wrap">
+            <svg class="nav-search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            <input type="search" name="q" class="nav-search-input" placeholder="Search products..." autocomplete="off" aria-label="Search products" maxlength="100" />
+            <button type="submit" class="nav-search-btn" aria-label="Submit search">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </form>
+
+        <!-- Mobile search toggle -->
+        <button class="nav-search-toggle" id="nav-search-toggle" aria-label="Search products" aria-expanded="false" aria-controls="nav-search-drawer">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </button>
+
         <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
           <span></span><span></span><span></span>
         </button>
       </div>
     </nav>
+
+    <!-- Mobile search drawer -->
+    <div class="nav-search-drawer" id="nav-search-drawer" aria-hidden="true">
+      <div class="container">
+        <form class="js-nav-search-form" role="search" action="../products.html" method="GET" aria-label="Search products">
+          <div class="nav-search-wrap">
+            <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            <input type="search" name="q" class="nav-search-input" placeholder="Search products..." autocomplete="off" aria-label="Search products" maxlength="100" />
+            <button type="submit" class="nav-search-btn" aria-label="Submit search">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <div class="nav-mobile" id="nav-mobile" role="dialog" aria-label="Navigation menu">
       <a href="../index.html">Home</a>
       <a href="../about.html">About</a>

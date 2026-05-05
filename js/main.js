@@ -36,36 +36,40 @@
   const navToggle = document.querySelector('.nav-toggle');
   const navMobile = document.querySelector('.nav-mobile');
 
+  // iOS Safari requires position:fixed on body to block background scroll.
+  // Defined at outer IIFE scope so the search toggle handler can call closeMobileMenu().
+  function openMobileMenu() {
+    if (!navToggle || !navMobile) return;
+    const y = window.scrollY;
+    navToggle.classList.add('open');
+    navMobile.classList.add('open');
+    navToggle.setAttribute('aria-expanded', 'true');
+    document.body.dataset.navScrollY = y;
+    document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${y}px`;
+    document.body.style.width = '100%';
+  }
+
+  function closeMobileMenu() {
+    if (!navToggle || !navMobile) return;
+    const y = parseFloat(document.body.dataset.navScrollY || '0');
+    navToggle.classList.remove('open');
+    navMobile.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    window.scrollTo(0, y);
+  }
+
   if (navToggle && navMobile) {
-    // iOS Safari requires position:fixed on body to block background scroll
-    function openMobileMenu() {
-      const y = window.scrollY;
-      navToggle.classList.add('open');
-      navMobile.classList.add('open');
-      navToggle.setAttribute('aria-expanded', 'true');
-      document.body.dataset.navScrollY = y;
-      document.body.style.overflow = 'hidden';
-      document.body.style.position = 'fixed';
-      document.body.style.top = `-${y}px`;
-      document.body.style.width = '100%';
-    }
-
-    function closeMobileMenu() {
-      const y = parseFloat(document.body.dataset.navScrollY || '0');
-      navToggle.classList.remove('open');
-      navMobile.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-      document.body.style.position = '';
-      document.body.style.top = '';
-      document.body.style.width = '';
-      window.scrollTo(0, y);
-    }
-
     navToggle.addEventListener('click', () => {
       if (navToggle.classList.contains('open')) {
         closeMobileMenu();
       } else {
+        closeSearchDrawer(); // mutual exclusion: close search before opening menu
         openMobileMenu();
       }
     });
@@ -140,6 +144,10 @@
   /* ── Product filter ── */
   const filterBtns = document.querySelectorAll('.filter-btn');
   const productCards = document.querySelectorAll('.product-card[data-category]');
+
+  // Shared search state (used by both search and category filter)
+  let currentSearchQuery = new URLSearchParams(window.location.search).get('q') || '';
+
   const validProductCategories = new Set([
     'all',
     'injectable-singles',
@@ -290,6 +298,9 @@
 
     updateProductCardLinks(normalizedCategory);
     updateCatalogUrl(normalizedCategory, options);
+
+    // Apply text search filter on top of category filter
+    applyTextFilter(productCards, currentSearchQuery);
   }
 
   function setActiveFilterButton(activeButton) {
@@ -298,6 +309,54 @@
       button.classList.toggle('active', isActive);
       button.setAttribute('aria-pressed', String(isActive));
     });
+  }
+
+  function getProductSearchText(card) {
+    const cardId = card.id || '';
+    const slug = cardId.startsWith('product-') ? cardId.slice('product-'.length) : '';
+    const allProducts = Array.isArray(window.XPHARMA_PRODUCTS) ? window.XPHARMA_PRODUCTS : [];
+
+    if (slug && allProducts.length) {
+      const product = allProducts.find(function (p) { return p.slug === slug; });
+      if (product) {
+        return [
+          product.name,
+          product.displayName,
+          product.slug,
+          product.category,
+          product.categoryLabel,
+          product.subtitle,
+          product.presentation,
+          product.activeCompound,
+          product.cardDescription
+        ].filter(Boolean).join(' ').toLowerCase();
+      }
+    }
+    return card.textContent.toLowerCase();
+  }
+
+  function applyTextFilter(cards, query) {
+    const q = (query || '').toLowerCase().trim();
+    let visibleCount = 0;
+
+    cards.forEach(function (card) {
+      if (card.style.display === 'none') return;
+      if (!q) {
+        visibleCount++;
+        return;
+      }
+      if (getProductSearchText(card).includes(q)) {
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+        card.classList.remove('visible');
+      }
+    });
+
+    const emptyState = document.getElementById('products-empty-state');
+    if (emptyState) {
+      emptyState.classList.toggle('visible', visibleCount === 0 && q.length > 0);
+    }
   }
 
   filterBtns.forEach(btn => {
@@ -309,6 +368,26 @@
     });
   });
 
+  // Empty state action buttons
+  const emptyStateClearBtn = document.getElementById('empty-state-clear');
+  const emptyStateAllBtn   = document.getElementById('empty-state-all');
+
+  if (emptyStateClearBtn) {
+    emptyStateClearBtn.addEventListener('click', function () {
+      // Clear search but keep active filter
+      applySearchOnProductsPage('');
+    });
+  }
+
+  if (emptyStateAllBtn) {
+    emptyStateAllBtn.addEventListener('click', function () {
+      // Clear search and reset to All
+      const allBtn = Array.from(filterBtns).find(b => b.getAttribute('data-filter') === 'all');
+      applySearchOnProductsPage('');
+      if (allBtn) applyProductFilter('all', allBtn);
+    });
+  }
+
   if (filterBtns.length > 0 && productCards.length > 0) {
     const initialCategory = getCatalogCategoryFromUrl();
     const initialButton = Array.from(filterBtns).find(btn => btn.getAttribute('data-filter') === initialCategory)
@@ -319,6 +398,127 @@
       restoreCatalogTarget();
     }
   }
+
+  /* ── Nav Search ── */
+  const navSearchForms = document.querySelectorAll('.js-nav-search-form');
+  const navSearchToggle = document.getElementById('nav-search-toggle');
+  const navSearchDrawer = document.getElementById('nav-search-drawer');
+  const isProductsPage = window.location.pathname.endsWith('products.html');
+
+  function closeSearchDrawer() {
+    if (!navSearchDrawer || !navSearchToggle) return;
+    navSearchDrawer.classList.remove('open');
+    navSearchToggle.classList.remove('active');
+    navSearchToggle.setAttribute('aria-expanded', 'false');
+    navSearchDrawer.setAttribute('aria-hidden', 'true');
+  }
+
+  if (navSearchToggle) {
+    navSearchToggle.addEventListener('click', function () {
+      const isOpen = navSearchDrawer && navSearchDrawer.classList.contains('open');
+      if (isOpen) {
+        closeSearchDrawer();
+      } else {
+        if (navSearchDrawer) {
+          closeMobileMenu(); // mutual exclusion: close menu before opening search
+          navSearchDrawer.classList.add('open');
+          navSearchToggle.classList.add('active');
+          navSearchToggle.setAttribute('aria-expanded', 'true');
+          navSearchDrawer.setAttribute('aria-hidden', 'false');
+          const drawerInput = navSearchDrawer.querySelector('input[type="search"]');
+          if (drawerInput) drawerInput.focus();
+        }
+      }
+    });
+
+    document.addEventListener('click', function (e) {
+      if (navSearchDrawer && navSearchDrawer.classList.contains('open') &&
+          !navSearchToggle.contains(e.target) &&
+          !navSearchDrawer.contains(e.target)) {
+        closeSearchDrawer();
+      }
+    });
+  }
+
+  // Close panels on resize to desktop (states would be stale at desktop breakpoint)
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 1100) {
+      closeMobileMenu();
+      closeSearchDrawer();
+    }
+  }, { passive: true });
+
+  // ESC closes open mobile panels
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' || e.key === 'Esc') {
+      closeMobileMenu();
+      closeSearchDrawer();
+    }
+  });
+
+  function updateSearchInUrl(q) {
+    const nextUrl = new URL(window.location.href);
+    if (q) {
+      nextUrl.searchParams.set('q', q);
+    } else {
+      nextUrl.searchParams.delete('q');
+    }
+    window.history.replaceState({}, '', nextUrl.pathname + nextUrl.search);
+  }
+
+  function syncSearchInputs(q) {
+    navSearchForms.forEach(function (form) {
+      const input = form.querySelector('input[type="search"]');
+      if (input && input.value !== q) input.value = q;
+    });
+  }
+
+  function applySearchOnProductsPage(q) {
+    currentSearchQuery = q;
+    updateSearchInUrl(q);
+    syncSearchInputs(q);
+    const activeBtn = document.querySelector('.filter-btn.active');
+    const activeCategory = activeBtn ? activeBtn.getAttribute('data-filter') : 'all';
+    applyProductFilter(activeCategory, activeBtn, { preserveHash: false });
+  }
+
+  // Pre-fill inputs if ?q is in URL (on products page load)
+  if (currentSearchQuery) {
+    syncSearchInputs(currentSearchQuery);
+  }
+
+  navSearchForms.forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      const input = form.querySelector('input[type="search"]');
+      const q = input ? input.value.trim() : '';
+
+      if (isProductsPage && filterBtns.length > 0) {
+        e.preventDefault();
+        closeSearchDrawer();
+        applySearchOnProductsPage(q);
+        // Scroll to catalog if needed
+        const grid = document.getElementById('products-grid');
+        if (grid) {
+          const offset = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h'), 10) || 80;
+          const top = grid.getBoundingClientRect().top + window.scrollY - offset - 24;
+          if (top < window.scrollY - 100 || top > window.scrollY + window.innerHeight) {
+            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+          }
+        }
+      }
+      // else: let the form navigate naturally to products.html?q=TERM
+    });
+
+    // Handle native search-input clear (clicking X) on products page
+    const searchInput = form.querySelector('input[type="search"]');
+    if (searchInput) {
+      searchInput.addEventListener('input', function () {
+        if (!searchInput.value.trim() && isProductsPage && filterBtns.length > 0 && currentSearchQuery) {
+          applySearchOnProductsPage('');
+        }
+      });
+    }
+  });
 
   /* ── Inquiry / Contact form ── */
   const contactForm = document.querySelector('[data-inquiry-form]') || document.getElementById('contact-form');

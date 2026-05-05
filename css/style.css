@@ -58,7 +58,7 @@
   --font-heading: 'Montserrat', sans-serif;
   --font-body:    'Inter', sans-serif;
 
-  --nav-h: 80px;
+  --nav-h: 128px;
 }
 
 /* ── Reset & base ── */
@@ -211,11 +211,10 @@ select:focus-visible {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  height: var(--nav-h);
-  display: flex;
-  align-items: center;
+  height: auto;
+  display: block;
   background: rgba(255,255,255,0.88);
-  border-bottom: 1px solid rgba(239,216,219,0.58);
+  border-bottom: 1px solid rgba(196,0,18,0.08);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   transition: background var(--transition), box-shadow var(--transition), border-color var(--transition);
@@ -223,19 +222,25 @@ select:focus-visible {
 
 .navbar.scrolled {
   background: rgba(255,255,255,0.96);
-  border-bottom-color: var(--border);
-  box-shadow: 0 14px 30px rgba(82,0,6,0.06);
+  border-bottom-color: rgba(196,0,18,0.12);
+  box-shadow: 0 8px 24px rgba(20,20,20,0.04);
 }
 
 .nav-inner {
-  display: flex;
+  display: grid;
+  grid-template-areas:
+    "logo links cta"
+    "search search search";
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 80px auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  column-gap: 1.5rem;
+  row-gap: 0;
   min-width: 0;
 }
 
 .nav-logo {
+  grid-area: logo;
   display: inline-flex;
   align-items: center;
   line-height: 0;
@@ -270,8 +275,10 @@ select:focus-visible {
 }
 
 .nav-links {
+  grid-area: links;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
 }
 
@@ -299,7 +306,19 @@ select:focus-visible {
 .nav-links a:hover::after,
 .nav-links a.active::after { width: 100%; }
 
-.nav-cta { margin-left: 1rem; flex-shrink: 0; }
+.nav-cta {
+  grid-area: cta;
+  flex-shrink: 0;
+  white-space: nowrap;
+  padding: 10px 20px;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  box-shadow: none;
+}
+.nav-cta:hover {
+  box-shadow: 0 4px 14px rgba(82,0,6,0.18);
+  transform: translateY(-1px);
+}
 
 /* Hamburger */
 .nav-toggle {
@@ -340,16 +359,14 @@ select:focus-visible {
   position: fixed;
   top: var(--nav-h);
   left: 0; right: 0;
-  background: rgba(255,255,255,0.98);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: #fff;
   padding: 2rem;
   border-bottom: 1px solid var(--border);
   box-shadow: 0 18px 35px rgba(82,0,6,0.08);
   z-index: 999;
   flex-direction: column;
   gap: 0;
-  max-height: calc(100vh - var(--nav-h));
+  height: calc(100vh - var(--nav-h));
   overflow-y: auto;
   overscroll-behavior: contain;
 }
@@ -376,6 +393,171 @@ select:focus-visible {
   color: var(--text-primary);
   padding: 0.875rem 1.5rem;
   border-bottom: none;
+}
+
+/* ── Nav Search ── */
+/* Desktop: second grid row spanning all 3 columns */
+.nav-search {
+  grid-area: search;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0 14px;
+  border-top: 1px solid rgba(239,216,219,0.12);
+}
+
+.nav-search-wrap {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.72);
+  border: 1.5px solid var(--border-red);
+  border-radius: 100px;
+  padding: 0 6px 0 14px;
+  height: 40px;
+  width: 390px;
+  max-width: calc(100% - 2rem);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+}
+
+.nav-search-wrap:focus-within {
+  border-color: var(--red-500);
+  box-shadow: 0 0 0 3px rgba(228,25,36,0.09);
+  background: rgba(255,255,255,0.97);
+}
+
+.nav-search-icon {
+  color: var(--text-muted);
+  flex-shrink: 0;
+  margin-right: 6px;
+  pointer-events: none;
+}
+
+.nav-search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--text-primary);
+  outline: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  min-width: 0;
+  height: 100%;
+}
+
+.nav-search-input::placeholder { color: var(--text-muted); }
+.nav-search-input::-webkit-search-cancel-button { display: none; }
+.nav-search-input::-ms-clear { display: none; }
+.nav-search-input:focus { outline: none; box-shadow: none; border: none; }
+
+.nav-search-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 100px;
+  background: linear-gradient(135deg, var(--red-600), var(--red-800));
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.nav-search-btn:hover {
+  background: linear-gradient(135deg, var(--red-700), var(--red-900));
+  transform: scale(1.07);
+}
+
+/* Mobile search toggle */
+.nav-search-toggle {
+  display: none;
+}
+
+/* Mobile search drawer */
+.nav-search-drawer {
+  display: none;
+  position: fixed;
+  top: var(--nav-h);
+  left: 0;
+  right: 0;
+  z-index: 998;
+  padding: 0.875rem 0;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 8px 20px rgba(82,0,6,0.06);
+  animation: navSearchSlide 0.18s ease;
+}
+
+.nav-search-drawer.open { display: block; }
+
+@keyframes navSearchSlide {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.nav-search-drawer .nav-search-wrap {
+  width: 100%;
+  height: 44px;
+  border-radius: var(--radius-md);
+  padding: 0 10px 0 16px;
+}
+
+/* Products: empty search state */
+.products-empty-state {
+  display: none;
+  text-align: center;
+  padding: 3.5rem 1rem;
+  color: var(--text-secondary);
+}
+
+.products-empty-state.visible { display: block; }
+
+.empty-state-inner {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--bg-surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 3rem;
+  max-width: 480px;
+  margin-inline: auto;
+}
+
+.empty-state-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+.empty-state-body {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  max-width: 380px;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.empty-state-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-sm {
+  padding: 9px 20px;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
 }
 
 /* ── Hero ── */
@@ -2402,6 +2584,70 @@ section[aria-labelledby="lipored-info-title"] .card {
   .about-grid  { gap: 3rem; }
 }
 
+/* ── Intermediate breakpoint: compact header for narrow desktops / tablets ─ */
+/* Switches nav to logo + search toggle + hamburger between 769px and 1100px  */
+@media (max-width: 1100px) {
+  :root { --nav-h: 68px; }
+
+  /* Reset nav grid → flex, same as mobile */
+  .nav-inner {
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0.75rem;
+    min-height: var(--nav-h);
+  }
+
+  /* Hide desktop nav items */
+  .nav-links, .nav-cta, .nav-search { display: none; }
+
+  /* Logo: leave room for lupa + hamburger (~108px) */
+  .nav-logo { max-width: calc(100% - 108px); }
+  .brand-logo { max-width: min(260px, calc(100vw - 136px)); }
+  .brand-logo-img { height: auto; max-height: 48px; }
+
+  /* Show hamburger */
+  .nav-toggle {
+    display: inline-flex;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  /* Show search toggle (lupa) — identical size as hamburger */
+  .nav-search-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0;
+    background: rgba(255,255,255,0.96);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    box-shadow: 0 10px 22px rgba(82,0,6,0.08);
+    cursor: pointer;
+    color: var(--red-700);
+    flex-shrink: 0;
+    position: absolute;
+    top: 50%;
+    right: 52px;
+    transform: translateY(-50%);
+    transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+  }
+  .nav-search-toggle:hover,
+  .nav-search-toggle.active {
+    background: var(--red-50);
+    border-color: var(--border-red);
+    color: var(--red-600);
+  }
+}
+
 @media (max-width: 768px) {
   :root { --nav-h: 68px; }
 
@@ -2424,9 +2670,13 @@ section[aria-labelledby="lipored-info-title"] .card {
   }
 
   .nav-inner {
+    display: flex;  /* reset grid → flex on mobile */
     position: relative;
     justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
     gap: 0.75rem;
+    min-height: var(--nav-h);
   }
 
   .nav-logo {
@@ -2437,7 +2687,7 @@ section[aria-labelledby="lipored-info-title"] .card {
   }
   .brand-logo-img {
     height: auto;
-    max-height: 44px;
+    max-height: 48px;
   }
   .hero-product-image { width: 100%; }
   .footer-logo .brand-logo-img {
@@ -2450,7 +2700,7 @@ section[aria-labelledby="lipored-info-title"] .card {
     gap: 2.5rem;
   }
 
-  .nav-links, .nav-cta { display: none; }
+  .nav-links, .nav-cta, .nav-search { display: none; }
   .nav-toggle {
     display: inline-flex;
     position: absolute;
@@ -2458,6 +2708,41 @@ section[aria-labelledby="lipored-info-title"] .card {
     right: 0;
     transform: translateY(-50%);
   }
+
+  /* Search toggle button (mobile) — identical size as hamburger */
+  .nav-search-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0;
+    background: rgba(255,255,255,0.96);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    box-shadow: 0 10px 22px rgba(82,0,6,0.08);
+    cursor: pointer;
+    color: var(--red-700);
+    flex-shrink: 0;
+    position: absolute;
+    top: 50%;
+    right: 52px;
+    transform: translateY(-50%);
+    transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+  }
+
+  .nav-search-toggle:hover,
+  .nav-search-toggle.active {
+    background: var(--red-50);
+    border-color: var(--border-red);
+    color: var(--red-600);
+  }
+
+  /* Adjust logo max-width to leave room for search toggle + hamburger */
+  .nav-logo { max-width: calc(100% - 108px); }
+  .brand-logo { max-width: min(220px, calc(100vw - 136px)); }
 
   .page-hero {
     padding: calc(var(--nav-h) + 3rem) 0 3rem;
@@ -2514,14 +2799,21 @@ section[aria-labelledby="lipored-info-title"] .card {
   .contact-cards-grid { grid-template-columns: 1fr; }
 
   .nav-logo {
-    max-width: calc(100% - 56px);
+    max-width: calc(100% - 96px);
   }
   .brand-logo {
-    max-width: min(170px, calc(100vw - 84px));
+    max-width: min(150px, calc(100vw - 116px));
   }
   .brand-logo-img {
     height: auto;
-    max-height: 34px;
+    max-height: 38px;
+  }
+  .nav-search-toggle {
+    right: 48px;
+    min-width: 40px;
+    min-height: 40px;
+    width: 34px;
+    height: 34px;
   }
 
   .nav-toggle {
