@@ -18,6 +18,7 @@ const STATIC_PATHS = [
   '/lipored.html',
   '/contact.html',
   '/distributor.html',
+  '/mr-laboratorios.html',
   '/apparel.html',
   '/apparel/xpharma-tshirt-white.html',
   '/apparel/xpharma-tshirt-black.html',
