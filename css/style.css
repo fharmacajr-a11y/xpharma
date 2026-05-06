@@ -3182,3 +3182,34 @@ address.footer-contact-list {
   outline: 3px solid #fff;
   outline-offset: 2px;
 }
+
+/* ── Product notice section ── */
+.product-notice-section {
+  padding: 60px 0;
+  background: var(--bg-surface);
+}
+.product-notice-box {
+  background: var(--bg-surface2);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+.product-notice-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+.product-notice-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+.product-notice-body {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
